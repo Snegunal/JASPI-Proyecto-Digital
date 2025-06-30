@@ -18,7 +18,7 @@ parameter Ns = 60; // N de ciclos de reloj equivalenes a 1 semiciclo
 parameter Delay = 5; // Delay para evitar stop o start cuando no es
 reg [2:0] state;
 reg [$clog2(20*Ns):0] counter;
-reg [2:0] st_prev;
+reg [2:0] st_prev; // NO es el estado previo sino una flag para poder reutilizar estados
 
 initial begin
   state <= Default;
