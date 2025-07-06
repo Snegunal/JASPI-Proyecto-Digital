@@ -12,10 +12,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "beg",
-					"strict" : false
-				},
-				{
 					"name" : "clk",
 					"strict" : false
 				}

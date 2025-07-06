@@ -5,3 +5,5 @@
 - master I2C (hasta antes del Listen)
 - testbench para el mismo
 - Datasheet del DS3231 
+
+[Video funcionamiento actual](Videos/Jaspi_1.mp4)

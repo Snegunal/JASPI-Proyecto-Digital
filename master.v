@@ -284,6 +284,7 @@ always @(posedge clk) begin
               scl <= 1;
               counter <= counter + 1;
              end else if (counter == 2*Ns) begin
+              sda_out <= 1;
               counter <= 0;
               listen_count <= listen_count +1;
              end else counter <= counter +1;
