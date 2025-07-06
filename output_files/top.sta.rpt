@@ -1,5 +1,5 @@
 Timing Analyzer report for top
-Sun Jul  6 01:20:23 2025
+Sun Jul  6 13:59:38 2025
 Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 
 
@@ -99,12 +99,12 @@ on the Quartus Prime software download page.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.04        ;
+; Average used               ; 1.03        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   3.8%      ;
+;     Processor 2            ;   3.4%      ;
 +----------------------------+-------------+
 
 
@@ -122,7 +122,7 @@ on the Quartus Prime software download page.
 +-----------+-----------------+------------+------+
 ; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
 +-----------+-----------------+------------+------+
-; 35.42 MHz ; 35.42 MHz       ; clk        ;      ;
+; 36.16 MHz ; 36.16 MHz       ; clk        ;      ;
 +-----------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -138,7 +138,7 @@ HTML report is unavailable in plain text report export.
 +-------+---------+-------------------+
 ; Clock ; Slack   ; End Point TNS     ;
 +-------+---------+-------------------+
-; clk   ; -27.235 ; -647.110          ;
+; clk   ; -26.657 ; -630.301          ;
 +-------+---------+-------------------+
 
 
@@ -147,7 +147,7 @@ HTML report is unavailable in plain text report export.
 +-------+-------+--------------------+
 ; Clock ; Slack ; End Point TNS      ;
 +-------+-------+--------------------+
-; clk   ; 0.432 ; 0.000              ;
+; clk   ; 0.434 ; 0.000              ;
 +-------+-------+--------------------+
 
 
@@ -168,7 +168,7 @@ No paths to report.
 +-------+--------+----------------------------------+
 ; Clock ; Slack  ; End Point TNS                    ;
 +-------+--------+----------------------------------+
-; clk   ; -3.000 ; -43.149                          ;
+; clk   ; -3.000 ; -41.662                          ;
 +-------+--------+----------------------------------+
 
 
@@ -177,106 +177,106 @@ No paths to report.
 +---------+---------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack   ; From Node                 ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +---------+---------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
-; -27.235 ; master:master|counter[8]  ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.081     ; 28.155     ;
-; -27.235 ; master:master|counter[8]  ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.081     ; 28.155     ;
-; -27.235 ; master:master|counter[8]  ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.081     ; 28.155     ;
-; -27.235 ; master:master|counter[8]  ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.081     ; 28.155     ;
-; -27.235 ; master:master|counter[8]  ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.081     ; 28.155     ;
-; -27.235 ; master:master|counter[8]  ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.081     ; 28.155     ;
-; -27.235 ; master:master|counter[8]  ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.081     ; 28.155     ;
-; -27.139 ; master:master|counter[7]  ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.081     ; 28.059     ;
-; -27.139 ; master:master|counter[7]  ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.081     ; 28.059     ;
-; -27.139 ; master:master|counter[7]  ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.081     ; 28.059     ;
-; -27.139 ; master:master|counter[7]  ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.081     ; 28.059     ;
-; -27.139 ; master:master|counter[7]  ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.081     ; 28.059     ;
-; -27.139 ; master:master|counter[7]  ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.081     ; 28.059     ;
-; -27.139 ; master:master|counter[7]  ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.081     ; 28.059     ;
-; -27.093 ; master:master|counter[10] ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.081     ; 28.013     ;
-; -27.093 ; master:master|counter[10] ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.081     ; 28.013     ;
-; -27.093 ; master:master|counter[10] ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.081     ; 28.013     ;
-; -27.093 ; master:master|counter[10] ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.081     ; 28.013     ;
-; -27.093 ; master:master|counter[10] ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.081     ; 28.013     ;
-; -27.093 ; master:master|counter[10] ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.081     ; 28.013     ;
-; -27.093 ; master:master|counter[10] ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.081     ; 28.013     ;
-; -26.994 ; master:master|counter[9]  ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.081     ; 27.914     ;
-; -26.994 ; master:master|counter[9]  ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.081     ; 27.914     ;
-; -26.994 ; master:master|counter[9]  ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.081     ; 27.914     ;
-; -26.994 ; master:master|counter[9]  ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.081     ; 27.914     ;
-; -26.994 ; master:master|counter[9]  ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.081     ; 27.914     ;
-; -26.994 ; master:master|counter[9]  ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.081     ; 27.914     ;
-; -26.994 ; master:master|counter[9]  ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.081     ; 27.914     ;
-; -26.955 ; master:master|counter[12] ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.081     ; 27.875     ;
-; -26.955 ; master:master|counter[12] ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.081     ; 27.875     ;
-; -26.955 ; master:master|counter[12] ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.081     ; 27.875     ;
-; -26.955 ; master:master|counter[12] ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.081     ; 27.875     ;
-; -26.955 ; master:master|counter[12] ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.081     ; 27.875     ;
-; -26.955 ; master:master|counter[12] ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.081     ; 27.875     ;
-; -26.955 ; master:master|counter[12] ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.081     ; 27.875     ;
-; -26.859 ; master:master|counter[11] ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.081     ; 27.779     ;
-; -26.859 ; master:master|counter[11] ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.081     ; 27.779     ;
-; -26.859 ; master:master|counter[11] ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.081     ; 27.779     ;
-; -26.859 ; master:master|counter[11] ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.081     ; 27.779     ;
-; -26.859 ; master:master|counter[11] ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.081     ; 27.779     ;
-; -26.859 ; master:master|counter[11] ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.081     ; 27.779     ;
-; -26.859 ; master:master|counter[11] ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.081     ; 27.779     ;
-; -26.704 ; master:master|counter[13] ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.081     ; 27.624     ;
-; -26.704 ; master:master|counter[13] ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.081     ; 27.624     ;
-; -26.704 ; master:master|counter[13] ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.081     ; 27.624     ;
-; -26.704 ; master:master|counter[13] ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.081     ; 27.624     ;
-; -26.704 ; master:master|counter[13] ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.081     ; 27.624     ;
-; -26.704 ; master:master|counter[13] ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.081     ; 27.624     ;
-; -26.704 ; master:master|counter[13] ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.081     ; 27.624     ;
-; -26.574 ; master:master|counter[8]  ; master:master|sda_en           ; clk          ; clk         ; 1.000        ; 0.407      ; 27.982     ;
-; -26.478 ; master:master|counter[7]  ; master:master|sda_en           ; clk          ; clk         ; 1.000        ; 0.407      ; 27.886     ;
-; -26.467 ; master:master|counter[8]  ; master:master|st_prev.Send_Add ; clk          ; clk         ; 1.000        ; 0.396      ; 27.864     ;
-; -26.432 ; master:master|counter[10] ; master:master|sda_en           ; clk          ; clk         ; 1.000        ; 0.407      ; 27.840     ;
-; -26.397 ; master:master|counter[8]  ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 1.000        ; -0.084     ; 27.314     ;
-; -26.371 ; master:master|counter[7]  ; master:master|st_prev.Send_Add ; clk          ; clk         ; 1.000        ; 0.396      ; 27.768     ;
-; -26.333 ; master:master|counter[9]  ; master:master|sda_en           ; clk          ; clk         ; 1.000        ; 0.407      ; 27.741     ;
-; -26.332 ; master:master|counter[6]  ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.593     ; 26.740     ;
-; -26.332 ; master:master|counter[6]  ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.593     ; 26.740     ;
-; -26.332 ; master:master|counter[6]  ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.593     ; 26.740     ;
-; -26.332 ; master:master|counter[6]  ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.593     ; 26.740     ;
-; -26.332 ; master:master|counter[6]  ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.593     ; 26.740     ;
-; -26.332 ; master:master|counter[6]  ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.593     ; 26.740     ;
-; -26.332 ; master:master|counter[6]  ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.593     ; 26.740     ;
-; -26.325 ; master:master|counter[10] ; master:master|st_prev.Send_Add ; clk          ; clk         ; 1.000        ; 0.396      ; 27.722     ;
-; -26.301 ; master:master|counter[7]  ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 1.000        ; -0.084     ; 27.218     ;
-; -26.294 ; master:master|counter[12] ; master:master|sda_en           ; clk          ; clk         ; 1.000        ; 0.407      ; 27.702     ;
-; -26.255 ; master:master|counter[10] ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 1.000        ; -0.084     ; 27.172     ;
-; -26.226 ; master:master|counter[9]  ; master:master|st_prev.Send_Add ; clk          ; clk         ; 1.000        ; 0.396      ; 27.623     ;
-; -26.198 ; master:master|counter[11] ; master:master|sda_en           ; clk          ; clk         ; 1.000        ; 0.407      ; 27.606     ;
-; -26.187 ; master:master|counter[12] ; master:master|st_prev.Send_Add ; clk          ; clk         ; 1.000        ; 0.396      ; 27.584     ;
-; -26.156 ; master:master|counter[9]  ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 1.000        ; -0.084     ; 27.073     ;
-; -26.117 ; master:master|counter[12] ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 1.000        ; -0.084     ; 27.034     ;
-; -26.102 ; master:master|counter[8]  ; master:master|counter[0]       ; clk          ; clk         ; 1.000        ; 0.410      ; 27.513     ;
-; -26.102 ; master:master|counter[8]  ; master:master|counter[2]       ; clk          ; clk         ; 1.000        ; 0.410      ; 27.513     ;
-; -26.102 ; master:master|counter[8]  ; master:master|counter[1]       ; clk          ; clk         ; 1.000        ; 0.410      ; 27.513     ;
-; -26.102 ; master:master|counter[8]  ; master:master|counter[4]       ; clk          ; clk         ; 1.000        ; 0.410      ; 27.513     ;
-; -26.102 ; master:master|counter[8]  ; master:master|counter[5]       ; clk          ; clk         ; 1.000        ; 0.410      ; 27.513     ;
-; -26.102 ; master:master|counter[8]  ; master:master|counter[6]       ; clk          ; clk         ; 1.000        ; 0.410      ; 27.513     ;
-; -26.102 ; master:master|counter[8]  ; master:master|counter[3]       ; clk          ; clk         ; 1.000        ; 0.410      ; 27.513     ;
-; -26.091 ; master:master|counter[11] ; master:master|st_prev.Send_Add ; clk          ; clk         ; 1.000        ; 0.396      ; 27.488     ;
-; -26.084 ; master:master|counter[8]  ; master:master|state.Stretch    ; clk          ; clk         ; 1.000        ; -0.084     ; 27.001     ;
-; -26.082 ; master:master|counter[8]  ; master:master|state.Send_Add   ; clk          ; clk         ; 1.000        ; -0.084     ; 26.999     ;
-; -26.057 ; master:master|counter[8]  ; master:master|st_prev.Default  ; clk          ; clk         ; 1.000        ; 0.396      ; 27.454     ;
-; -26.043 ; master:master|counter[13] ; master:master|sda_en           ; clk          ; clk         ; 1.000        ; 0.407      ; 27.451     ;
-; -26.021 ; master:master|counter[11] ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 1.000        ; -0.084     ; 26.938     ;
-; -26.014 ; master:master|counter[8]  ; master:master|sda_out          ; clk          ; clk         ; 1.000        ; 0.413      ; 27.428     ;
-; -26.006 ; master:master|counter[7]  ; master:master|counter[0]       ; clk          ; clk         ; 1.000        ; 0.410      ; 27.417     ;
-; -26.006 ; master:master|counter[7]  ; master:master|counter[2]       ; clk          ; clk         ; 1.000        ; 0.410      ; 27.417     ;
-; -26.006 ; master:master|counter[7]  ; master:master|counter[1]       ; clk          ; clk         ; 1.000        ; 0.410      ; 27.417     ;
-; -26.006 ; master:master|counter[7]  ; master:master|counter[4]       ; clk          ; clk         ; 1.000        ; 0.410      ; 27.417     ;
-; -26.006 ; master:master|counter[7]  ; master:master|counter[5]       ; clk          ; clk         ; 1.000        ; 0.410      ; 27.417     ;
-; -26.006 ; master:master|counter[7]  ; master:master|counter[6]       ; clk          ; clk         ; 1.000        ; 0.410      ; 27.417     ;
-; -26.006 ; master:master|counter[7]  ; master:master|counter[3]       ; clk          ; clk         ; 1.000        ; 0.410      ; 27.417     ;
-; -25.988 ; master:master|counter[7]  ; master:master|state.Stretch    ; clk          ; clk         ; 1.000        ; -0.084     ; 26.905     ;
-; -25.986 ; master:master|counter[7]  ; master:master|state.Send_Add   ; clk          ; clk         ; 1.000        ; -0.084     ; 26.903     ;
-; -25.980 ; master:master|counter[8]  ; master:master|st_prev.Restart  ; clk          ; clk         ; 1.000        ; -0.084     ; 26.897     ;
-; -25.961 ; master:master|counter[7]  ; master:master|st_prev.Default  ; clk          ; clk         ; 1.000        ; 0.396      ; 27.358     ;
-; -25.960 ; master:master|counter[10] ; master:master|counter[0]       ; clk          ; clk         ; 1.000        ; 0.410      ; 27.371     ;
-; -25.960 ; master:master|counter[10] ; master:master|counter[2]       ; clk          ; clk         ; 1.000        ; 0.410      ; 27.371     ;
-; -25.960 ; master:master|counter[10] ; master:master|counter[1]       ; clk          ; clk         ; 1.000        ; 0.410      ; 27.371     ;
+; -26.657 ; master:master|counter[7]  ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.080     ; 27.578     ;
+; -26.657 ; master:master|counter[7]  ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.080     ; 27.578     ;
+; -26.657 ; master:master|counter[7]  ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.080     ; 27.578     ;
+; -26.657 ; master:master|counter[7]  ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.080     ; 27.578     ;
+; -26.657 ; master:master|counter[7]  ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.080     ; 27.578     ;
+; -26.657 ; master:master|counter[7]  ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.080     ; 27.578     ;
+; -26.657 ; master:master|counter[7]  ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.080     ; 27.578     ;
+; -26.519 ; master:master|counter[9]  ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.080     ; 27.440     ;
+; -26.519 ; master:master|counter[9]  ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.080     ; 27.440     ;
+; -26.519 ; master:master|counter[9]  ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.080     ; 27.440     ;
+; -26.519 ; master:master|counter[9]  ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.080     ; 27.440     ;
+; -26.519 ; master:master|counter[9]  ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.080     ; 27.440     ;
+; -26.519 ; master:master|counter[9]  ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.080     ; 27.440     ;
+; -26.519 ; master:master|counter[9]  ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.080     ; 27.440     ;
+; -26.495 ; master:master|counter[8]  ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.080     ; 27.416     ;
+; -26.495 ; master:master|counter[8]  ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.080     ; 27.416     ;
+; -26.495 ; master:master|counter[8]  ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.080     ; 27.416     ;
+; -26.495 ; master:master|counter[8]  ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.080     ; 27.416     ;
+; -26.495 ; master:master|counter[8]  ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.080     ; 27.416     ;
+; -26.495 ; master:master|counter[8]  ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.080     ; 27.416     ;
+; -26.495 ; master:master|counter[8]  ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.080     ; 27.416     ;
+; -26.364 ; master:master|counter[11] ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.080     ; 27.285     ;
+; -26.364 ; master:master|counter[11] ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.080     ; 27.285     ;
+; -26.364 ; master:master|counter[11] ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.080     ; 27.285     ;
+; -26.364 ; master:master|counter[11] ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.080     ; 27.285     ;
+; -26.364 ; master:master|counter[11] ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.080     ; 27.285     ;
+; -26.364 ; master:master|counter[11] ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.080     ; 27.285     ;
+; -26.364 ; master:master|counter[11] ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.080     ; 27.285     ;
+; -26.363 ; master:master|counter[10] ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.080     ; 27.284     ;
+; -26.363 ; master:master|counter[10] ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.080     ; 27.284     ;
+; -26.363 ; master:master|counter[10] ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.080     ; 27.284     ;
+; -26.363 ; master:master|counter[10] ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.080     ; 27.284     ;
+; -26.363 ; master:master|counter[10] ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.080     ; 27.284     ;
+; -26.363 ; master:master|counter[10] ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.080     ; 27.284     ;
+; -26.363 ; master:master|counter[10] ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.080     ; 27.284     ;
+; -26.218 ; master:master|counter[13] ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.080     ; 27.139     ;
+; -26.218 ; master:master|counter[13] ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.080     ; 27.139     ;
+; -26.218 ; master:master|counter[13] ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.080     ; 27.139     ;
+; -26.218 ; master:master|counter[13] ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.080     ; 27.139     ;
+; -26.218 ; master:master|counter[13] ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.080     ; 27.139     ;
+; -26.218 ; master:master|counter[13] ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.080     ; 27.139     ;
+; -26.218 ; master:master|counter[13] ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.080     ; 27.139     ;
+; -26.216 ; master:master|counter[12] ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.080     ; 27.137     ;
+; -26.216 ; master:master|counter[12] ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.080     ; 27.137     ;
+; -26.216 ; master:master|counter[12] ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.080     ; 27.137     ;
+; -26.216 ; master:master|counter[12] ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.080     ; 27.137     ;
+; -26.216 ; master:master|counter[12] ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.080     ; 27.137     ;
+; -26.216 ; master:master|counter[12] ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.080     ; 27.137     ;
+; -26.216 ; master:master|counter[12] ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.080     ; 27.137     ;
+; -26.040 ; master:master|counter[7]  ; master:master|sda_en           ; clk          ; clk         ; 1.000        ; -0.074     ; 26.967     ;
+; -25.902 ; master:master|counter[9]  ; master:master|sda_en           ; clk          ; clk         ; 1.000        ; -0.074     ; 26.829     ;
+; -25.878 ; master:master|counter[8]  ; master:master|sda_en           ; clk          ; clk         ; 1.000        ; -0.074     ; 26.805     ;
+; -25.747 ; master:master|counter[11] ; master:master|sda_en           ; clk          ; clk         ; 1.000        ; -0.074     ; 26.674     ;
+; -25.746 ; master:master|counter[10] ; master:master|sda_en           ; clk          ; clk         ; 1.000        ; -0.074     ; 26.673     ;
+; -25.743 ; master:master|counter[7]  ; master:master|counter[3]       ; clk          ; clk         ; 1.000        ; 0.398      ; 27.142     ;
+; -25.743 ; master:master|counter[7]  ; master:master|counter[0]       ; clk          ; clk         ; 1.000        ; 0.398      ; 27.142     ;
+; -25.743 ; master:master|counter[7]  ; master:master|counter[1]       ; clk          ; clk         ; 1.000        ; 0.398      ; 27.142     ;
+; -25.743 ; master:master|counter[7]  ; master:master|counter[2]       ; clk          ; clk         ; 1.000        ; 0.398      ; 27.142     ;
+; -25.743 ; master:master|counter[7]  ; master:master|counter[4]       ; clk          ; clk         ; 1.000        ; 0.398      ; 27.142     ;
+; -25.743 ; master:master|counter[7]  ; master:master|counter[5]       ; clk          ; clk         ; 1.000        ; 0.398      ; 27.142     ;
+; -25.743 ; master:master|counter[7]  ; master:master|counter[6]       ; clk          ; clk         ; 1.000        ; 0.398      ; 27.142     ;
+; -25.605 ; master:master|counter[9]  ; master:master|counter[3]       ; clk          ; clk         ; 1.000        ; 0.398      ; 27.004     ;
+; -25.605 ; master:master|counter[9]  ; master:master|counter[0]       ; clk          ; clk         ; 1.000        ; 0.398      ; 27.004     ;
+; -25.605 ; master:master|counter[9]  ; master:master|counter[1]       ; clk          ; clk         ; 1.000        ; 0.398      ; 27.004     ;
+; -25.605 ; master:master|counter[9]  ; master:master|counter[2]       ; clk          ; clk         ; 1.000        ; 0.398      ; 27.004     ;
+; -25.605 ; master:master|counter[9]  ; master:master|counter[4]       ; clk          ; clk         ; 1.000        ; 0.398      ; 27.004     ;
+; -25.605 ; master:master|counter[9]  ; master:master|counter[5]       ; clk          ; clk         ; 1.000        ; 0.398      ; 27.004     ;
+; -25.605 ; master:master|counter[9]  ; master:master|counter[6]       ; clk          ; clk         ; 1.000        ; 0.398      ; 27.004     ;
+; -25.601 ; master:master|counter[13] ; master:master|sda_en           ; clk          ; clk         ; 1.000        ; -0.074     ; 26.528     ;
+; -25.599 ; master:master|counter[12] ; master:master|sda_en           ; clk          ; clk         ; 1.000        ; -0.074     ; 26.526     ;
+; -25.581 ; master:master|counter[8]  ; master:master|counter[3]       ; clk          ; clk         ; 1.000        ; 0.398      ; 26.980     ;
+; -25.581 ; master:master|counter[8]  ; master:master|counter[0]       ; clk          ; clk         ; 1.000        ; 0.398      ; 26.980     ;
+; -25.581 ; master:master|counter[8]  ; master:master|counter[1]       ; clk          ; clk         ; 1.000        ; 0.398      ; 26.980     ;
+; -25.581 ; master:master|counter[8]  ; master:master|counter[2]       ; clk          ; clk         ; 1.000        ; 0.398      ; 26.980     ;
+; -25.581 ; master:master|counter[8]  ; master:master|counter[4]       ; clk          ; clk         ; 1.000        ; 0.398      ; 26.980     ;
+; -25.581 ; master:master|counter[8]  ; master:master|counter[5]       ; clk          ; clk         ; 1.000        ; 0.398      ; 26.980     ;
+; -25.581 ; master:master|counter[8]  ; master:master|counter[6]       ; clk          ; clk         ; 1.000        ; 0.398      ; 26.980     ;
+; -25.565 ; master:master|counter[7]  ; master:master|st_prev.Send_Add ; clk          ; clk         ; 1.000        ; 0.407      ; 26.973     ;
+; -25.524 ; master:master|counter[6]  ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.578     ; 25.947     ;
+; -25.524 ; master:master|counter[6]  ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.578     ; 25.947     ;
+; -25.524 ; master:master|counter[6]  ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.578     ; 25.947     ;
+; -25.524 ; master:master|counter[6]  ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.578     ; 25.947     ;
+; -25.524 ; master:master|counter[6]  ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.578     ; 25.947     ;
+; -25.524 ; master:master|counter[6]  ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.578     ; 25.947     ;
+; -25.524 ; master:master|counter[6]  ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.578     ; 25.947     ;
+; -25.450 ; master:master|counter[11] ; master:master|counter[3]       ; clk          ; clk         ; 1.000        ; 0.398      ; 26.849     ;
+; -25.450 ; master:master|counter[11] ; master:master|counter[0]       ; clk          ; clk         ; 1.000        ; 0.398      ; 26.849     ;
+; -25.450 ; master:master|counter[11] ; master:master|counter[1]       ; clk          ; clk         ; 1.000        ; 0.398      ; 26.849     ;
+; -25.450 ; master:master|counter[11] ; master:master|counter[2]       ; clk          ; clk         ; 1.000        ; 0.398      ; 26.849     ;
+; -25.450 ; master:master|counter[11] ; master:master|counter[4]       ; clk          ; clk         ; 1.000        ; 0.398      ; 26.849     ;
+; -25.450 ; master:master|counter[11] ; master:master|counter[5]       ; clk          ; clk         ; 1.000        ; 0.398      ; 26.849     ;
+; -25.450 ; master:master|counter[11] ; master:master|counter[6]       ; clk          ; clk         ; 1.000        ; 0.398      ; 26.849     ;
+; -25.449 ; master:master|counter[10] ; master:master|counter[3]       ; clk          ; clk         ; 1.000        ; 0.398      ; 26.848     ;
+; -25.449 ; master:master|counter[10] ; master:master|counter[0]       ; clk          ; clk         ; 1.000        ; 0.398      ; 26.848     ;
+; -25.449 ; master:master|counter[10] ; master:master|counter[1]       ; clk          ; clk         ; 1.000        ; 0.398      ; 26.848     ;
+; -25.449 ; master:master|counter[10] ; master:master|counter[2]       ; clk          ; clk         ; 1.000        ; 0.398      ; 26.848     ;
+; -25.449 ; master:master|counter[10] ; master:master|counter[4]       ; clk          ; clk         ; 1.000        ; 0.398      ; 26.848     ;
+; -25.449 ; master:master|counter[10] ; master:master|counter[5]       ; clk          ; clk         ; 1.000        ; 0.398      ; 26.848     ;
+; -25.449 ; master:master|counter[10] ; master:master|counter[6]       ; clk          ; clk         ; 1.000        ; 0.398      ; 26.848     ;
+; -25.441 ; master:master|counter[7]  ; master:master|sda_out          ; clk          ; clk         ; 1.000        ; 0.398      ; 26.840     ;
 +---------+---------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -285,106 +285,106 @@ No paths to report.
 +-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                      ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.432 ; master:master|state.Listen     ; master:master|state.Listen     ; clk          ; clk         ; 0.000        ; 0.102      ; 0.746      ;
-; 0.433 ; master:master|st_prev.Send_Add ; master:master|st_prev.Send_Add ; clk          ; clk         ; 0.000        ; 0.101      ; 0.746      ;
-; 0.433 ; master:master|st_prev.Default  ; master:master|st_prev.Default  ; clk          ; clk         ; 0.000        ; 0.101      ; 0.746      ;
+; 0.434 ; master:master|state.Stretch    ; master:master|state.Stretch    ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
+; 0.434 ; master:master|state.Send_Add   ; master:master|state.Send_Add   ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
+; 0.434 ; master:master|st_prev.Send_Add ; master:master|st_prev.Send_Add ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
+; 0.434 ; master:master|st_prev.Default  ; master:master|st_prev.Default  ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
+; 0.454 ; master:master|st_prev.Send_Reg ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
 ; 0.454 ; master:master|st_prev.Restart  ; master:master|st_prev.Restart  ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
-; 0.454 ; master:master|state.Stretch    ; master:master|state.Stretch    ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
-; 0.454 ; master:master|state.Send_Add   ; master:master|state.Send_Add   ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
 ; 0.454 ; master:master|state.Start      ; master:master|state.Start      ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
-; 0.454 ; master:master|state.Default    ; master:master|state.Default    ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
-; 0.740 ; master:master|counter[5]       ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.102      ; 1.054      ;
-; 0.743 ; master:master|counter[4]       ; master:master|counter[4]       ; clk          ; clk         ; 0.000        ; 0.102      ; 1.057      ;
-; 0.763 ; master:master|counter[3]       ; master:master|counter[3]       ; clk          ; clk         ; 0.000        ; 0.102      ; 1.077      ;
-; 0.766 ; master:master|counter[2]       ; master:master|counter[2]       ; clk          ; clk         ; 0.000        ; 0.102      ; 1.080      ;
-; 0.766 ; master:master|counter[6]       ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.102      ; 1.080      ;
-; 0.788 ; master:master|counter[0]       ; master:master|counter[0]       ; clk          ; clk         ; 0.000        ; 0.102      ; 1.102      ;
-; 0.800 ; master:master|state.Start      ; master:master|st_prev.Default  ; clk          ; clk         ; 0.000        ; 0.580      ; 1.592      ;
-; 0.939 ; master:master|counter[1]       ; master:master|counter[1]       ; clk          ; clk         ; 0.000        ; 0.102      ; 1.253      ;
-; 1.050 ; master:master|state.Start      ; master:master|st_prev.Send_Add ; clk          ; clk         ; 0.000        ; 0.580      ; 1.842      ;
-; 1.056 ; master:master|st_prev.Send_Add ; master:master|state.Send_Reg   ; clk          ; clk         ; 0.000        ; 0.101      ; 1.369      ;
-; 1.095 ; master:master|counter[5]       ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.102      ; 1.409      ;
-; 1.104 ; master:master|counter[4]       ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.102      ; 1.418      ;
-; 1.113 ; master:master|state.Send_Reg   ; master:master|sda_en           ; clk          ; clk         ; 0.000        ; 0.113      ; 1.438      ;
-; 1.113 ; master:master|counter[4]       ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.102      ; 1.427      ;
-; 1.118 ; master:master|counter[3]       ; master:master|counter[4]       ; clk          ; clk         ; 0.000        ; 0.102      ; 1.432      ;
-; 1.126 ; master:master|counter[0]       ; master:master|counter[1]       ; clk          ; clk         ; 0.000        ; 0.102      ; 1.440      ;
-; 1.127 ; master:master|counter[2]       ; master:master|counter[3]       ; clk          ; clk         ; 0.000        ; 0.102      ; 1.441      ;
-; 1.135 ; master:master|counter[0]       ; master:master|counter[2]       ; clk          ; clk         ; 0.000        ; 0.102      ; 1.449      ;
-; 1.136 ; master:master|counter[2]       ; master:master|counter[4]       ; clk          ; clk         ; 0.000        ; 0.102      ; 1.450      ;
-; 1.169 ; master:master|scl              ; master:master|scl              ; clk          ; clk         ; 0.000        ; 0.080      ; 1.461      ;
-; 1.177 ; master:master|state.Send_Reg   ; master:master|state.Send_Reg   ; clk          ; clk         ; 0.000        ; 0.101      ; 1.490      ;
-; 1.187 ; master:master|st_prev.Send_Reg ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 0.000        ; 0.080      ; 1.479      ;
-; 1.217 ; master:master|state.Stretch    ; master:master|state.Send_Reg   ; clk          ; clk         ; 0.000        ; 0.581      ; 2.010      ;
-; 1.239 ; master:master|state.Stretch    ; master:master|state.Listen     ; clk          ; clk         ; 0.000        ; 0.593      ; 2.044      ;
-; 1.248 ; master:master|st_prev.Restart  ; master:master|st_prev.Send_Add ; clk          ; clk         ; 0.000        ; 0.581      ; 2.041      ;
-; 1.249 ; master:master|counter[3]       ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.102      ; 1.563      ;
-; 1.258 ; master:master|counter[3]       ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.102      ; 1.572      ;
-; 1.266 ; master:master|counter[0]       ; master:master|counter[3]       ; clk          ; clk         ; 0.000        ; 0.102      ; 1.580      ;
-; 1.267 ; master:master|counter[2]       ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.102      ; 1.581      ;
-; 1.275 ; master:master|counter[0]       ; master:master|counter[4]       ; clk          ; clk         ; 0.000        ; 0.102      ; 1.589      ;
-; 1.276 ; master:master|counter[2]       ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.102      ; 1.590      ;
-; 1.293 ; master:master|counter[1]       ; master:master|counter[2]       ; clk          ; clk         ; 0.000        ; 0.102      ; 1.607      ;
-; 1.319 ; master:master|sda_en           ; master:master|sda_en           ; clk          ; clk         ; 0.000        ; 0.102      ; 1.633      ;
-; 1.329 ; master:master|state.Send_Reg   ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 0.000        ; -0.400     ; 1.141      ;
-; 1.383 ; master:master|counter[1]       ; master:master|counter[3]       ; clk          ; clk         ; 0.000        ; 0.102      ; 1.697      ;
-; 1.406 ; master:master|counter[0]       ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.102      ; 1.720      ;
-; 1.415 ; master:master|counter[0]       ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.102      ; 1.729      ;
-; 1.423 ; master:master|st_prev.Send_Reg ; master:master|state.Start      ; clk          ; clk         ; 0.000        ; 0.081      ; 1.716      ;
-; 1.433 ; master:master|counter[1]       ; master:master|counter[4]       ; clk          ; clk         ; 0.000        ; 0.102      ; 1.747      ;
-; 1.472 ; master:master|st_prev.Default  ; master:master|st_prev.Send_Add ; clk          ; clk         ; 0.000        ; 0.101      ; 1.785      ;
-; 1.506 ; master:master|state.Default    ; master:master|scl              ; clk          ; clk         ; 0.000        ; 0.079      ; 1.797      ;
-; 1.523 ; master:master|counter[1]       ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.102      ; 1.837      ;
-; 1.531 ; master:master|state.Default    ; master:master|state.Start      ; clk          ; clk         ; 0.000        ; 0.080      ; 1.823      ;
-; 1.546 ; master:master|state.Send_Reg   ; master:master|st_prev.Default  ; clk          ; clk         ; 0.000        ; 0.101      ; 1.859      ;
-; 1.573 ; master:master|counter[1]       ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.102      ; 1.887      ;
-; 1.579 ; master:master|state.Listen     ; master:master|sda_out          ; clk          ; clk         ; 0.000        ; 0.108      ; 1.899      ;
-; 1.591 ; master:master|state.Send_Add   ; master:master|state.Stretch    ; clk          ; clk         ; 0.000        ; 0.080      ; 1.883      ;
-; 1.663 ; master:master|state.Start      ; master:master|st_prev.Restart  ; clk          ; clk         ; 0.000        ; 0.079      ; 1.954      ;
-; 1.674 ; master:master|state.Send_Reg   ; master:master|st_prev.Restart  ; clk          ; clk         ; 0.000        ; -0.400     ; 1.486      ;
-; 1.695 ; master:master|state.Send_Add   ; master:master|sda_en           ; clk          ; clk         ; 0.000        ; 0.593      ; 2.500      ;
-; 1.749 ; master:master|state.Default    ; master:master|st_prev.Restart  ; clk          ; clk         ; 0.000        ; 0.079      ; 2.040      ;
-; 1.752 ; master:master|state.Start      ; master:master|scl              ; clk          ; clk         ; 0.000        ; 0.079      ; 2.043      ;
-; 1.781 ; master:master|state.Send_Add   ; master:master|st_prev.Default  ; clk          ; clk         ; 0.000        ; 0.581      ; 2.574      ;
-; 1.818 ; master:master|st_prev.Send_Reg ; master:master|st_prev.Send_Add ; clk          ; clk         ; 0.000        ; 0.581      ; 2.611      ;
-; 1.835 ; master:master|state.Send_Add   ; master:master|st_prev.Send_Add ; clk          ; clk         ; 0.000        ; 0.581      ; 2.628      ;
-; 1.883 ; master:master|state.Listen     ; master:master|sda_en           ; clk          ; clk         ; 0.000        ; 0.102      ; 2.197      ;
-; 1.921 ; master:master|st_prev.Default  ; master:master|st_prev.Restart  ; clk          ; clk         ; 0.000        ; -0.400     ; 1.733      ;
-; 1.951 ; master:master|state.Send_Reg   ; master:master|st_prev.Send_Add ; clk          ; clk         ; 0.000        ; 0.101      ; 2.264      ;
-; 1.973 ; master:master|state.Send_Reg   ; master:master|sda_out          ; clk          ; clk         ; 0.000        ; 0.119      ; 2.304      ;
-; 1.997 ; master:master|counter[0]       ; master:master|sda_out          ; clk          ; clk         ; 0.000        ; 0.105      ; 2.314      ;
-; 2.039 ; master:master|st_prev.Restart  ; master:master|sda_en           ; clk          ; clk         ; 0.000        ; 0.593      ; 2.844      ;
-; 2.041 ; master:master|state.Default    ; master:master|counter[0]       ; clk          ; clk         ; 0.000        ; 0.595      ; 2.848      ;
-; 2.041 ; master:master|state.Default    ; master:master|counter[2]       ; clk          ; clk         ; 0.000        ; 0.595      ; 2.848      ;
-; 2.041 ; master:master|state.Default    ; master:master|counter[1]       ; clk          ; clk         ; 0.000        ; 0.595      ; 2.848      ;
-; 2.041 ; master:master|state.Default    ; master:master|counter[4]       ; clk          ; clk         ; 0.000        ; 0.595      ; 2.848      ;
-; 2.041 ; master:master|state.Default    ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.595      ; 2.848      ;
-; 2.041 ; master:master|state.Default    ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.595      ; 2.848      ;
-; 2.041 ; master:master|state.Default    ; master:master|counter[3]       ; clk          ; clk         ; 0.000        ; 0.595      ; 2.848      ;
-; 2.053 ; master:master|state.Start      ; master:master|counter[0]       ; clk          ; clk         ; 0.000        ; 0.595      ; 2.860      ;
-; 2.053 ; master:master|state.Start      ; master:master|counter[2]       ; clk          ; clk         ; 0.000        ; 0.595      ; 2.860      ;
-; 2.053 ; master:master|state.Start      ; master:master|counter[1]       ; clk          ; clk         ; 0.000        ; 0.595      ; 2.860      ;
-; 2.053 ; master:master|state.Start      ; master:master|counter[4]       ; clk          ; clk         ; 0.000        ; 0.595      ; 2.860      ;
-; 2.053 ; master:master|state.Start      ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.595      ; 2.860      ;
-; 2.053 ; master:master|state.Start      ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.595      ; 2.860      ;
-; 2.053 ; master:master|state.Start      ; master:master|counter[3]       ; clk          ; clk         ; 0.000        ; 0.595      ; 2.860      ;
-; 2.068 ; master:master|state.Start      ; master:master|state.Send_Add   ; clk          ; clk         ; 0.000        ; 0.079      ; 2.359      ;
-; 2.189 ; master:master|state.Send_Add   ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 0.000        ; 0.080      ; 2.481      ;
-; 2.257 ; master:master|state.Start      ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 0.000        ; 0.079      ; 2.548      ;
-; 2.273 ; master:master|st_prev.Restart  ; master:master|sda_out          ; clk          ; clk         ; 0.000        ; 0.599      ; 3.084      ;
-; 2.274 ; master:master|st_prev.Default  ; master:master|sda_out          ; clk          ; clk         ; 0.000        ; 0.119      ; 2.605      ;
-; 2.278 ; master:master|state.Default    ; master:master|sda_en           ; clk          ; clk         ; 0.000        ; 0.592      ; 3.082      ;
-; 2.280 ; master:master|counter[0]       ; master:master|st_prev.Send_Add ; clk          ; clk         ; 0.000        ; 0.087      ; 2.579      ;
-; 2.284 ; master:master|state.Send_Add   ; master:master|sda_out          ; clk          ; clk         ; 0.000        ; 0.599      ; 3.095      ;
-; 2.293 ; master:master|sda_out          ; master:master|sda_out          ; clk          ; clk         ; 0.000        ; 0.102      ; 2.607      ;
-; 2.304 ; master:master|st_prev.Send_Reg ; master:master|state.Listen     ; clk          ; clk         ; 0.000        ; 0.593      ; 3.109      ;
-; 2.309 ; master:master|state.Start      ; master:master|state.Stretch    ; clk          ; clk         ; 0.000        ; 0.079      ; 2.600      ;
-; 2.314 ; master:master|state.Send_Add   ; master:master|scl              ; clk          ; clk         ; 0.000        ; 0.080      ; 2.606      ;
-; 2.345 ; master:master|counter[10]      ; master:master|sda_out          ; clk          ; clk         ; 0.000        ; 0.596      ; 3.153      ;
-; 2.364 ; master:master|state.Stretch    ; master:master|sda_en           ; clk          ; clk         ; 0.000        ; 0.593      ; 3.169      ;
-; 2.395 ; master:master|state.Send_Add   ; master:master|st_prev.Restart  ; clk          ; clk         ; 0.000        ; 0.080      ; 2.687      ;
-; 2.448 ; master:master|st_prev.Default  ; master:master|state.Start      ; clk          ; clk         ; 0.000        ; -0.399     ; 2.261      ;
-; 2.455 ; master:master|counter[0]       ; master:master|st_prev.Default  ; clk          ; clk         ; 0.000        ; 0.087      ; 2.754      ;
+; 0.741 ; master:master|counter[1]       ; master:master|counter[1]       ; clk          ; clk         ; 0.000        ; 0.100      ; 1.053      ;
+; 0.742 ; master:master|counter[3]       ; master:master|counter[3]       ; clk          ; clk         ; 0.000        ; 0.100      ; 1.054      ;
+; 0.744 ; master:master|counter[5]       ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.100      ; 1.056      ;
+; 0.767 ; master:master|counter[4]       ; master:master|counter[4]       ; clk          ; clk         ; 0.000        ; 0.100      ; 1.079      ;
+; 0.769 ; master:master|counter[6]       ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.100      ; 1.081      ;
+; 0.933 ; master:master|counter[2]       ; master:master|counter[2]       ; clk          ; clk         ; 0.000        ; 0.100      ; 1.245      ;
+; 1.033 ; master:master|state.Send_Reg   ; master:master|st_prev.Default  ; clk          ; clk         ; 0.000        ; 0.581      ; 1.826      ;
+; 1.096 ; master:master|counter[1]       ; master:master|counter[2]       ; clk          ; clk         ; 0.000        ; 0.100      ; 1.408      ;
+; 1.097 ; master:master|counter[3]       ; master:master|counter[4]       ; clk          ; clk         ; 0.000        ; 0.100      ; 1.409      ;
+; 1.098 ; master:master|counter[5]       ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.100      ; 1.410      ;
+; 1.128 ; master:master|counter[4]       ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.100      ; 1.440      ;
+; 1.137 ; master:master|counter[4]       ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.100      ; 1.449      ;
+; 1.157 ; master:master|state.Send_Reg   ; master:master|sda_en           ; clk          ; clk         ; 0.000        ; 0.080      ; 1.449      ;
+; 1.185 ; master:master|st_prev.Default  ; master:master|st_prev.Send_Add ; clk          ; clk         ; 0.000        ; 0.100      ; 1.497      ;
+; 1.194 ; master:master|state.Send_Reg   ; master:master|state.Send_Reg   ; clk          ; clk         ; 0.000        ; 0.080      ; 1.486      ;
+; 1.195 ; master:master|state.Send_Reg   ; master:master|st_prev.Restart  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.487      ;
+; 1.204 ; master:master|state.Default    ; master:master|state.Start      ; clk          ; clk         ; 0.000        ; 0.080      ; 1.496      ;
+; 1.207 ; master:master|counter[0]       ; master:master|counter[0]       ; clk          ; clk         ; 0.000        ; 0.100      ; 1.519      ;
+; 1.222 ; master:master|scl              ; master:master|scl              ; clk          ; clk         ; 0.000        ; 0.080      ; 1.514      ;
+; 1.227 ; master:master|counter[1]       ; master:master|counter[3]       ; clk          ; clk         ; 0.000        ; 0.100      ; 1.539      ;
+; 1.228 ; master:master|counter[3]       ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.100      ; 1.540      ;
+; 1.236 ; master:master|counter[1]       ; master:master|counter[4]       ; clk          ; clk         ; 0.000        ; 0.100      ; 1.548      ;
+; 1.237 ; master:master|counter[3]       ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.100      ; 1.549      ;
+; 1.249 ; master:master|state.Start      ; master:master|scl              ; clk          ; clk         ; 0.000        ; 0.078      ; 1.539      ;
+; 1.287 ; master:master|sda_en           ; master:master|sda_en           ; clk          ; clk         ; 0.000        ; 0.080      ; 1.579      ;
+; 1.294 ; master:master|counter[2]       ; master:master|counter[3]       ; clk          ; clk         ; 0.000        ; 0.100      ; 1.606      ;
+; 1.295 ; master:master|st_prev.Send_Add ; master:master|state.Send_Reg   ; clk          ; clk         ; 0.000        ; -0.401     ; 1.106      ;
+; 1.303 ; master:master|counter[2]       ; master:master|counter[4]       ; clk          ; clk         ; 0.000        ; 0.100      ; 1.615      ;
+; 1.364 ; master:master|sda_out          ; master:master|sda_out          ; clk          ; clk         ; 0.000        ; 0.100      ; 1.676      ;
+; 1.367 ; master:master|counter[1]       ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.100      ; 1.679      ;
+; 1.376 ; master:master|counter[1]       ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.100      ; 1.688      ;
+; 1.395 ; master:master|state.Send_Reg   ; master:master|st_prev.Send_Add ; clk          ; clk         ; 0.000        ; 0.581      ; 2.188      ;
+; 1.407 ; master:master|state.Start      ; master:master|state.Send_Add   ; clk          ; clk         ; 0.000        ; 0.572      ; 2.191      ;
+; 1.434 ; master:master|counter[2]       ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.100      ; 1.746      ;
+; 1.443 ; master:master|state.Default    ; master:master|state.Default    ; clk          ; clk         ; 0.000        ; 0.080      ; 1.735      ;
+; 1.443 ; master:master|counter[2]       ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.100      ; 1.755      ;
+; 1.471 ; master:master|state.Stretch    ; master:master|sda_out          ; clk          ; clk         ; 0.000        ; 0.101      ; 1.784      ;
+; 1.510 ; master:master|counter[0]       ; master:master|counter[1]       ; clk          ; clk         ; 0.000        ; 0.100      ; 1.822      ;
+; 1.512 ; master:master|state.Send_Reg   ; master:master|sda_out          ; clk          ; clk         ; 0.000        ; 0.572      ; 2.296      ;
+; 1.525 ; master:master|state.Send_Add   ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 0.000        ; -0.393     ; 1.344      ;
+; 1.562 ; master:master|state.Start      ; master:master|state.Stretch    ; clk          ; clk         ; 0.000        ; 0.572      ; 2.346      ;
+; 1.569 ; master:master|state.Default    ; master:master|state.Stretch    ; clk          ; clk         ; 0.000        ; 0.572      ; 2.353      ;
+; 1.576 ; master:master|counter[0]       ; master:master|counter[2]       ; clk          ; clk         ; 0.000        ; 0.100      ; 1.888      ;
+; 1.586 ; master:master|state.Send_Add   ; master:master|sda_out          ; clk          ; clk         ; 0.000        ; 0.101      ; 1.899      ;
+; 1.630 ; master:master|state.Send_Add   ; master:master|st_prev.Default  ; clk          ; clk         ; 0.000        ; 0.110      ; 1.952      ;
+; 1.648 ; master:master|state.Send_Add   ; master:master|st_prev.Send_Add ; clk          ; clk         ; 0.000        ; 0.110      ; 1.970      ;
+; 1.650 ; master:master|counter[0]       ; master:master|counter[3]       ; clk          ; clk         ; 0.000        ; 0.100      ; 1.962      ;
+; 1.716 ; master:master|counter[0]       ; master:master|counter[4]       ; clk          ; clk         ; 0.000        ; 0.100      ; 2.028      ;
+; 1.720 ; master:master|state.Stretch    ; master:master|state.Default    ; clk          ; clk         ; 0.000        ; -0.392     ; 1.540      ;
+; 1.782 ; master:master|state.Send_Reg   ; master:master|state.Stretch    ; clk          ; clk         ; 0.000        ; 0.571      ; 2.565      ;
+; 1.782 ; master:master|state.Send_Reg   ; master:master|state.Send_Add   ; clk          ; clk         ; 0.000        ; 0.571      ; 2.565      ;
+; 1.790 ; master:master|counter[0]       ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.100      ; 2.102      ;
+; 1.856 ; master:master|counter[0]       ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.100      ; 2.168      ;
+; 1.910 ; master:master|state.Default    ; master:master|counter[3]       ; clk          ; clk         ; 0.000        ; 0.573      ; 2.695      ;
+; 1.910 ; master:master|state.Default    ; master:master|counter[0]       ; clk          ; clk         ; 0.000        ; 0.573      ; 2.695      ;
+; 1.910 ; master:master|state.Default    ; master:master|counter[1]       ; clk          ; clk         ; 0.000        ; 0.573      ; 2.695      ;
+; 1.910 ; master:master|state.Default    ; master:master|counter[2]       ; clk          ; clk         ; 0.000        ; 0.573      ; 2.695      ;
+; 1.910 ; master:master|state.Default    ; master:master|counter[4]       ; clk          ; clk         ; 0.000        ; 0.573      ; 2.695      ;
+; 1.910 ; master:master|state.Default    ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.573      ; 2.695      ;
+; 1.910 ; master:master|state.Default    ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.573      ; 2.695      ;
+; 1.951 ; master:master|st_prev.Restart  ; master:master|sda_out          ; clk          ; clk         ; 0.000        ; 0.572      ; 2.735      ;
+; 1.953 ; master:master|st_prev.Restart  ; master:master|sda_en           ; clk          ; clk         ; 0.000        ; 0.080      ; 2.245      ;
+; 1.966 ; master:master|state.Start      ; master:master|st_prev.Send_Add ; clk          ; clk         ; 0.000        ; 0.582      ; 2.760      ;
+; 1.990 ; master:master|st_prev.Send_Reg ; master:master|state.Start      ; clk          ; clk         ; 0.000        ; 0.081      ; 2.283      ;
+; 2.023 ; master:master|st_prev.Send_Reg ; master:master|state.Default    ; clk          ; clk         ; 0.000        ; 0.081      ; 2.316      ;
+; 2.027 ; master:master|state.Default    ; master:master|sda_out          ; clk          ; clk         ; 0.000        ; 0.573      ; 2.812      ;
+; 2.031 ; master:master|state.Send_Add   ; master:master|state.Stretch    ; clk          ; clk         ; 0.000        ; 0.100      ; 2.343      ;
+; 2.054 ; master:master|state.Start      ; master:master|sda_out          ; clk          ; clk         ; 0.000        ; 0.573      ; 2.839      ;
+; 2.105 ; master:master|st_prev.Restart  ; master:master|state.Stretch    ; clk          ; clk         ; 0.000        ; 0.571      ; 2.888      ;
+; 2.105 ; master:master|st_prev.Restart  ; master:master|state.Send_Add   ; clk          ; clk         ; 0.000        ; 0.571      ; 2.888      ;
+; 2.133 ; master:master|state.Default    ; master:master|state.Send_Add   ; clk          ; clk         ; 0.000        ; 0.572      ; 2.917      ;
+; 2.165 ; master:master|st_prev.Send_Reg ; master:master|scl              ; clk          ; clk         ; 0.000        ; 0.079      ; 2.456      ;
+; 2.198 ; master:master|counter[0]       ; master:master|st_prev.Default  ; clk          ; clk         ; 0.000        ; 0.109      ; 2.519      ;
+; 2.250 ; master:master|state.Stretch    ; master:master|state.Send_Reg   ; clk          ; clk         ; 0.000        ; -0.391     ; 2.071      ;
+; 2.260 ; master:master|state.Start      ; master:master|st_prev.Restart  ; clk          ; clk         ; 0.000        ; 0.081      ; 2.553      ;
+; 2.274 ; master:master|state.Send_Add   ; master:master|sda_en           ; clk          ; clk         ; 0.000        ; -0.391     ; 2.095      ;
+; 2.290 ; master:master|st_prev.Send_Reg ; master:master|state.Stretch    ; clk          ; clk         ; 0.000        ; 0.573      ; 3.075      ;
+; 2.297 ; master:master|state.Send_Reg   ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 0.000        ; 0.078      ; 2.587      ;
+; 2.330 ; master:master|state.Stretch    ; master:master|st_prev.Send_Add ; clk          ; clk         ; 0.000        ; 0.110      ; 2.652      ;
+; 2.346 ; master:master|st_prev.Restart  ; master:master|state.Default    ; clk          ; clk         ; 0.000        ; 0.079      ; 2.637      ;
+; 2.406 ; master:master|state.Stretch    ; master:master|scl              ; clk          ; clk         ; 0.000        ; -0.394     ; 2.224      ;
+; 2.429 ; master:master|state.Start      ; master:master|counter[3]       ; clk          ; clk         ; 0.000        ; 0.573      ; 3.214      ;
+; 2.429 ; master:master|state.Start      ; master:master|counter[0]       ; clk          ; clk         ; 0.000        ; 0.573      ; 3.214      ;
+; 2.429 ; master:master|state.Start      ; master:master|counter[1]       ; clk          ; clk         ; 0.000        ; 0.573      ; 3.214      ;
+; 2.429 ; master:master|state.Start      ; master:master|counter[2]       ; clk          ; clk         ; 0.000        ; 0.573      ; 3.214      ;
+; 2.429 ; master:master|state.Start      ; master:master|counter[4]       ; clk          ; clk         ; 0.000        ; 0.573      ; 3.214      ;
+; 2.429 ; master:master|state.Start      ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.573      ; 3.214      ;
+; 2.429 ; master:master|state.Start      ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.573      ; 3.214      ;
+; 2.484 ; master:master|counter[0]       ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 0.000        ; -0.394     ; 2.302      ;
+; 2.496 ; master:master|state.Default    ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 0.000        ; 0.079      ; 2.787      ;
+; 2.511 ; master:master|counter[8]       ; master:master|counter[8]       ; clk          ; clk         ; 0.000        ; 0.080      ; 2.803      ;
+; 2.523 ; master:master|state.Stretch    ; master:master|state.Start      ; clk          ; clk         ; 0.000        ; -0.392     ; 2.343      ;
+; 2.551 ; master:master|counter[10]      ; master:master|counter[10]      ; clk          ; clk         ; 0.000        ; 0.080      ; 2.843      ;
 +-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -399,7 +399,7 @@ No synchronizer chains to report.
 +-----------+-----------------+------------+------+
 ; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
 +-----------+-----------------+------------+------+
-; 38.67 MHz ; 38.67 MHz       ; clk        ;      ;
+; 39.44 MHz ; 39.44 MHz       ; clk        ;      ;
 +-----------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -409,7 +409,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+---------+------------------+
 ; Clock ; Slack   ; End Point TNS    ;
 +-------+---------+------------------+
-; clk   ; -24.860 ; -590.438         ;
+; clk   ; -24.352 ; -575.643         ;
 +-------+---------+------------------+
 
 
@@ -418,7 +418,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+-------+-------------------+
 ; Clock ; Slack ; End Point TNS     ;
 +-------+-------+-------------------+
-; clk   ; 0.382 ; 0.000             ;
+; clk   ; 0.383 ; 0.000             ;
 +-------+-------+-------------------+
 
 
@@ -439,7 +439,7 @@ No paths to report.
 +-------+--------+---------------------------------+
 ; Clock ; Slack  ; End Point TNS                   ;
 +-------+--------+---------------------------------+
-; clk   ; -3.000 ; -43.149                         ;
+; clk   ; -3.000 ; -41.662                         ;
 +-------+--------+---------------------------------+
 
 
@@ -448,106 +448,106 @@ No paths to report.
 +---------+---------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack   ; From Node                 ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +---------+---------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
-; -24.860 ; master:master|counter[8]  ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.072     ; 25.790     ;
-; -24.860 ; master:master|counter[8]  ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.072     ; 25.790     ;
-; -24.860 ; master:master|counter[8]  ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.072     ; 25.790     ;
-; -24.860 ; master:master|counter[8]  ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.790     ;
-; -24.860 ; master:master|counter[8]  ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.790     ;
-; -24.860 ; master:master|counter[8]  ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.790     ;
-; -24.860 ; master:master|counter[8]  ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.790     ;
-; -24.772 ; master:master|counter[7]  ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.072     ; 25.702     ;
-; -24.772 ; master:master|counter[7]  ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.072     ; 25.702     ;
-; -24.772 ; master:master|counter[7]  ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.072     ; 25.702     ;
-; -24.772 ; master:master|counter[7]  ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.702     ;
-; -24.772 ; master:master|counter[7]  ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.702     ;
-; -24.772 ; master:master|counter[7]  ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.702     ;
-; -24.772 ; master:master|counter[7]  ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.702     ;
-; -24.738 ; master:master|counter[10] ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.072     ; 25.668     ;
-; -24.738 ; master:master|counter[10] ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.072     ; 25.668     ;
-; -24.738 ; master:master|counter[10] ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.072     ; 25.668     ;
-; -24.738 ; master:master|counter[10] ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.668     ;
-; -24.738 ; master:master|counter[10] ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.668     ;
-; -24.738 ; master:master|counter[10] ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.668     ;
-; -24.738 ; master:master|counter[10] ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.668     ;
-; -24.647 ; master:master|counter[9]  ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.072     ; 25.577     ;
-; -24.647 ; master:master|counter[9]  ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.072     ; 25.577     ;
-; -24.647 ; master:master|counter[9]  ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.072     ; 25.577     ;
-; -24.647 ; master:master|counter[9]  ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.577     ;
-; -24.647 ; master:master|counter[9]  ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.577     ;
-; -24.647 ; master:master|counter[9]  ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.577     ;
-; -24.647 ; master:master|counter[9]  ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.577     ;
-; -24.618 ; master:master|counter[12] ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.072     ; 25.548     ;
-; -24.618 ; master:master|counter[12] ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.072     ; 25.548     ;
-; -24.618 ; master:master|counter[12] ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.072     ; 25.548     ;
-; -24.618 ; master:master|counter[12] ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.548     ;
-; -24.618 ; master:master|counter[12] ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.548     ;
-; -24.618 ; master:master|counter[12] ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.548     ;
-; -24.618 ; master:master|counter[12] ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.548     ;
-; -24.530 ; master:master|counter[11] ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.072     ; 25.460     ;
-; -24.530 ; master:master|counter[11] ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.072     ; 25.460     ;
-; -24.530 ; master:master|counter[11] ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.072     ; 25.460     ;
-; -24.530 ; master:master|counter[11] ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.460     ;
-; -24.530 ; master:master|counter[11] ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.460     ;
-; -24.530 ; master:master|counter[11] ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.460     ;
-; -24.530 ; master:master|counter[11] ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.460     ;
-; -24.397 ; master:master|counter[13] ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.072     ; 25.327     ;
-; -24.397 ; master:master|counter[13] ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.072     ; 25.327     ;
-; -24.397 ; master:master|counter[13] ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.072     ; 25.327     ;
-; -24.397 ; master:master|counter[13] ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.327     ;
-; -24.397 ; master:master|counter[13] ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.327     ;
-; -24.397 ; master:master|counter[13] ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.327     ;
-; -24.397 ; master:master|counter[13] ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.327     ;
-; -24.244 ; master:master|counter[8]  ; master:master|sda_en           ; clk          ; clk         ; 1.000        ; 0.386      ; 25.632     ;
-; -24.156 ; master:master|counter[7]  ; master:master|sda_en           ; clk          ; clk         ; 1.000        ; 0.386      ; 25.544     ;
-; -24.122 ; master:master|counter[10] ; master:master|sda_en           ; clk          ; clk         ; 1.000        ; 0.386      ; 25.510     ;
-; -24.116 ; master:master|counter[8]  ; master:master|st_prev.Send_Add ; clk          ; clk         ; 1.000        ; 0.378      ; 25.496     ;
-; -24.113 ; master:master|counter[8]  ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 1.000        ; -0.077     ; 25.038     ;
-; -24.109 ; master:master|counter[6]  ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.551     ; 24.560     ;
-; -24.109 ; master:master|counter[6]  ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.551     ; 24.560     ;
-; -24.109 ; master:master|counter[6]  ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.551     ; 24.560     ;
-; -24.109 ; master:master|counter[6]  ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.551     ; 24.560     ;
-; -24.109 ; master:master|counter[6]  ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.551     ; 24.560     ;
-; -24.109 ; master:master|counter[6]  ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.551     ; 24.560     ;
-; -24.109 ; master:master|counter[6]  ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.551     ; 24.560     ;
-; -24.031 ; master:master|counter[9]  ; master:master|sda_en           ; clk          ; clk         ; 1.000        ; 0.386      ; 25.419     ;
-; -24.028 ; master:master|counter[7]  ; master:master|st_prev.Send_Add ; clk          ; clk         ; 1.000        ; 0.378      ; 25.408     ;
-; -24.025 ; master:master|counter[7]  ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 1.000        ; -0.077     ; 24.950     ;
-; -24.002 ; master:master|counter[12] ; master:master|sda_en           ; clk          ; clk         ; 1.000        ; 0.386      ; 25.390     ;
-; -23.994 ; master:master|counter[10] ; master:master|st_prev.Send_Add ; clk          ; clk         ; 1.000        ; 0.378      ; 25.374     ;
-; -23.991 ; master:master|counter[10] ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 1.000        ; -0.077     ; 24.916     ;
-; -23.914 ; master:master|counter[11] ; master:master|sda_en           ; clk          ; clk         ; 1.000        ; 0.386      ; 25.302     ;
-; -23.903 ; master:master|counter[9]  ; master:master|st_prev.Send_Add ; clk          ; clk         ; 1.000        ; 0.378      ; 25.283     ;
-; -23.900 ; master:master|counter[9]  ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 1.000        ; -0.077     ; 24.825     ;
-; -23.874 ; master:master|counter[12] ; master:master|st_prev.Send_Add ; clk          ; clk         ; 1.000        ; 0.378      ; 25.254     ;
-; -23.871 ; master:master|counter[12] ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 1.000        ; -0.077     ; 24.796     ;
-; -23.786 ; master:master|counter[11] ; master:master|st_prev.Send_Add ; clk          ; clk         ; 1.000        ; 0.378      ; 25.166     ;
-; -23.783 ; master:master|counter[11] ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 1.000        ; -0.077     ; 24.708     ;
-; -23.781 ; master:master|counter[13] ; master:master|sda_en           ; clk          ; clk         ; 1.000        ; 0.386      ; 25.169     ;
-; -23.770 ; master:master|counter[8]  ; master:master|counter[0]       ; clk          ; clk         ; 1.000        ; 0.387      ; 25.159     ;
-; -23.770 ; master:master|counter[8]  ; master:master|counter[2]       ; clk          ; clk         ; 1.000        ; 0.387      ; 25.159     ;
-; -23.770 ; master:master|counter[8]  ; master:master|counter[1]       ; clk          ; clk         ; 1.000        ; 0.387      ; 25.159     ;
-; -23.770 ; master:master|counter[8]  ; master:master|counter[4]       ; clk          ; clk         ; 1.000        ; 0.387      ; 25.159     ;
-; -23.770 ; master:master|counter[8]  ; master:master|counter[5]       ; clk          ; clk         ; 1.000        ; 0.387      ; 25.159     ;
-; -23.770 ; master:master|counter[8]  ; master:master|counter[6]       ; clk          ; clk         ; 1.000        ; 0.387      ; 25.159     ;
-; -23.770 ; master:master|counter[8]  ; master:master|counter[3]       ; clk          ; clk         ; 1.000        ; 0.387      ; 25.159     ;
-; -23.739 ; master:master|counter[8]  ; master:master|st_prev.Default  ; clk          ; clk         ; 1.000        ; 0.378      ; 25.119     ;
-; -23.738 ; master:master|counter[8]  ; master:master|state.Stretch    ; clk          ; clk         ; 1.000        ; -0.077     ; 24.663     ;
-; -23.736 ; master:master|counter[8]  ; master:master|state.Send_Add   ; clk          ; clk         ; 1.000        ; -0.077     ; 24.661     ;
-; -23.713 ; master:master|counter[8]  ; master:master|st_prev.Restart  ; clk          ; clk         ; 1.000        ; -0.077     ; 24.638     ;
-; -23.704 ; master:master|counter[8]  ; master:master|sda_out          ; clk          ; clk         ; 1.000        ; 0.393      ; 25.099     ;
-; -23.682 ; master:master|counter[7]  ; master:master|counter[0]       ; clk          ; clk         ; 1.000        ; 0.387      ; 25.071     ;
-; -23.682 ; master:master|counter[7]  ; master:master|counter[2]       ; clk          ; clk         ; 1.000        ; 0.387      ; 25.071     ;
-; -23.682 ; master:master|counter[7]  ; master:master|counter[1]       ; clk          ; clk         ; 1.000        ; 0.387      ; 25.071     ;
-; -23.682 ; master:master|counter[7]  ; master:master|counter[4]       ; clk          ; clk         ; 1.000        ; 0.387      ; 25.071     ;
-; -23.682 ; master:master|counter[7]  ; master:master|counter[5]       ; clk          ; clk         ; 1.000        ; 0.387      ; 25.071     ;
-; -23.682 ; master:master|counter[7]  ; master:master|counter[6]       ; clk          ; clk         ; 1.000        ; 0.387      ; 25.071     ;
-; -23.682 ; master:master|counter[7]  ; master:master|counter[3]       ; clk          ; clk         ; 1.000        ; 0.387      ; 25.071     ;
-; -23.653 ; master:master|counter[13] ; master:master|st_prev.Send_Add ; clk          ; clk         ; 1.000        ; 0.378      ; 25.033     ;
-; -23.651 ; master:master|counter[7]  ; master:master|st_prev.Default  ; clk          ; clk         ; 1.000        ; 0.378      ; 25.031     ;
-; -23.650 ; master:master|counter[13] ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 1.000        ; -0.077     ; 24.575     ;
-; -23.650 ; master:master|counter[7]  ; master:master|state.Stretch    ; clk          ; clk         ; 1.000        ; -0.077     ; 24.575     ;
-; -23.648 ; master:master|counter[10] ; master:master|counter[0]       ; clk          ; clk         ; 1.000        ; 0.387      ; 25.037     ;
-; -23.648 ; master:master|counter[10] ; master:master|counter[2]       ; clk          ; clk         ; 1.000        ; 0.387      ; 25.037     ;
+; -24.352 ; master:master|counter[7]  ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.282     ;
+; -24.352 ; master:master|counter[7]  ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.072     ; 25.282     ;
+; -24.352 ; master:master|counter[7]  ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.072     ; 25.282     ;
+; -24.352 ; master:master|counter[7]  ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.072     ; 25.282     ;
+; -24.352 ; master:master|counter[7]  ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.282     ;
+; -24.352 ; master:master|counter[7]  ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.282     ;
+; -24.352 ; master:master|counter[7]  ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.282     ;
+; -24.288 ; master:master|counter[8]  ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.218     ;
+; -24.288 ; master:master|counter[8]  ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.072     ; 25.218     ;
+; -24.288 ; master:master|counter[8]  ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.072     ; 25.218     ;
+; -24.288 ; master:master|counter[8]  ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.072     ; 25.218     ;
+; -24.288 ; master:master|counter[8]  ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.218     ;
+; -24.288 ; master:master|counter[8]  ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.218     ;
+; -24.288 ; master:master|counter[8]  ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.218     ;
+; -24.235 ; master:master|counter[9]  ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.165     ;
+; -24.235 ; master:master|counter[9]  ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.072     ; 25.165     ;
+; -24.235 ; master:master|counter[9]  ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.072     ; 25.165     ;
+; -24.235 ; master:master|counter[9]  ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.072     ; 25.165     ;
+; -24.235 ; master:master|counter[9]  ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.165     ;
+; -24.235 ; master:master|counter[9]  ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.165     ;
+; -24.235 ; master:master|counter[9]  ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.165     ;
+; -24.174 ; master:master|counter[10] ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.104     ;
+; -24.174 ; master:master|counter[10] ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.072     ; 25.104     ;
+; -24.174 ; master:master|counter[10] ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.072     ; 25.104     ;
+; -24.174 ; master:master|counter[10] ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.072     ; 25.104     ;
+; -24.174 ; master:master|counter[10] ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.104     ;
+; -24.174 ; master:master|counter[10] ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.104     ;
+; -24.174 ; master:master|counter[10] ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.104     ;
+; -24.098 ; master:master|counter[11] ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.028     ;
+; -24.098 ; master:master|counter[11] ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.072     ; 25.028     ;
+; -24.098 ; master:master|counter[11] ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.072     ; 25.028     ;
+; -24.098 ; master:master|counter[11] ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.072     ; 25.028     ;
+; -24.098 ; master:master|counter[11] ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.028     ;
+; -24.098 ; master:master|counter[11] ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.028     ;
+; -24.098 ; master:master|counter[11] ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.072     ; 25.028     ;
+; -24.048 ; master:master|counter[12] ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.072     ; 24.978     ;
+; -24.048 ; master:master|counter[12] ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.072     ; 24.978     ;
+; -24.048 ; master:master|counter[12] ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.072     ; 24.978     ;
+; -24.048 ; master:master|counter[12] ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.072     ; 24.978     ;
+; -24.048 ; master:master|counter[12] ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.072     ; 24.978     ;
+; -24.048 ; master:master|counter[12] ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.072     ; 24.978     ;
+; -24.048 ; master:master|counter[12] ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.072     ; 24.978     ;
+; -23.973 ; master:master|counter[13] ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.072     ; 24.903     ;
+; -23.973 ; master:master|counter[13] ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.072     ; 24.903     ;
+; -23.973 ; master:master|counter[13] ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.072     ; 24.903     ;
+; -23.973 ; master:master|counter[13] ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.072     ; 24.903     ;
+; -23.973 ; master:master|counter[13] ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.072     ; 24.903     ;
+; -23.973 ; master:master|counter[13] ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.072     ; 24.903     ;
+; -23.973 ; master:master|counter[13] ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.072     ; 24.903     ;
+; -23.729 ; master:master|counter[7]  ; master:master|sda_en           ; clk          ; clk         ; 1.000        ; -0.065     ; 24.666     ;
+; -23.665 ; master:master|counter[8]  ; master:master|sda_en           ; clk          ; clk         ; 1.000        ; -0.065     ; 24.602     ;
+; -23.612 ; master:master|counter[9]  ; master:master|sda_en           ; clk          ; clk         ; 1.000        ; -0.065     ; 24.549     ;
+; -23.551 ; master:master|counter[10] ; master:master|sda_en           ; clk          ; clk         ; 1.000        ; -0.065     ; 24.488     ;
+; -23.517 ; master:master|counter[7]  ; master:master|counter[3]       ; clk          ; clk         ; 1.000        ; 0.380      ; 24.899     ;
+; -23.517 ; master:master|counter[7]  ; master:master|counter[0]       ; clk          ; clk         ; 1.000        ; 0.380      ; 24.899     ;
+; -23.517 ; master:master|counter[7]  ; master:master|counter[1]       ; clk          ; clk         ; 1.000        ; 0.380      ; 24.899     ;
+; -23.517 ; master:master|counter[7]  ; master:master|counter[2]       ; clk          ; clk         ; 1.000        ; 0.380      ; 24.899     ;
+; -23.517 ; master:master|counter[7]  ; master:master|counter[4]       ; clk          ; clk         ; 1.000        ; 0.380      ; 24.899     ;
+; -23.517 ; master:master|counter[7]  ; master:master|counter[5]       ; clk          ; clk         ; 1.000        ; 0.380      ; 24.899     ;
+; -23.517 ; master:master|counter[7]  ; master:master|counter[6]       ; clk          ; clk         ; 1.000        ; 0.380      ; 24.899     ;
+; -23.475 ; master:master|counter[11] ; master:master|sda_en           ; clk          ; clk         ; 1.000        ; -0.065     ; 24.412     ;
+; -23.453 ; master:master|counter[8]  ; master:master|counter[3]       ; clk          ; clk         ; 1.000        ; 0.380      ; 24.835     ;
+; -23.453 ; master:master|counter[8]  ; master:master|counter[0]       ; clk          ; clk         ; 1.000        ; 0.380      ; 24.835     ;
+; -23.453 ; master:master|counter[8]  ; master:master|counter[1]       ; clk          ; clk         ; 1.000        ; 0.380      ; 24.835     ;
+; -23.453 ; master:master|counter[8]  ; master:master|counter[2]       ; clk          ; clk         ; 1.000        ; 0.380      ; 24.835     ;
+; -23.453 ; master:master|counter[8]  ; master:master|counter[4]       ; clk          ; clk         ; 1.000        ; 0.380      ; 24.835     ;
+; -23.453 ; master:master|counter[8]  ; master:master|counter[5]       ; clk          ; clk         ; 1.000        ; 0.380      ; 24.835     ;
+; -23.453 ; master:master|counter[8]  ; master:master|counter[6]       ; clk          ; clk         ; 1.000        ; 0.380      ; 24.835     ;
+; -23.432 ; master:master|counter[6]  ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.542     ; 23.892     ;
+; -23.432 ; master:master|counter[6]  ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.542     ; 23.892     ;
+; -23.432 ; master:master|counter[6]  ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.542     ; 23.892     ;
+; -23.432 ; master:master|counter[6]  ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.542     ; 23.892     ;
+; -23.432 ; master:master|counter[6]  ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.542     ; 23.892     ;
+; -23.432 ; master:master|counter[6]  ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.542     ; 23.892     ;
+; -23.432 ; master:master|counter[6]  ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.542     ; 23.892     ;
+; -23.425 ; master:master|counter[12] ; master:master|sda_en           ; clk          ; clk         ; 1.000        ; -0.065     ; 24.362     ;
+; -23.400 ; master:master|counter[9]  ; master:master|counter[3]       ; clk          ; clk         ; 1.000        ; 0.380      ; 24.782     ;
+; -23.400 ; master:master|counter[9]  ; master:master|counter[0]       ; clk          ; clk         ; 1.000        ; 0.380      ; 24.782     ;
+; -23.400 ; master:master|counter[9]  ; master:master|counter[1]       ; clk          ; clk         ; 1.000        ; 0.380      ; 24.782     ;
+; -23.400 ; master:master|counter[9]  ; master:master|counter[2]       ; clk          ; clk         ; 1.000        ; 0.380      ; 24.782     ;
+; -23.400 ; master:master|counter[9]  ; master:master|counter[4]       ; clk          ; clk         ; 1.000        ; 0.380      ; 24.782     ;
+; -23.400 ; master:master|counter[9]  ; master:master|counter[5]       ; clk          ; clk         ; 1.000        ; 0.380      ; 24.782     ;
+; -23.400 ; master:master|counter[9]  ; master:master|counter[6]       ; clk          ; clk         ; 1.000        ; 0.380      ; 24.782     ;
+; -23.350 ; master:master|counter[13] ; master:master|sda_en           ; clk          ; clk         ; 1.000        ; -0.065     ; 24.287     ;
+; -23.339 ; master:master|counter[10] ; master:master|counter[3]       ; clk          ; clk         ; 1.000        ; 0.380      ; 24.721     ;
+; -23.339 ; master:master|counter[10] ; master:master|counter[0]       ; clk          ; clk         ; 1.000        ; 0.380      ; 24.721     ;
+; -23.339 ; master:master|counter[10] ; master:master|counter[1]       ; clk          ; clk         ; 1.000        ; 0.380      ; 24.721     ;
+; -23.339 ; master:master|counter[10] ; master:master|counter[2]       ; clk          ; clk         ; 1.000        ; 0.380      ; 24.721     ;
+; -23.339 ; master:master|counter[10] ; master:master|counter[4]       ; clk          ; clk         ; 1.000        ; 0.380      ; 24.721     ;
+; -23.339 ; master:master|counter[10] ; master:master|counter[5]       ; clk          ; clk         ; 1.000        ; 0.380      ; 24.721     ;
+; -23.339 ; master:master|counter[10] ; master:master|counter[6]       ; clk          ; clk         ; 1.000        ; 0.380      ; 24.721     ;
+; -23.290 ; master:master|counter[7]  ; master:master|st_prev.Send_Add ; clk          ; clk         ; 1.000        ; 0.387      ; 24.679     ;
+; -23.263 ; master:master|counter[11] ; master:master|counter[3]       ; clk          ; clk         ; 1.000        ; 0.380      ; 24.645     ;
+; -23.263 ; master:master|counter[11] ; master:master|counter[0]       ; clk          ; clk         ; 1.000        ; 0.380      ; 24.645     ;
+; -23.263 ; master:master|counter[11] ; master:master|counter[1]       ; clk          ; clk         ; 1.000        ; 0.380      ; 24.645     ;
+; -23.263 ; master:master|counter[11] ; master:master|counter[2]       ; clk          ; clk         ; 1.000        ; 0.380      ; 24.645     ;
+; -23.263 ; master:master|counter[11] ; master:master|counter[4]       ; clk          ; clk         ; 1.000        ; 0.380      ; 24.645     ;
+; -23.263 ; master:master|counter[11] ; master:master|counter[5]       ; clk          ; clk         ; 1.000        ; 0.380      ; 24.645     ;
+; -23.263 ; master:master|counter[11] ; master:master|counter[6]       ; clk          ; clk         ; 1.000        ; 0.380      ; 24.645     ;
+; -23.226 ; master:master|counter[8]  ; master:master|st_prev.Send_Add ; clk          ; clk         ; 1.000        ; 0.387      ; 24.615     ;
 +---------+---------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -556,106 +556,106 @@ No paths to report.
 +-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                      ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.382 ; master:master|state.Listen     ; master:master|state.Listen     ; clk          ; clk         ; 0.000        ; 0.092      ; 0.669      ;
+; 0.383 ; master:master|state.Stretch    ; master:master|state.Stretch    ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
+; 0.383 ; master:master|state.Send_Add   ; master:master|state.Send_Add   ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
 ; 0.383 ; master:master|st_prev.Send_Add ; master:master|st_prev.Send_Add ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
 ; 0.383 ; master:master|st_prev.Default  ; master:master|st_prev.Default  ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
-; 0.401 ; master:master|state.Start      ; master:master|state.Start      ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
-; 0.401 ; master:master|state.Default    ; master:master|state.Default    ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.402 ; master:master|st_prev.Send_Reg ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
 ; 0.402 ; master:master|st_prev.Restart  ; master:master|st_prev.Restart  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
-; 0.402 ; master:master|state.Stretch    ; master:master|state.Stretch    ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
-; 0.402 ; master:master|state.Send_Add   ; master:master|state.Send_Add   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
-; 0.683 ; master:master|state.Start      ; master:master|st_prev.Default  ; clk          ; clk         ; 0.000        ; 0.544      ; 1.422      ;
-; 0.685 ; master:master|counter[5]       ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.092      ; 0.972      ;
-; 0.691 ; master:master|counter[4]       ; master:master|counter[4]       ; clk          ; clk         ; 0.000        ; 0.092      ; 0.978      ;
-; 0.707 ; master:master|counter[3]       ; master:master|counter[3]       ; clk          ; clk         ; 0.000        ; 0.092      ; 0.994      ;
-; 0.709 ; master:master|counter[6]       ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.092      ; 0.996      ;
-; 0.712 ; master:master|counter[2]       ; master:master|counter[2]       ; clk          ; clk         ; 0.000        ; 0.092      ; 0.999      ;
-; 0.735 ; master:master|counter[0]       ; master:master|counter[0]       ; clk          ; clk         ; 0.000        ; 0.092      ; 1.022      ;
-; 0.851 ; master:master|counter[1]       ; master:master|counter[1]       ; clk          ; clk         ; 0.000        ; 0.092      ; 1.138      ;
-; 0.933 ; master:master|state.Start      ; master:master|st_prev.Send_Add ; clk          ; clk         ; 0.000        ; 0.544      ; 1.672      ;
-; 0.997 ; master:master|st_prev.Send_Add ; master:master|state.Send_Reg   ; clk          ; clk         ; 0.000        ; 0.091      ; 1.283      ;
-; 1.007 ; master:master|counter[5]       ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.092      ; 1.294      ;
-; 1.008 ; master:master|counter[4]       ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.092      ; 1.295      ;
-; 1.025 ; master:master|counter[4]       ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.092      ; 1.312      ;
-; 1.029 ; master:master|counter[3]       ; master:master|counter[4]       ; clk          ; clk         ; 0.000        ; 0.092      ; 1.316      ;
-; 1.029 ; master:master|counter[0]       ; master:master|counter[1]       ; clk          ; clk         ; 0.000        ; 0.092      ; 1.316      ;
-; 1.030 ; master:master|counter[2]       ; master:master|counter[3]       ; clk          ; clk         ; 0.000        ; 0.092      ; 1.317      ;
-; 1.045 ; master:master|counter[0]       ; master:master|counter[2]       ; clk          ; clk         ; 0.000        ; 0.092      ; 1.332      ;
-; 1.046 ; master:master|counter[2]       ; master:master|counter[4]       ; clk          ; clk         ; 0.000        ; 0.092      ; 1.333      ;
-; 1.056 ; master:master|state.Send_Reg   ; master:master|sda_en           ; clk          ; clk         ; 0.000        ; 0.100      ; 1.351      ;
-; 1.083 ; master:master|scl              ; master:master|scl              ; clk          ; clk         ; 0.000        ; 0.072      ; 1.350      ;
-; 1.097 ; master:master|st_prev.Send_Reg ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 0.000        ; 0.072      ; 1.364      ;
-; 1.099 ; master:master|state.Send_Reg   ; master:master|state.Send_Reg   ; clk          ; clk         ; 0.000        ; 0.091      ; 1.385      ;
-; 1.122 ; master:master|state.Stretch    ; master:master|state.Send_Reg   ; clk          ; clk         ; 0.000        ; 0.546      ; 1.863      ;
-; 1.122 ; master:master|counter[3]       ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.092      ; 1.409      ;
-; 1.147 ; master:master|st_prev.Restart  ; master:master|st_prev.Send_Add ; clk          ; clk         ; 0.000        ; 0.546      ; 1.888      ;
-; 1.151 ; master:master|counter[3]       ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.092      ; 1.438      ;
-; 1.151 ; master:master|counter[0]       ; master:master|counter[3]       ; clk          ; clk         ; 0.000        ; 0.092      ; 1.438      ;
-; 1.152 ; master:master|counter[2]       ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.092      ; 1.439      ;
-; 1.162 ; master:master|state.Stretch    ; master:master|state.Listen     ; clk          ; clk         ; 0.000        ; 0.555      ; 1.912      ;
-; 1.167 ; master:master|counter[0]       ; master:master|counter[4]       ; clk          ; clk         ; 0.000        ; 0.092      ; 1.454      ;
-; 1.168 ; master:master|counter[2]       ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.092      ; 1.455      ;
-; 1.213 ; master:master|counter[1]       ; master:master|counter[2]       ; clk          ; clk         ; 0.000        ; 0.092      ; 1.500      ;
-; 1.221 ; master:master|sda_en           ; master:master|sda_en           ; clk          ; clk         ; 0.000        ; 0.092      ; 1.508      ;
-; 1.238 ; master:master|counter[1]       ; master:master|counter[3]       ; clk          ; clk         ; 0.000        ; 0.092      ; 1.525      ;
-; 1.248 ; master:master|state.Send_Reg   ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 0.000        ; -0.383     ; 1.060      ;
-; 1.273 ; master:master|counter[0]       ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.092      ; 1.560      ;
-; 1.283 ; master:master|st_prev.Send_Reg ; master:master|state.Start      ; clk          ; clk         ; 0.000        ; 0.075      ; 1.553      ;
-; 1.289 ; master:master|counter[0]       ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.092      ; 1.576      ;
-; 1.335 ; master:master|counter[1]       ; master:master|counter[4]       ; clk          ; clk         ; 0.000        ; 0.092      ; 1.622      ;
-; 1.347 ; master:master|state.Default    ; master:master|scl              ; clk          ; clk         ; 0.000        ; 0.070      ; 1.612      ;
-; 1.348 ; master:master|st_prev.Default  ; master:master|st_prev.Send_Add ; clk          ; clk         ; 0.000        ; 0.091      ; 1.634      ;
-; 1.360 ; master:master|counter[1]       ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.092      ; 1.647      ;
-; 1.403 ; master:master|state.Default    ; master:master|state.Start      ; clk          ; clk         ; 0.000        ; 0.073      ; 1.671      ;
-; 1.425 ; master:master|state.Send_Reg   ; master:master|st_prev.Default  ; clk          ; clk         ; 0.000        ; 0.091      ; 1.711      ;
-; 1.440 ; master:master|state.Listen     ; master:master|sda_out          ; clk          ; clk         ; 0.000        ; 0.099      ; 1.734      ;
-; 1.457 ; master:master|counter[1]       ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.092      ; 1.744      ;
-; 1.469 ; master:master|state.Send_Add   ; master:master|state.Stretch    ; clk          ; clk         ; 0.000        ; 0.072      ; 1.736      ;
-; 1.480 ; master:master|state.Start      ; master:master|st_prev.Restart  ; clk          ; clk         ; 0.000        ; 0.070      ; 1.745      ;
-; 1.531 ; master:master|state.Send_Add   ; master:master|sda_en           ; clk          ; clk         ; 0.000        ; 0.555      ; 2.281      ;
-; 1.559 ; master:master|state.Start      ; master:master|scl              ; clk          ; clk         ; 0.000        ; 0.070      ; 1.824      ;
-; 1.562 ; master:master|state.Default    ; master:master|st_prev.Restart  ; clk          ; clk         ; 0.000        ; 0.070      ; 1.827      ;
-; 1.569 ; master:master|state.Send_Reg   ; master:master|st_prev.Restart  ; clk          ; clk         ; 0.000        ; -0.383     ; 1.381      ;
-; 1.605 ; master:master|st_prev.Send_Reg ; master:master|st_prev.Send_Add ; clk          ; clk         ; 0.000        ; 0.546      ; 2.346      ;
-; 1.648 ; master:master|state.Send_Add   ; master:master|st_prev.Default  ; clk          ; clk         ; 0.000        ; 0.546      ; 2.389      ;
-; 1.679 ; master:master|state.Send_Add   ; master:master|st_prev.Send_Add ; clk          ; clk         ; 0.000        ; 0.546      ; 2.420      ;
-; 1.710 ; master:master|state.Listen     ; master:master|sda_en           ; clk          ; clk         ; 0.000        ; 0.092      ; 1.997      ;
-; 1.781 ; master:master|state.Send_Reg   ; master:master|sda_out          ; clk          ; clk         ; 0.000        ; 0.107      ; 2.083      ;
-; 1.794 ; master:master|state.Send_Reg   ; master:master|st_prev.Send_Add ; clk          ; clk         ; 0.000        ; 0.091      ; 2.080      ;
-; 1.796 ; master:master|counter[0]       ; master:master|sda_out          ; clk          ; clk         ; 0.000        ; 0.098      ; 2.089      ;
-; 1.800 ; master:master|st_prev.Default  ; master:master|st_prev.Restart  ; clk          ; clk         ; 0.000        ; -0.383     ; 1.612      ;
-; 1.824 ; master:master|st_prev.Restart  ; master:master|sda_en           ; clk          ; clk         ; 0.000        ; 0.555      ; 2.574      ;
-; 1.841 ; master:master|state.Start      ; master:master|state.Send_Add   ; clk          ; clk         ; 0.000        ; 0.070      ; 2.106      ;
-; 1.842 ; master:master|state.Default    ; master:master|counter[0]       ; clk          ; clk         ; 0.000        ; 0.554      ; 2.591      ;
-; 1.842 ; master:master|state.Default    ; master:master|counter[2]       ; clk          ; clk         ; 0.000        ; 0.554      ; 2.591      ;
-; 1.842 ; master:master|state.Default    ; master:master|counter[1]       ; clk          ; clk         ; 0.000        ; 0.554      ; 2.591      ;
-; 1.842 ; master:master|state.Default    ; master:master|counter[4]       ; clk          ; clk         ; 0.000        ; 0.554      ; 2.591      ;
-; 1.842 ; master:master|state.Default    ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.554      ; 2.591      ;
-; 1.842 ; master:master|state.Default    ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.554      ; 2.591      ;
-; 1.842 ; master:master|state.Default    ; master:master|counter[3]       ; clk          ; clk         ; 0.000        ; 0.554      ; 2.591      ;
-; 1.844 ; master:master|state.Start      ; master:master|counter[0]       ; clk          ; clk         ; 0.000        ; 0.554      ; 2.593      ;
-; 1.844 ; master:master|state.Start      ; master:master|counter[2]       ; clk          ; clk         ; 0.000        ; 0.554      ; 2.593      ;
-; 1.844 ; master:master|state.Start      ; master:master|counter[1]       ; clk          ; clk         ; 0.000        ; 0.554      ; 2.593      ;
-; 1.844 ; master:master|state.Start      ; master:master|counter[4]       ; clk          ; clk         ; 0.000        ; 0.554      ; 2.593      ;
-; 1.844 ; master:master|state.Start      ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.554      ; 2.593      ;
-; 1.844 ; master:master|state.Start      ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.554      ; 2.593      ;
-; 1.844 ; master:master|state.Start      ; master:master|counter[3]       ; clk          ; clk         ; 0.000        ; 0.554      ; 2.593      ;
-; 2.016 ; master:master|state.Send_Add   ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 0.000        ; 0.072      ; 2.283      ;
-; 2.020 ; master:master|state.Start      ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 0.000        ; 0.070      ; 2.285      ;
-; 2.025 ; master:master|st_prev.Restart  ; master:master|sda_out          ; clk          ; clk         ; 0.000        ; 0.562      ; 2.782      ;
-; 2.032 ; master:master|state.Send_Add   ; master:master|sda_out          ; clk          ; clk         ; 0.000        ; 0.562      ; 2.789      ;
-; 2.070 ; master:master|counter[0]       ; master:master|st_prev.Send_Add ; clk          ; clk         ; 0.000        ; 0.082      ; 2.347      ;
-; 2.081 ; master:master|state.Default    ; master:master|sda_en           ; clk          ; clk         ; 0.000        ; 0.553      ; 2.829      ;
-; 2.082 ; master:master|st_prev.Default  ; master:master|sda_out          ; clk          ; clk         ; 0.000        ; 0.107      ; 2.384      ;
-; 2.113 ; master:master|sda_out          ; master:master|sda_out          ; clk          ; clk         ; 0.000        ; 0.092      ; 2.400      ;
-; 2.121 ; master:master|st_prev.Send_Reg ; master:master|state.Listen     ; clk          ; clk         ; 0.000        ; 0.555      ; 2.871      ;
-; 2.123 ; master:master|state.Stretch    ; master:master|sda_en           ; clk          ; clk         ; 0.000        ; 0.555      ; 2.873      ;
-; 2.129 ; master:master|state.Start      ; master:master|state.Stretch    ; clk          ; clk         ; 0.000        ; 0.070      ; 2.394      ;
-; 2.135 ; master:master|counter[10]      ; master:master|sda_out          ; clk          ; clk         ; 0.000        ; 0.557      ; 2.887      ;
-; 2.141 ; master:master|state.Send_Add   ; master:master|scl              ; clk          ; clk         ; 0.000        ; 0.072      ; 2.408      ;
-; 2.175 ; master:master|state.Start      ; master:master|sda_out          ; clk          ; clk         ; 0.000        ; 0.560      ; 2.930      ;
-; 2.215 ; master:master|state.Stretch    ; master:master|state.Start      ; clk          ; clk         ; 0.000        ; 0.075      ; 2.485      ;
-; 2.221 ; master:master|counter[7]       ; master:master|counter[7]       ; clk          ; clk         ; 0.000        ; 0.072      ; 2.488      ;
+; 0.402 ; master:master|state.Start      ; master:master|state.Start      ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.687 ; master:master|counter[3]       ; master:master|counter[3]       ; clk          ; clk         ; 0.000        ; 0.090      ; 0.972      ;
+; 0.687 ; master:master|counter[1]       ; master:master|counter[1]       ; clk          ; clk         ; 0.000        ; 0.090      ; 0.972      ;
+; 0.690 ; master:master|counter[5]       ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.090      ; 0.975      ;
+; 0.711 ; master:master|counter[4]       ; master:master|counter[4]       ; clk          ; clk         ; 0.000        ; 0.090      ; 0.996      ;
+; 0.715 ; master:master|counter[6]       ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.090      ; 1.000      ;
+; 0.856 ; master:master|counter[2]       ; master:master|counter[2]       ; clk          ; clk         ; 0.000        ; 0.090      ; 1.141      ;
+; 0.959 ; master:master|state.Send_Reg   ; master:master|st_prev.Default  ; clk          ; clk         ; 0.000        ; 0.543      ; 1.697      ;
+; 1.009 ; master:master|counter[3]       ; master:master|counter[4]       ; clk          ; clk         ; 0.000        ; 0.090      ; 1.294      ;
+; 1.009 ; master:master|counter[1]       ; master:master|counter[2]       ; clk          ; clk         ; 0.000        ; 0.090      ; 1.294      ;
+; 1.014 ; master:master|counter[5]       ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.090      ; 1.299      ;
+; 1.030 ; master:master|counter[4]       ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.090      ; 1.315      ;
+; 1.045 ; master:master|counter[4]       ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.090      ; 1.330      ;
+; 1.071 ; master:master|counter[0]       ; master:master|counter[0]       ; clk          ; clk         ; 0.000        ; 0.090      ; 1.356      ;
+; 1.077 ; master:master|state.Send_Reg   ; master:master|sda_en           ; clk          ; clk         ; 0.000        ; 0.072      ; 1.344      ;
+; 1.089 ; master:master|st_prev.Default  ; master:master|st_prev.Send_Add ; clk          ; clk         ; 0.000        ; 0.091      ; 1.375      ;
+; 1.102 ; master:master|counter[1]       ; master:master|counter[3]       ; clk          ; clk         ; 0.000        ; 0.090      ; 1.387      ;
+; 1.103 ; master:master|counter[3]       ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.090      ; 1.388      ;
+; 1.112 ; master:master|state.Default    ; master:master|state.Start      ; clk          ; clk         ; 0.000        ; 0.072      ; 1.379      ;
+; 1.116 ; master:master|state.Send_Reg   ; master:master|state.Send_Reg   ; clk          ; clk         ; 0.000        ; 0.072      ; 1.383      ;
+; 1.117 ; master:master|state.Send_Reg   ; master:master|st_prev.Restart  ; clk          ; clk         ; 0.000        ; 0.072      ; 1.384      ;
+; 1.128 ; master:master|state.Start      ; master:master|scl              ; clk          ; clk         ; 0.000        ; 0.069      ; 1.392      ;
+; 1.131 ; master:master|counter[1]       ; master:master|counter[4]       ; clk          ; clk         ; 0.000        ; 0.090      ; 1.416      ;
+; 1.131 ; master:master|counter[3]       ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.090      ; 1.416      ;
+; 1.135 ; master:master|scl              ; master:master|scl              ; clk          ; clk         ; 0.000        ; 0.072      ; 1.402      ;
+; 1.160 ; master:master|counter[2]       ; master:master|counter[3]       ; clk          ; clk         ; 0.000        ; 0.090      ; 1.445      ;
+; 1.190 ; master:master|sda_en           ; master:master|sda_en           ; clk          ; clk         ; 0.000        ; 0.072      ; 1.457      ;
+; 1.205 ; master:master|st_prev.Send_Add ; master:master|state.Send_Reg   ; clk          ; clk         ; 0.000        ; -0.380     ; 1.020      ;
+; 1.215 ; master:master|counter[2]       ; master:master|counter[4]       ; clk          ; clk         ; 0.000        ; 0.090      ; 1.500      ;
+; 1.224 ; master:master|counter[1]       ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.090      ; 1.509      ;
+; 1.227 ; master:master|state.Start      ; master:master|state.Send_Add   ; clk          ; clk         ; 0.000        ; 0.534      ; 1.956      ;
+; 1.253 ; master:master|counter[1]       ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.090      ; 1.538      ;
+; 1.265 ; master:master|sda_out          ; master:master|sda_out          ; clk          ; clk         ; 0.000        ; 0.090      ; 1.550      ;
+; 1.272 ; master:master|state.Send_Reg   ; master:master|st_prev.Send_Add ; clk          ; clk         ; 0.000        ; 0.543      ; 2.010      ;
+; 1.282 ; master:master|counter[2]       ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.090      ; 1.567      ;
+; 1.308 ; master:master|state.Stretch    ; master:master|sda_out          ; clk          ; clk         ; 0.000        ; 0.090      ; 1.593      ;
+; 1.328 ; master:master|state.Default    ; master:master|state.Default    ; clk          ; clk         ; 0.000        ; 0.072      ; 1.595      ;
+; 1.337 ; master:master|counter[2]       ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.090      ; 1.622      ;
+; 1.344 ; master:master|counter[0]       ; master:master|counter[1]       ; clk          ; clk         ; 0.000        ; 0.090      ; 1.629      ;
+; 1.346 ; master:master|state.Send_Reg   ; master:master|sda_out          ; clk          ; clk         ; 0.000        ; 0.532      ; 2.073      ;
+; 1.372 ; master:master|state.Default    ; master:master|state.Stretch    ; clk          ; clk         ; 0.000        ; 0.534      ; 2.101      ;
+; 1.428 ; master:master|state.Start      ; master:master|state.Stretch    ; clk          ; clk         ; 0.000        ; 0.534      ; 2.157      ;
+; 1.435 ; master:master|state.Send_Add   ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 0.000        ; -0.373     ; 1.257      ;
+; 1.451 ; master:master|counter[0]       ; master:master|counter[2]       ; clk          ; clk         ; 0.000        ; 0.090      ; 1.736      ;
+; 1.466 ; master:master|counter[0]       ; master:master|counter[3]       ; clk          ; clk         ; 0.000        ; 0.090      ; 1.751      ;
+; 1.470 ; master:master|state.Send_Add   ; master:master|sda_out          ; clk          ; clk         ; 0.000        ; 0.090      ; 1.755      ;
+; 1.484 ; master:master|state.Send_Add   ; master:master|st_prev.Send_Add ; clk          ; clk         ; 0.000        ; 0.101      ; 1.780      ;
+; 1.508 ; master:master|state.Send_Add   ; master:master|st_prev.Default  ; clk          ; clk         ; 0.000        ; 0.101      ; 1.804      ;
+; 1.566 ; master:master|state.Stretch    ; master:master|state.Default    ; clk          ; clk         ; 0.000        ; -0.371     ; 1.390      ;
+; 1.573 ; master:master|counter[0]       ; master:master|counter[4]       ; clk          ; clk         ; 0.000        ; 0.090      ; 1.858      ;
+; 1.588 ; master:master|state.Send_Reg   ; master:master|state.Stretch    ; clk          ; clk         ; 0.000        ; 0.533      ; 2.316      ;
+; 1.588 ; master:master|state.Send_Reg   ; master:master|state.Send_Add   ; clk          ; clk         ; 0.000        ; 0.533      ; 2.316      ;
+; 1.588 ; master:master|counter[0]       ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.090      ; 1.873      ;
+; 1.695 ; master:master|counter[0]       ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.090      ; 1.980      ;
+; 1.717 ; master:master|state.Default    ; master:master|counter[3]       ; clk          ; clk         ; 0.000        ; 0.536      ; 2.448      ;
+; 1.717 ; master:master|state.Default    ; master:master|counter[0]       ; clk          ; clk         ; 0.000        ; 0.536      ; 2.448      ;
+; 1.717 ; master:master|state.Default    ; master:master|counter[1]       ; clk          ; clk         ; 0.000        ; 0.536      ; 2.448      ;
+; 1.717 ; master:master|state.Default    ; master:master|counter[2]       ; clk          ; clk         ; 0.000        ; 0.536      ; 2.448      ;
+; 1.717 ; master:master|state.Default    ; master:master|counter[4]       ; clk          ; clk         ; 0.000        ; 0.536      ; 2.448      ;
+; 1.717 ; master:master|state.Default    ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.536      ; 2.448      ;
+; 1.717 ; master:master|state.Default    ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.536      ; 2.448      ;
+; 1.743 ; master:master|state.Start      ; master:master|st_prev.Send_Add ; clk          ; clk         ; 0.000        ; 0.544      ; 2.482      ;
+; 1.751 ; master:master|st_prev.Restart  ; master:master|sda_out          ; clk          ; clk         ; 0.000        ; 0.532      ; 2.478      ;
+; 1.797 ; master:master|state.Start      ; master:master|sda_out          ; clk          ; clk         ; 0.000        ; 0.533      ; 2.525      ;
+; 1.800 ; master:master|st_prev.Restart  ; master:master|sda_en           ; clk          ; clk         ; 0.000        ; 0.072      ; 2.067      ;
+; 1.809 ; master:master|state.Default    ; master:master|sda_out          ; clk          ; clk         ; 0.000        ; 0.533      ; 2.537      ;
+; 1.811 ; master:master|st_prev.Send_Reg ; master:master|state.Start      ; clk          ; clk         ; 0.000        ; 0.074      ; 2.080      ;
+; 1.829 ; master:master|state.Send_Add   ; master:master|state.Stretch    ; clk          ; clk         ; 0.000        ; 0.091      ; 2.115      ;
+; 1.847 ; master:master|st_prev.Send_Reg ; master:master|state.Default    ; clk          ; clk         ; 0.000        ; 0.074      ; 2.116      ;
+; 1.870 ; master:master|st_prev.Restart  ; master:master|state.Stretch    ; clk          ; clk         ; 0.000        ; 0.533      ; 2.598      ;
+; 1.870 ; master:master|st_prev.Restart  ; master:master|state.Send_Add   ; clk          ; clk         ; 0.000        ; 0.533      ; 2.598      ;
+; 1.890 ; master:master|state.Default    ; master:master|state.Send_Add   ; clk          ; clk         ; 0.000        ; 0.534      ; 2.619      ;
+; 1.931 ; master:master|st_prev.Send_Reg ; master:master|scl              ; clk          ; clk         ; 0.000        ; 0.071      ; 2.197      ;
+; 2.006 ; master:master|counter[0]       ; master:master|st_prev.Default  ; clk          ; clk         ; 0.000        ; 0.098      ; 2.299      ;
+; 2.009 ; master:master|state.Start      ; master:master|st_prev.Restart  ; clk          ; clk         ; 0.000        ; 0.073      ; 2.277      ;
+; 2.035 ; master:master|state.Stretch    ; master:master|state.Send_Reg   ; clk          ; clk         ; 0.000        ; -0.370     ; 1.860      ;
+; 2.045 ; master:master|st_prev.Send_Reg ; master:master|state.Stretch    ; clk          ; clk         ; 0.000        ; 0.536      ; 2.776      ;
+; 2.078 ; master:master|state.Send_Reg   ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 0.000        ; 0.069      ; 2.342      ;
+; 2.087 ; master:master|state.Stretch    ; master:master|st_prev.Send_Add ; clk          ; clk         ; 0.000        ; 0.101      ; 2.383      ;
+; 2.094 ; master:master|st_prev.Restart  ; master:master|state.Default    ; clk          ; clk         ; 0.000        ; 0.071      ; 2.360      ;
+; 2.103 ; master:master|state.Send_Add   ; master:master|sda_en           ; clk          ; clk         ; 0.000        ; -0.370     ; 1.928      ;
+; 2.224 ; master:master|state.Start      ; master:master|counter[3]       ; clk          ; clk         ; 0.000        ; 0.536      ; 2.955      ;
+; 2.224 ; master:master|state.Start      ; master:master|counter[0]       ; clk          ; clk         ; 0.000        ; 0.536      ; 2.955      ;
+; 2.224 ; master:master|state.Start      ; master:master|counter[1]       ; clk          ; clk         ; 0.000        ; 0.536      ; 2.955      ;
+; 2.224 ; master:master|state.Start      ; master:master|counter[2]       ; clk          ; clk         ; 0.000        ; 0.536      ; 2.955      ;
+; 2.224 ; master:master|state.Start      ; master:master|counter[4]       ; clk          ; clk         ; 0.000        ; 0.536      ; 2.955      ;
+; 2.224 ; master:master|state.Start      ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.536      ; 2.955      ;
+; 2.224 ; master:master|state.Start      ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.536      ; 2.955      ;
+; 2.227 ; master:master|state.Default    ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 0.000        ; 0.070      ; 2.492      ;
+; 2.243 ; master:master|counter[0]       ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 0.000        ; -0.376     ; 2.062      ;
+; 2.251 ; master:master|state.Stretch    ; master:master|scl              ; clk          ; clk         ; 0.000        ; -0.374     ; 2.072      ;
+; 2.257 ; master:master|counter[8]       ; master:master|counter[8]       ; clk          ; clk         ; 0.000        ; 0.072      ; 2.524      ;
+; 2.299 ; master:master|counter[10]      ; master:master|counter[10]      ; clk          ; clk         ; 0.000        ; 0.072      ; 2.566      ;
+; 2.309 ; master:master|state.Stretch    ; master:master|state.Start      ; clk          ; clk         ; 0.000        ; -0.371     ; 2.133      ;
 +-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -670,7 +670,7 @@ No synchronizer chains to report.
 +-------+---------+------------------+
 ; Clock ; Slack   ; End Point TNS    ;
 +-------+---------+------------------+
-; clk   ; -11.269 ; -268.235         ;
+; clk   ; -10.970 ; -258.683         ;
 +-------+---------+------------------+
 
 
@@ -679,7 +679,7 @@ No synchronizer chains to report.
 +-------+-------+-------------------+
 ; Clock ; Slack ; End Point TNS     ;
 +-------+-------+-------------------+
-; clk   ; 0.179 ; 0.000             ;
+; clk   ; 0.178 ; 0.000             ;
 +-------+-------+-------------------+
 
 
@@ -700,7 +700,7 @@ No paths to report.
 +-------+--------+---------------------------------+
 ; Clock ; Slack  ; End Point TNS                   ;
 +-------+--------+---------------------------------+
-; clk   ; -3.000 ; -32.082                         ;
+; clk   ; -3.000 ; -30.976                         ;
 +-------+--------+---------------------------------+
 
 
@@ -709,106 +709,106 @@ No paths to report.
 +---------+---------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack   ; From Node                 ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +---------+---------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
-; -11.269 ; master:master|counter[7]  ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.036     ; 12.220     ;
-; -11.269 ; master:master|counter[7]  ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.036     ; 12.220     ;
-; -11.269 ; master:master|counter[7]  ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.036     ; 12.220     ;
-; -11.269 ; master:master|counter[7]  ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.036     ; 12.220     ;
-; -11.269 ; master:master|counter[7]  ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.036     ; 12.220     ;
-; -11.269 ; master:master|counter[7]  ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.036     ; 12.220     ;
-; -11.269 ; master:master|counter[7]  ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.036     ; 12.220     ;
-; -11.267 ; master:master|counter[8]  ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.036     ; 12.218     ;
-; -11.267 ; master:master|counter[8]  ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.036     ; 12.218     ;
-; -11.267 ; master:master|counter[8]  ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.036     ; 12.218     ;
-; -11.267 ; master:master|counter[8]  ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.036     ; 12.218     ;
-; -11.267 ; master:master|counter[8]  ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.036     ; 12.218     ;
-; -11.267 ; master:master|counter[8]  ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.036     ; 12.218     ;
-; -11.267 ; master:master|counter[8]  ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.036     ; 12.218     ;
-; -11.202 ; master:master|counter[10] ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.036     ; 12.153     ;
-; -11.202 ; master:master|counter[10] ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.036     ; 12.153     ;
-; -11.202 ; master:master|counter[10] ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.036     ; 12.153     ;
-; -11.202 ; master:master|counter[10] ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.036     ; 12.153     ;
-; -11.202 ; master:master|counter[10] ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.036     ; 12.153     ;
-; -11.202 ; master:master|counter[10] ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.036     ; 12.153     ;
-; -11.202 ; master:master|counter[10] ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.036     ; 12.153     ;
-; -11.201 ; master:master|counter[9]  ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.036     ; 12.152     ;
-; -11.201 ; master:master|counter[9]  ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.036     ; 12.152     ;
-; -11.201 ; master:master|counter[9]  ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.036     ; 12.152     ;
-; -11.201 ; master:master|counter[9]  ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.036     ; 12.152     ;
-; -11.201 ; master:master|counter[9]  ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.036     ; 12.152     ;
-; -11.201 ; master:master|counter[9]  ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.036     ; 12.152     ;
-; -11.201 ; master:master|counter[9]  ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.036     ; 12.152     ;
-; -11.138 ; master:master|counter[11] ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.036     ; 12.089     ;
-; -11.138 ; master:master|counter[11] ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.036     ; 12.089     ;
-; -11.138 ; master:master|counter[11] ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.036     ; 12.089     ;
-; -11.138 ; master:master|counter[11] ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.036     ; 12.089     ;
-; -11.138 ; master:master|counter[11] ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.036     ; 12.089     ;
-; -11.138 ; master:master|counter[11] ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.036     ; 12.089     ;
-; -11.138 ; master:master|counter[11] ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.036     ; 12.089     ;
-; -11.136 ; master:master|counter[12] ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.036     ; 12.087     ;
-; -11.136 ; master:master|counter[12] ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.036     ; 12.087     ;
-; -11.136 ; master:master|counter[12] ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.036     ; 12.087     ;
-; -11.136 ; master:master|counter[12] ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.036     ; 12.087     ;
-; -11.136 ; master:master|counter[12] ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.036     ; 12.087     ;
-; -11.136 ; master:master|counter[12] ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.036     ; 12.087     ;
-; -11.136 ; master:master|counter[12] ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.036     ; 12.087     ;
-; -11.130 ; master:master|counter[7]  ; master:master|sda_en           ; clk          ; clk         ; 1.000        ; 0.163      ; 12.280     ;
-; -11.128 ; master:master|counter[8]  ; master:master|sda_en           ; clk          ; clk         ; 1.000        ; 0.163      ; 12.278     ;
-; -11.067 ; master:master|counter[13] ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.036     ; 12.018     ;
-; -11.067 ; master:master|counter[13] ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.036     ; 12.018     ;
-; -11.067 ; master:master|counter[13] ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.036     ; 12.018     ;
-; -11.067 ; master:master|counter[13] ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.036     ; 12.018     ;
-; -11.067 ; master:master|counter[13] ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.036     ; 12.018     ;
-; -11.067 ; master:master|counter[13] ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.036     ; 12.018     ;
-; -11.067 ; master:master|counter[13] ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.036     ; 12.018     ;
-; -11.063 ; master:master|counter[10] ; master:master|sda_en           ; clk          ; clk         ; 1.000        ; 0.163      ; 12.213     ;
-; -11.062 ; master:master|counter[9]  ; master:master|sda_en           ; clk          ; clk         ; 1.000        ; 0.163      ; 12.212     ;
-; -11.055 ; master:master|counter[7]  ; master:master|st_prev.Send_Add ; clk          ; clk         ; 1.000        ; 0.153      ; 12.195     ;
-; -11.053 ; master:master|counter[8]  ; master:master|st_prev.Send_Add ; clk          ; clk         ; 1.000        ; 0.153      ; 12.193     ;
-; -11.034 ; master:master|counter[7]  ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 1.000        ; -0.040     ; 11.981     ;
-; -11.032 ; master:master|counter[8]  ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 1.000        ; -0.040     ; 11.979     ;
-; -10.999 ; master:master|counter[11] ; master:master|sda_en           ; clk          ; clk         ; 1.000        ; 0.163      ; 12.149     ;
-; -10.997 ; master:master|counter[12] ; master:master|sda_en           ; clk          ; clk         ; 1.000        ; 0.163      ; 12.147     ;
-; -10.988 ; master:master|counter[10] ; master:master|st_prev.Send_Add ; clk          ; clk         ; 1.000        ; 0.153      ; 12.128     ;
-; -10.987 ; master:master|counter[9]  ; master:master|st_prev.Send_Add ; clk          ; clk         ; 1.000        ; 0.153      ; 12.127     ;
-; -10.967 ; master:master|counter[10] ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 1.000        ; -0.040     ; 11.914     ;
-; -10.966 ; master:master|counter[9]  ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 1.000        ; -0.040     ; 11.913     ;
-; -10.928 ; master:master|counter[13] ; master:master|sda_en           ; clk          ; clk         ; 1.000        ; 0.163      ; 12.078     ;
-; -10.924 ; master:master|counter[11] ; master:master|st_prev.Send_Add ; clk          ; clk         ; 1.000        ; 0.153      ; 12.064     ;
-; -10.922 ; master:master|counter[12] ; master:master|st_prev.Send_Add ; clk          ; clk         ; 1.000        ; 0.153      ; 12.062     ;
-; -10.903 ; master:master|counter[11] ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 1.000        ; -0.040     ; 11.850     ;
-; -10.901 ; master:master|counter[12] ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 1.000        ; -0.040     ; 11.848     ;
-; -10.883 ; master:master|counter[7]  ; master:master|st_prev.Default  ; clk          ; clk         ; 1.000        ; 0.153      ; 12.023     ;
-; -10.881 ; master:master|counter[8]  ; master:master|st_prev.Default  ; clk          ; clk         ; 1.000        ; 0.153      ; 12.021     ;
-; -10.875 ; master:master|counter[7]  ; master:master|state.Stretch    ; clk          ; clk         ; 1.000        ; -0.040     ; 11.822     ;
-; -10.873 ; master:master|counter[7]  ; master:master|state.Send_Add   ; clk          ; clk         ; 1.000        ; -0.040     ; 11.820     ;
-; -10.873 ; master:master|counter[8]  ; master:master|state.Stretch    ; clk          ; clk         ; 1.000        ; -0.040     ; 11.820     ;
-; -10.871 ; master:master|counter[8]  ; master:master|state.Send_Add   ; clk          ; clk         ; 1.000        ; -0.040     ; 11.818     ;
-; -10.854 ; master:master|counter[7]  ; master:master|st_prev.Restart  ; clk          ; clk         ; 1.000        ; -0.040     ; 11.801     ;
-; -10.853 ; master:master|counter[13] ; master:master|st_prev.Send_Add ; clk          ; clk         ; 1.000        ; 0.153      ; 11.993     ;
-; -10.852 ; master:master|counter[8]  ; master:master|st_prev.Restart  ; clk          ; clk         ; 1.000        ; -0.040     ; 11.799     ;
-; -10.849 ; master:master|counter[6]  ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.245     ; 11.591     ;
-; -10.849 ; master:master|counter[6]  ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.245     ; 11.591     ;
-; -10.849 ; master:master|counter[6]  ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.245     ; 11.591     ;
-; -10.849 ; master:master|counter[6]  ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.245     ; 11.591     ;
-; -10.849 ; master:master|counter[6]  ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.245     ; 11.591     ;
-; -10.849 ; master:master|counter[6]  ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.245     ; 11.591     ;
-; -10.849 ; master:master|counter[6]  ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.245     ; 11.591     ;
-; -10.847 ; master:master|counter[7]  ; master:master|sda_out          ; clk          ; clk         ; 1.000        ; 0.165      ; 11.999     ;
-; -10.845 ; master:master|counter[8]  ; master:master|sda_out          ; clk          ; clk         ; 1.000        ; 0.165      ; 11.997     ;
-; -10.832 ; master:master|counter[13] ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 1.000        ; -0.040     ; 11.779     ;
-; -10.824 ; master:master|counter[7]  ; master:master|counter[0]       ; clk          ; clk         ; 1.000        ; 0.164      ; 11.975     ;
-; -10.824 ; master:master|counter[7]  ; master:master|counter[2]       ; clk          ; clk         ; 1.000        ; 0.164      ; 11.975     ;
-; -10.824 ; master:master|counter[7]  ; master:master|counter[1]       ; clk          ; clk         ; 1.000        ; 0.164      ; 11.975     ;
-; -10.824 ; master:master|counter[7]  ; master:master|counter[4]       ; clk          ; clk         ; 1.000        ; 0.164      ; 11.975     ;
-; -10.824 ; master:master|counter[7]  ; master:master|counter[5]       ; clk          ; clk         ; 1.000        ; 0.164      ; 11.975     ;
-; -10.824 ; master:master|counter[7]  ; master:master|counter[6]       ; clk          ; clk         ; 1.000        ; 0.164      ; 11.975     ;
-; -10.824 ; master:master|counter[7]  ; master:master|counter[3]       ; clk          ; clk         ; 1.000        ; 0.164      ; 11.975     ;
-; -10.822 ; master:master|counter[8]  ; master:master|counter[0]       ; clk          ; clk         ; 1.000        ; 0.164      ; 11.973     ;
-; -10.822 ; master:master|counter[8]  ; master:master|counter[2]       ; clk          ; clk         ; 1.000        ; 0.164      ; 11.973     ;
-; -10.822 ; master:master|counter[8]  ; master:master|counter[1]       ; clk          ; clk         ; 1.000        ; 0.164      ; 11.973     ;
-; -10.822 ; master:master|counter[8]  ; master:master|counter[4]       ; clk          ; clk         ; 1.000        ; 0.164      ; 11.973     ;
-; -10.822 ; master:master|counter[8]  ; master:master|counter[5]       ; clk          ; clk         ; 1.000        ; 0.164      ; 11.973     ;
-; -10.822 ; master:master|counter[8]  ; master:master|counter[6]       ; clk          ; clk         ; 1.000        ; 0.164      ; 11.973     ;
+; -10.970 ; master:master|counter[7]  ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.036     ; 11.921     ;
+; -10.970 ; master:master|counter[7]  ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.036     ; 11.921     ;
+; -10.970 ; master:master|counter[7]  ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.036     ; 11.921     ;
+; -10.970 ; master:master|counter[7]  ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.036     ; 11.921     ;
+; -10.970 ; master:master|counter[7]  ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.036     ; 11.921     ;
+; -10.970 ; master:master|counter[7]  ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.036     ; 11.921     ;
+; -10.970 ; master:master|counter[7]  ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.036     ; 11.921     ;
+; -10.907 ; master:master|counter[9]  ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.036     ; 11.858     ;
+; -10.907 ; master:master|counter[9]  ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.036     ; 11.858     ;
+; -10.907 ; master:master|counter[9]  ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.036     ; 11.858     ;
+; -10.907 ; master:master|counter[9]  ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.036     ; 11.858     ;
+; -10.907 ; master:master|counter[9]  ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.036     ; 11.858     ;
+; -10.907 ; master:master|counter[9]  ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.036     ; 11.858     ;
+; -10.907 ; master:master|counter[9]  ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.036     ; 11.858     ;
+; -10.884 ; master:master|counter[8]  ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.036     ; 11.835     ;
+; -10.884 ; master:master|counter[8]  ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.036     ; 11.835     ;
+; -10.884 ; master:master|counter[8]  ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.036     ; 11.835     ;
+; -10.884 ; master:master|counter[8]  ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.036     ; 11.835     ;
+; -10.884 ; master:master|counter[8]  ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.036     ; 11.835     ;
+; -10.884 ; master:master|counter[8]  ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.036     ; 11.835     ;
+; -10.884 ; master:master|counter[8]  ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.036     ; 11.835     ;
+; -10.832 ; master:master|counter[11] ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.036     ; 11.783     ;
+; -10.832 ; master:master|counter[11] ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.036     ; 11.783     ;
+; -10.832 ; master:master|counter[11] ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.036     ; 11.783     ;
+; -10.832 ; master:master|counter[11] ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.036     ; 11.783     ;
+; -10.832 ; master:master|counter[11] ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.036     ; 11.783     ;
+; -10.832 ; master:master|counter[11] ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.036     ; 11.783     ;
+; -10.832 ; master:master|counter[11] ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.036     ; 11.783     ;
+; -10.819 ; master:master|counter[10] ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.036     ; 11.770     ;
+; -10.819 ; master:master|counter[10] ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.036     ; 11.770     ;
+; -10.819 ; master:master|counter[10] ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.036     ; 11.770     ;
+; -10.819 ; master:master|counter[10] ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.036     ; 11.770     ;
+; -10.819 ; master:master|counter[10] ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.036     ; 11.770     ;
+; -10.819 ; master:master|counter[10] ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.036     ; 11.770     ;
+; -10.819 ; master:master|counter[10] ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.036     ; 11.770     ;
+; -10.766 ; master:master|counter[13] ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.036     ; 11.717     ;
+; -10.766 ; master:master|counter[13] ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.036     ; 11.717     ;
+; -10.766 ; master:master|counter[13] ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.036     ; 11.717     ;
+; -10.766 ; master:master|counter[13] ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.036     ; 11.717     ;
+; -10.766 ; master:master|counter[13] ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.036     ; 11.717     ;
+; -10.766 ; master:master|counter[13] ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.036     ; 11.717     ;
+; -10.766 ; master:master|counter[13] ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.036     ; 11.717     ;
+; -10.753 ; master:master|counter[12] ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.036     ; 11.704     ;
+; -10.753 ; master:master|counter[12] ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.036     ; 11.704     ;
+; -10.753 ; master:master|counter[12] ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.036     ; 11.704     ;
+; -10.753 ; master:master|counter[12] ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.036     ; 11.704     ;
+; -10.753 ; master:master|counter[12] ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.036     ; 11.704     ;
+; -10.753 ; master:master|counter[12] ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.036     ; 11.704     ;
+; -10.753 ; master:master|counter[12] ; master:master|counter[12]      ; clk          ; clk         ; 1.000        ; -0.036     ; 11.704     ;
+; -10.686 ; master:master|counter[7]  ; master:master|sda_en           ; clk          ; clk         ; 1.000        ; -0.031     ; 11.642     ;
+; -10.623 ; master:master|counter[9]  ; master:master|sda_en           ; clk          ; clk         ; 1.000        ; -0.031     ; 11.579     ;
+; -10.600 ; master:master|counter[8]  ; master:master|sda_en           ; clk          ; clk         ; 1.000        ; -0.031     ; 11.556     ;
+; -10.581 ; master:master|counter[7]  ; master:master|counter[3]       ; clk          ; clk         ; 1.000        ; 0.160      ; 11.728     ;
+; -10.581 ; master:master|counter[7]  ; master:master|counter[0]       ; clk          ; clk         ; 1.000        ; 0.160      ; 11.728     ;
+; -10.581 ; master:master|counter[7]  ; master:master|counter[1]       ; clk          ; clk         ; 1.000        ; 0.160      ; 11.728     ;
+; -10.581 ; master:master|counter[7]  ; master:master|counter[2]       ; clk          ; clk         ; 1.000        ; 0.160      ; 11.728     ;
+; -10.581 ; master:master|counter[7]  ; master:master|counter[4]       ; clk          ; clk         ; 1.000        ; 0.160      ; 11.728     ;
+; -10.581 ; master:master|counter[7]  ; master:master|counter[5]       ; clk          ; clk         ; 1.000        ; 0.160      ; 11.728     ;
+; -10.581 ; master:master|counter[7]  ; master:master|counter[6]       ; clk          ; clk         ; 1.000        ; 0.160      ; 11.728     ;
+; -10.548 ; master:master|counter[11] ; master:master|sda_en           ; clk          ; clk         ; 1.000        ; -0.031     ; 11.504     ;
+; -10.535 ; master:master|counter[10] ; master:master|sda_en           ; clk          ; clk         ; 1.000        ; -0.031     ; 11.491     ;
+; -10.518 ; master:master|counter[9]  ; master:master|counter[3]       ; clk          ; clk         ; 1.000        ; 0.160      ; 11.665     ;
+; -10.518 ; master:master|counter[9]  ; master:master|counter[0]       ; clk          ; clk         ; 1.000        ; 0.160      ; 11.665     ;
+; -10.518 ; master:master|counter[9]  ; master:master|counter[1]       ; clk          ; clk         ; 1.000        ; 0.160      ; 11.665     ;
+; -10.518 ; master:master|counter[9]  ; master:master|counter[2]       ; clk          ; clk         ; 1.000        ; 0.160      ; 11.665     ;
+; -10.518 ; master:master|counter[9]  ; master:master|counter[4]       ; clk          ; clk         ; 1.000        ; 0.160      ; 11.665     ;
+; -10.518 ; master:master|counter[9]  ; master:master|counter[5]       ; clk          ; clk         ; 1.000        ; 0.160      ; 11.665     ;
+; -10.518 ; master:master|counter[9]  ; master:master|counter[6]       ; clk          ; clk         ; 1.000        ; 0.160      ; 11.665     ;
+; -10.495 ; master:master|counter[8]  ; master:master|counter[3]       ; clk          ; clk         ; 1.000        ; 0.160      ; 11.642     ;
+; -10.495 ; master:master|counter[8]  ; master:master|counter[0]       ; clk          ; clk         ; 1.000        ; 0.160      ; 11.642     ;
+; -10.495 ; master:master|counter[8]  ; master:master|counter[1]       ; clk          ; clk         ; 1.000        ; 0.160      ; 11.642     ;
+; -10.495 ; master:master|counter[8]  ; master:master|counter[2]       ; clk          ; clk         ; 1.000        ; 0.160      ; 11.642     ;
+; -10.495 ; master:master|counter[8]  ; master:master|counter[4]       ; clk          ; clk         ; 1.000        ; 0.160      ; 11.642     ;
+; -10.495 ; master:master|counter[8]  ; master:master|counter[5]       ; clk          ; clk         ; 1.000        ; 0.160      ; 11.642     ;
+; -10.495 ; master:master|counter[8]  ; master:master|counter[6]       ; clk          ; clk         ; 1.000        ; 0.160      ; 11.642     ;
+; -10.482 ; master:master|counter[13] ; master:master|sda_en           ; clk          ; clk         ; 1.000        ; -0.031     ; 11.438     ;
+; -10.472 ; master:master|counter[7]  ; master:master|st_prev.Send_Add ; clk          ; clk         ; 1.000        ; 0.162      ; 11.621     ;
+; -10.469 ; master:master|counter[12] ; master:master|sda_en           ; clk          ; clk         ; 1.000        ; -0.031     ; 11.425     ;
+; -10.455 ; master:master|counter[7]  ; master:master|sda_out          ; clk          ; clk         ; 1.000        ; 0.158      ; 11.600     ;
+; -10.443 ; master:master|counter[11] ; master:master|counter[3]       ; clk          ; clk         ; 1.000        ; 0.160      ; 11.590     ;
+; -10.443 ; master:master|counter[11] ; master:master|counter[0]       ; clk          ; clk         ; 1.000        ; 0.160      ; 11.590     ;
+; -10.443 ; master:master|counter[11] ; master:master|counter[1]       ; clk          ; clk         ; 1.000        ; 0.160      ; 11.590     ;
+; -10.443 ; master:master|counter[11] ; master:master|counter[2]       ; clk          ; clk         ; 1.000        ; 0.160      ; 11.590     ;
+; -10.443 ; master:master|counter[11] ; master:master|counter[4]       ; clk          ; clk         ; 1.000        ; 0.160      ; 11.590     ;
+; -10.443 ; master:master|counter[11] ; master:master|counter[5]       ; clk          ; clk         ; 1.000        ; 0.160      ; 11.590     ;
+; -10.443 ; master:master|counter[11] ; master:master|counter[6]       ; clk          ; clk         ; 1.000        ; 0.160      ; 11.590     ;
+; -10.430 ; master:master|counter[10] ; master:master|counter[3]       ; clk          ; clk         ; 1.000        ; 0.160      ; 11.577     ;
+; -10.430 ; master:master|counter[10] ; master:master|counter[0]       ; clk          ; clk         ; 1.000        ; 0.160      ; 11.577     ;
+; -10.430 ; master:master|counter[10] ; master:master|counter[1]       ; clk          ; clk         ; 1.000        ; 0.160      ; 11.577     ;
+; -10.430 ; master:master|counter[10] ; master:master|counter[2]       ; clk          ; clk         ; 1.000        ; 0.160      ; 11.577     ;
+; -10.430 ; master:master|counter[10] ; master:master|counter[4]       ; clk          ; clk         ; 1.000        ; 0.160      ; 11.577     ;
+; -10.430 ; master:master|counter[10] ; master:master|counter[5]       ; clk          ; clk         ; 1.000        ; 0.160      ; 11.577     ;
+; -10.430 ; master:master|counter[10] ; master:master|counter[6]       ; clk          ; clk         ; 1.000        ; 0.160      ; 11.577     ;
+; -10.409 ; master:master|counter[9]  ; master:master|st_prev.Send_Add ; clk          ; clk         ; 1.000        ; 0.162      ; 11.558     ;
+; -10.395 ; master:master|counter[6]  ; master:master|counter[13]      ; clk          ; clk         ; 1.000        ; -0.240     ; 11.142     ;
+; -10.395 ; master:master|counter[6]  ; master:master|counter[7]       ; clk          ; clk         ; 1.000        ; -0.240     ; 11.142     ;
+; -10.395 ; master:master|counter[6]  ; master:master|counter[8]       ; clk          ; clk         ; 1.000        ; -0.240     ; 11.142     ;
+; -10.395 ; master:master|counter[6]  ; master:master|counter[9]       ; clk          ; clk         ; 1.000        ; -0.240     ; 11.142     ;
+; -10.395 ; master:master|counter[6]  ; master:master|counter[10]      ; clk          ; clk         ; 1.000        ; -0.240     ; 11.142     ;
+; -10.395 ; master:master|counter[6]  ; master:master|counter[11]      ; clk          ; clk         ; 1.000        ; -0.240     ; 11.142     ;
 +---------+---------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -817,106 +817,106 @@ No paths to report.
 +-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                      ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.179 ; master:master|st_prev.Send_Add ; master:master|st_prev.Send_Add ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
-; 0.179 ; master:master|st_prev.Default  ; master:master|st_prev.Default  ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
-; 0.179 ; master:master|state.Listen     ; master:master|state.Listen     ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
-; 0.186 ; master:master|st_prev.Restart  ; master:master|st_prev.Restart  ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
-; 0.187 ; master:master|state.Stretch    ; master:master|state.Stretch    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
-; 0.187 ; master:master|state.Send_Add   ; master:master|state.Send_Add   ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.178 ; master:master|st_prev.Send_Add ; master:master|st_prev.Send_Add ; clk          ; clk         ; 0.000        ; 0.045      ; 0.307      ;
+; 0.178 ; master:master|st_prev.Default  ; master:master|st_prev.Default  ; clk          ; clk         ; 0.000        ; 0.045      ; 0.307      ;
+; 0.180 ; master:master|state.Stretch    ; master:master|state.Stretch    ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; master:master|state.Send_Add   ; master:master|state.Send_Add   ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.187 ; master:master|st_prev.Send_Reg ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; master:master|st_prev.Restart  ; master:master|st_prev.Restart  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
 ; 0.187 ; master:master|state.Start      ; master:master|state.Start      ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
-; 0.187 ; master:master|state.Default    ; master:master|state.Default    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
-; 0.295 ; master:master|counter[5]       ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.045      ; 0.424      ;
-; 0.298 ; master:master|counter[4]       ; master:master|counter[4]       ; clk          ; clk         ; 0.000        ; 0.045      ; 0.427      ;
-; 0.307 ; master:master|counter[3]       ; master:master|counter[3]       ; clk          ; clk         ; 0.000        ; 0.045      ; 0.436      ;
-; 0.308 ; master:master|counter[6]       ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.045      ; 0.437      ;
-; 0.309 ; master:master|counter[2]       ; master:master|counter[2]       ; clk          ; clk         ; 0.000        ; 0.045      ; 0.438      ;
-; 0.317 ; master:master|state.Start      ; master:master|st_prev.Default  ; clk          ; clk         ; 0.000        ; 0.235      ; 0.636      ;
-; 0.319 ; master:master|counter[0]       ; master:master|counter[0]       ; clk          ; clk         ; 0.000        ; 0.045      ; 0.448      ;
-; 0.362 ; master:master|counter[1]       ; master:master|counter[1]       ; clk          ; clk         ; 0.000        ; 0.045      ; 0.491      ;
-; 0.431 ; master:master|st_prev.Send_Add ; master:master|state.Send_Reg   ; clk          ; clk         ; 0.000        ; 0.044      ; 0.559      ;
-; 0.437 ; master:master|state.Start      ; master:master|st_prev.Send_Add ; clk          ; clk         ; 0.000        ; 0.235      ; 0.756      ;
-; 0.444 ; master:master|counter[5]       ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.045      ; 0.573      ;
-; 0.454 ; master:master|state.Send_Reg   ; master:master|sda_en           ; clk          ; clk         ; 0.000        ; 0.054      ; 0.592      ;
-; 0.456 ; master:master|counter[4]       ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.045      ; 0.585      ;
-; 0.456 ; master:master|counter[3]       ; master:master|counter[4]       ; clk          ; clk         ; 0.000        ; 0.045      ; 0.585      ;
-; 0.459 ; master:master|counter[4]       ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.045      ; 0.588      ;
-; 0.463 ; master:master|scl              ; master:master|scl              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.583      ;
-; 0.466 ; master:master|counter[0]       ; master:master|counter[1]       ; clk          ; clk         ; 0.000        ; 0.045      ; 0.595      ;
-; 0.467 ; master:master|counter[2]       ; master:master|counter[3]       ; clk          ; clk         ; 0.000        ; 0.045      ; 0.596      ;
-; 0.468 ; master:master|st_prev.Send_Reg ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 0.000        ; 0.037      ; 0.589      ;
-; 0.469 ; master:master|counter[0]       ; master:master|counter[2]       ; clk          ; clk         ; 0.000        ; 0.045      ; 0.598      ;
-; 0.470 ; master:master|counter[2]       ; master:master|counter[4]       ; clk          ; clk         ; 0.000        ; 0.045      ; 0.599      ;
-; 0.471 ; master:master|state.Send_Reg   ; master:master|state.Send_Reg   ; clk          ; clk         ; 0.000        ; 0.044      ; 0.599      ;
-; 0.511 ; master:master|counter[1]       ; master:master|counter[2]       ; clk          ; clk         ; 0.000        ; 0.045      ; 0.640      ;
-; 0.519 ; master:master|counter[3]       ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.045      ; 0.648      ;
-; 0.522 ; master:master|counter[3]       ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.045      ; 0.651      ;
-; 0.532 ; master:master|counter[0]       ; master:master|counter[3]       ; clk          ; clk         ; 0.000        ; 0.045      ; 0.661      ;
-; 0.533 ; master:master|counter[2]       ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.045      ; 0.662      ;
-; 0.534 ; master:master|state.Send_Reg   ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 0.000        ; -0.156     ; 0.462      ;
-; 0.535 ; master:master|counter[0]       ; master:master|counter[4]       ; clk          ; clk         ; 0.000        ; 0.045      ; 0.664      ;
-; 0.536 ; master:master|counter[2]       ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.045      ; 0.665      ;
-; 0.537 ; master:master|sda_en           ; master:master|sda_en           ; clk          ; clk         ; 0.000        ; 0.044      ; 0.665      ;
-; 0.538 ; master:master|state.Stretch    ; master:master|state.Send_Reg   ; clk          ; clk         ; 0.000        ; 0.237      ; 0.859      ;
-; 0.541 ; master:master|st_prev.Restart  ; master:master|st_prev.Send_Add ; clk          ; clk         ; 0.000        ; 0.237      ; 0.862      ;
-; 0.558 ; master:master|st_prev.Send_Reg ; master:master|state.Start      ; clk          ; clk         ; 0.000        ; 0.038      ; 0.680      ;
-; 0.560 ; master:master|state.Stretch    ; master:master|state.Listen     ; clk          ; clk         ; 0.000        ; 0.247      ; 0.891      ;
-; 0.574 ; master:master|counter[1]       ; master:master|counter[3]       ; clk          ; clk         ; 0.000        ; 0.045      ; 0.703      ;
-; 0.577 ; master:master|counter[1]       ; master:master|counter[4]       ; clk          ; clk         ; 0.000        ; 0.045      ; 0.706      ;
-; 0.598 ; master:master|counter[0]       ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.045      ; 0.727      ;
-; 0.601 ; master:master|counter[0]       ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.045      ; 0.730      ;
-; 0.623 ; master:master|state.Default    ; master:master|scl              ; clk          ; clk         ; 0.000        ; 0.034      ; 0.741      ;
-; 0.625 ; master:master|st_prev.Default  ; master:master|st_prev.Send_Add ; clk          ; clk         ; 0.000        ; 0.044      ; 0.753      ;
-; 0.640 ; master:master|counter[1]       ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.045      ; 0.769      ;
-; 0.641 ; master:master|state.Send_Reg   ; master:master|st_prev.Default  ; clk          ; clk         ; 0.000        ; 0.044      ; 0.769      ;
-; 0.643 ; master:master|counter[1]       ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.045      ; 0.772      ;
-; 0.645 ; master:master|state.Default    ; master:master|state.Start      ; clk          ; clk         ; 0.000        ; 0.036      ; 0.765      ;
-; 0.647 ; master:master|state.Send_Add   ; master:master|state.Stretch    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.767      ;
-; 0.651 ; master:master|state.Listen     ; master:master|sda_out          ; clk          ; clk         ; 0.000        ; 0.047      ; 0.782      ;
-; 0.656 ; master:master|state.Start      ; master:master|st_prev.Restart  ; clk          ; clk         ; 0.000        ; 0.035      ; 0.775      ;
-; 0.667 ; master:master|state.Send_Reg   ; master:master|st_prev.Restart  ; clk          ; clk         ; 0.000        ; -0.156     ; 0.595      ;
-; 0.690 ; master:master|state.Default    ; master:master|st_prev.Restart  ; clk          ; clk         ; 0.000        ; 0.035      ; 0.809      ;
-; 0.698 ; master:master|state.Start      ; master:master|scl              ; clk          ; clk         ; 0.000        ; 0.034      ; 0.816      ;
-; 0.714 ; master:master|st_prev.Send_Reg ; master:master|st_prev.Send_Add ; clk          ; clk         ; 0.000        ; 0.237      ; 1.035      ;
-; 0.733 ; master:master|state.Send_Add   ; master:master|sda_en           ; clk          ; clk         ; 0.000        ; 0.247      ; 1.064      ;
-; 0.749 ; master:master|state.Listen     ; master:master|sda_en           ; clk          ; clk         ; 0.000        ; 0.044      ; 0.877      ;
-; 0.772 ; master:master|st_prev.Default  ; master:master|st_prev.Restart  ; clk          ; clk         ; 0.000        ; -0.156     ; 0.700      ;
-; 0.787 ; master:master|state.Send_Reg   ; master:master|sda_out          ; clk          ; clk         ; 0.000        ; 0.057      ; 0.928      ;
-; 0.801 ; master:master|state.Send_Add   ; master:master|st_prev.Send_Add ; clk          ; clk         ; 0.000        ; 0.237      ; 1.122      ;
-; 0.802 ; master:master|state.Send_Add   ; master:master|st_prev.Default  ; clk          ; clk         ; 0.000        ; 0.237      ; 1.123      ;
-; 0.802 ; master:master|counter[0]       ; master:master|sda_out          ; clk          ; clk         ; 0.000        ; 0.046      ; 0.932      ;
-; 0.813 ; master:master|state.Send_Reg   ; master:master|st_prev.Send_Add ; clk          ; clk         ; 0.000        ; 0.044      ; 0.941      ;
-; 0.820 ; master:master|state.Default    ; master:master|counter[0]       ; clk          ; clk         ; 0.000        ; 0.247      ; 1.151      ;
-; 0.820 ; master:master|state.Default    ; master:master|counter[2]       ; clk          ; clk         ; 0.000        ; 0.247      ; 1.151      ;
-; 0.820 ; master:master|state.Default    ; master:master|counter[1]       ; clk          ; clk         ; 0.000        ; 0.247      ; 1.151      ;
-; 0.820 ; master:master|state.Default    ; master:master|counter[4]       ; clk          ; clk         ; 0.000        ; 0.247      ; 1.151      ;
-; 0.820 ; master:master|state.Default    ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.247      ; 1.151      ;
-; 0.820 ; master:master|state.Default    ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.247      ; 1.151      ;
-; 0.820 ; master:master|state.Default    ; master:master|counter[3]       ; clk          ; clk         ; 0.000        ; 0.247      ; 1.151      ;
-; 0.822 ; master:master|state.Start      ; master:master|counter[0]       ; clk          ; clk         ; 0.000        ; 0.247      ; 1.153      ;
-; 0.822 ; master:master|state.Start      ; master:master|counter[2]       ; clk          ; clk         ; 0.000        ; 0.247      ; 1.153      ;
-; 0.822 ; master:master|state.Start      ; master:master|counter[1]       ; clk          ; clk         ; 0.000        ; 0.247      ; 1.153      ;
-; 0.822 ; master:master|state.Start      ; master:master|counter[4]       ; clk          ; clk         ; 0.000        ; 0.247      ; 1.153      ;
-; 0.822 ; master:master|state.Start      ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.247      ; 1.153      ;
-; 0.822 ; master:master|state.Start      ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.247      ; 1.153      ;
-; 0.822 ; master:master|state.Start      ; master:master|counter[3]       ; clk          ; clk         ; 0.000        ; 0.247      ; 1.153      ;
-; 0.831 ; master:master|state.Start      ; master:master|state.Send_Add   ; clk          ; clk         ; 0.000        ; 0.034      ; 0.949      ;
-; 0.836 ; master:master|st_prev.Restart  ; master:master|sda_en           ; clk          ; clk         ; 0.000        ; 0.247      ; 1.167      ;
-; 0.893 ; master:master|state.Start      ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 0.000        ; 0.035      ; 1.012      ;
-; 0.907 ; master:master|st_prev.Restart  ; master:master|sda_out          ; clk          ; clk         ; 0.000        ; 0.250      ; 1.241      ;
-; 0.935 ; master:master|state.Send_Add   ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 0.000        ; 0.037      ; 1.056      ;
-; 0.943 ; master:master|state.Send_Add   ; master:master|scl              ; clk          ; clk         ; 0.000        ; 0.036      ; 1.063      ;
-; 0.946 ; master:master|state.Start      ; master:master|state.Stretch    ; clk          ; clk         ; 0.000        ; 0.034      ; 1.064      ;
-; 0.953 ; master:master|sda_out          ; master:master|sda_out          ; clk          ; clk         ; 0.000        ; 0.045      ; 1.082      ;
-; 0.953 ; master:master|state.Send_Add   ; master:master|sda_out          ; clk          ; clk         ; 0.000        ; 0.250      ; 1.287      ;
-; 0.961 ; master:master|state.Default    ; master:master|sda_en           ; clk          ; clk         ; 0.000        ; 0.245      ; 1.290      ;
-; 0.968 ; master:master|st_prev.Default  ; master:master|sda_out          ; clk          ; clk         ; 0.000        ; 0.057      ; 1.109      ;
-; 0.989 ; master:master|counter[0]       ; master:master|st_prev.Send_Add ; clk          ; clk         ; 0.000        ; 0.033      ; 1.106      ;
-; 0.989 ; master:master|st_prev.Default  ; master:master|state.Start      ; clk          ; clk         ; 0.000        ; -0.155     ; 0.918      ;
-; 0.998 ; master:master|counter[7]       ; master:master|counter[7]       ; clk          ; clk         ; 0.000        ; 0.036      ; 1.118      ;
-; 0.999 ; master:master|state.Stretch    ; master:master|sda_en           ; clk          ; clk         ; 0.000        ; 0.247      ; 1.330      ;
-; 1.006 ; master:master|state.Stretch    ; master:master|state.Start      ; clk          ; clk         ; 0.000        ; 0.038      ; 1.128      ;
-; 1.006 ; master:master|st_prev.Send_Reg ; master:master|st_prev.Restart  ; clk          ; clk         ; 0.000        ; 0.037      ; 1.127      ;
-; 1.008 ; master:master|counter[10]      ; master:master|sda_out          ; clk          ; clk         ; 0.000        ; 0.246      ; 1.338      ;
+; 0.296 ; master:master|counter[3]       ; master:master|counter[3]       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.424      ;
+; 0.296 ; master:master|counter[1]       ; master:master|counter[1]       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.424      ;
+; 0.297 ; master:master|counter[5]       ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.425      ;
+; 0.309 ; master:master|counter[4]       ; master:master|counter[4]       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.437      ;
+; 0.310 ; master:master|counter[6]       ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.438      ;
+; 0.362 ; master:master|counter[2]       ; master:master|counter[2]       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.490      ;
+; 0.415 ; master:master|state.Send_Reg   ; master:master|st_prev.Default  ; clk          ; clk         ; 0.000        ; 0.238      ; 0.737      ;
+; 0.445 ; master:master|counter[3]       ; master:master|counter[4]       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.573      ;
+; 0.445 ; master:master|counter[1]       ; master:master|counter[2]       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.573      ;
+; 0.446 ; master:master|counter[5]       ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.574      ;
+; 0.467 ; master:master|counter[4]       ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.595      ;
+; 0.470 ; master:master|state.Send_Reg   ; master:master|sda_en           ; clk          ; clk         ; 0.000        ; 0.036      ; 0.590      ;
+; 0.470 ; master:master|counter[4]       ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.598      ;
+; 0.474 ; master:master|state.Send_Reg   ; master:master|state.Send_Reg   ; clk          ; clk         ; 0.000        ; 0.036      ; 0.594      ;
+; 0.475 ; master:master|counter[0]       ; master:master|counter[0]       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.603      ;
+; 0.476 ; master:master|state.Send_Reg   ; master:master|st_prev.Restart  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.596      ;
+; 0.486 ; master:master|scl              ; master:master|scl              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.606      ;
+; 0.496 ; master:master|state.Start      ; master:master|scl              ; clk          ; clk         ; 0.000        ; 0.033      ; 0.613      ;
+; 0.497 ; master:master|st_prev.Default  ; master:master|st_prev.Send_Add ; clk          ; clk         ; 0.000        ; 0.045      ; 0.626      ;
+; 0.505 ; master:master|state.Default    ; master:master|state.Start      ; clk          ; clk         ; 0.000        ; 0.036      ; 0.625      ;
+; 0.508 ; master:master|counter[1]       ; master:master|counter[3]       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.636      ;
+; 0.508 ; master:master|counter[3]       ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.636      ;
+; 0.511 ; master:master|counter[1]       ; master:master|counter[4]       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.639      ;
+; 0.511 ; master:master|counter[3]       ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.639      ;
+; 0.520 ; master:master|st_prev.Send_Add ; master:master|state.Send_Reg   ; clk          ; clk         ; 0.000        ; -0.157     ; 0.447      ;
+; 0.520 ; master:master|counter[2]       ; master:master|counter[3]       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.648      ;
+; 0.523 ; master:master|counter[2]       ; master:master|counter[4]       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.651      ;
+; 0.534 ; master:master|sda_en           ; master:master|sda_en           ; clk          ; clk         ; 0.000        ; 0.036      ; 0.654      ;
+; 0.552 ; master:master|state.Send_Reg   ; master:master|st_prev.Send_Add ; clk          ; clk         ; 0.000        ; 0.238      ; 0.874      ;
+; 0.553 ; master:master|sda_out          ; master:master|sda_out          ; clk          ; clk         ; 0.000        ; 0.043      ; 0.680      ;
+; 0.570 ; master:master|state.Start      ; master:master|state.Send_Add   ; clk          ; clk         ; 0.000        ; 0.232      ; 0.886      ;
+; 0.574 ; master:master|counter[1]       ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.702      ;
+; 0.577 ; master:master|counter[1]       ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.705      ;
+; 0.578 ; master:master|state.Stretch    ; master:master|sda_out          ; clk          ; clk         ; 0.000        ; 0.043      ; 0.705      ;
+; 0.586 ; master:master|counter[2]       ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.714      ;
+; 0.589 ; master:master|counter[2]       ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.717      ;
+; 0.603 ; master:master|state.Default    ; master:master|state.Default    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.723      ;
+; 0.609 ; master:master|state.Send_Add   ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 0.000        ; -0.155     ; 0.538      ;
+; 0.609 ; master:master|state.Send_Reg   ; master:master|sda_out          ; clk          ; clk         ; 0.000        ; 0.232      ; 0.925      ;
+; 0.622 ; master:master|counter[0]       ; master:master|counter[1]       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.750      ;
+; 0.625 ; master:master|counter[0]       ; master:master|counter[2]       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.753      ;
+; 0.634 ; master:master|state.Default    ; master:master|state.Stretch    ; clk          ; clk         ; 0.000        ; 0.232      ; 0.950      ;
+; 0.634 ; master:master|state.Send_Add   ; master:master|sda_out          ; clk          ; clk         ; 0.000        ; 0.043      ; 0.761      ;
+; 0.652 ; master:master|state.Start      ; master:master|state.Stretch    ; clk          ; clk         ; 0.000        ; 0.232      ; 0.968      ;
+; 0.659 ; master:master|state.Send_Add   ; master:master|st_prev.Send_Add ; clk          ; clk         ; 0.000        ; 0.049      ; 0.792      ;
+; 0.661 ; master:master|state.Send_Add   ; master:master|st_prev.Default  ; clk          ; clk         ; 0.000        ; 0.049      ; 0.794      ;
+; 0.688 ; master:master|counter[0]       ; master:master|counter[3]       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.816      ;
+; 0.691 ; master:master|counter[0]       ; master:master|counter[4]       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.819      ;
+; 0.691 ; master:master|state.Stretch    ; master:master|state.Default    ; clk          ; clk         ; 0.000        ; -0.153     ; 0.622      ;
+; 0.741 ; master:master|state.Send_Reg   ; master:master|state.Stretch    ; clk          ; clk         ; 0.000        ; 0.232      ; 1.057      ;
+; 0.741 ; master:master|state.Send_Reg   ; master:master|state.Send_Add   ; clk          ; clk         ; 0.000        ; 0.232      ; 1.057      ;
+; 0.754 ; master:master|counter[0]       ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.882      ;
+; 0.757 ; master:master|counter[0]       ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.885      ;
+; 0.766 ; master:master|state.Default    ; master:master|counter[3]       ; clk          ; clk         ; 0.000        ; 0.235      ; 1.085      ;
+; 0.766 ; master:master|state.Default    ; master:master|counter[0]       ; clk          ; clk         ; 0.000        ; 0.235      ; 1.085      ;
+; 0.766 ; master:master|state.Default    ; master:master|counter[1]       ; clk          ; clk         ; 0.000        ; 0.235      ; 1.085      ;
+; 0.766 ; master:master|state.Default    ; master:master|counter[2]       ; clk          ; clk         ; 0.000        ; 0.235      ; 1.085      ;
+; 0.766 ; master:master|state.Default    ; master:master|counter[4]       ; clk          ; clk         ; 0.000        ; 0.235      ; 1.085      ;
+; 0.766 ; master:master|state.Default    ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.235      ; 1.085      ;
+; 0.766 ; master:master|state.Default    ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.235      ; 1.085      ;
+; 0.780 ; master:master|st_prev.Restart  ; master:master|sda_out          ; clk          ; clk         ; 0.000        ; 0.232      ; 1.096      ;
+; 0.786 ; master:master|st_prev.Send_Reg ; master:master|state.Start      ; clk          ; clk         ; 0.000        ; 0.038      ; 0.908      ;
+; 0.793 ; master:master|state.Send_Add   ; master:master|state.Stretch    ; clk          ; clk         ; 0.000        ; 0.043      ; 0.920      ;
+; 0.809 ; master:master|st_prev.Restart  ; master:master|sda_en           ; clk          ; clk         ; 0.000        ; 0.036      ; 0.929      ;
+; 0.823 ; master:master|state.Start      ; master:master|st_prev.Send_Add ; clk          ; clk         ; 0.000        ; 0.238      ; 1.145      ;
+; 0.826 ; master:master|st_prev.Restart  ; master:master|state.Stretch    ; clk          ; clk         ; 0.000        ; 0.232      ; 1.142      ;
+; 0.826 ; master:master|st_prev.Restart  ; master:master|state.Send_Add   ; clk          ; clk         ; 0.000        ; 0.232      ; 1.142      ;
+; 0.834 ; master:master|st_prev.Send_Reg ; master:master|state.Default    ; clk          ; clk         ; 0.000        ; 0.038      ; 0.956      ;
+; 0.857 ; master:master|state.Start      ; master:master|sda_out          ; clk          ; clk         ; 0.000        ; 0.232      ; 1.173      ;
+; 0.866 ; master:master|st_prev.Send_Reg ; master:master|scl              ; clk          ; clk         ; 0.000        ; 0.035      ; 0.985      ;
+; 0.879 ; master:master|state.Default    ; master:master|sda_out          ; clk          ; clk         ; 0.000        ; 0.232      ; 1.195      ;
+; 0.881 ; master:master|state.Default    ; master:master|state.Send_Add   ; clk          ; clk         ; 0.000        ; 0.232      ; 1.197      ;
+; 0.912 ; master:master|counter[0]       ; master:master|st_prev.Default  ; clk          ; clk         ; 0.000        ; 0.047      ; 1.043      ;
+; 0.917 ; master:master|state.Stretch    ; master:master|state.Send_Reg   ; clk          ; clk         ; 0.000        ; -0.153     ; 0.848      ;
+; 0.922 ; master:master|state.Send_Add   ; master:master|sda_en           ; clk          ; clk         ; 0.000        ; -0.153     ; 0.853      ;
+; 0.927 ; master:master|state.Start      ; master:master|st_prev.Restart  ; clk          ; clk         ; 0.000        ; 0.036      ; 1.047      ;
+; 0.935 ; master:master|state.Stretch    ; master:master|st_prev.Send_Add ; clk          ; clk         ; 0.000        ; 0.049      ; 1.068      ;
+; 0.938 ; master:master|st_prev.Send_Reg ; master:master|state.Stretch    ; clk          ; clk         ; 0.000        ; 0.234      ; 1.256      ;
+; 0.946 ; master:master|state.Send_Reg   ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 0.000        ; 0.034      ; 1.064      ;
+; 0.960 ; master:master|st_prev.Restart  ; master:master|state.Default    ; clk          ; clk         ; 0.000        ; 0.036      ; 1.080      ;
+; 0.962 ; master:master|state.Stretch    ; master:master|scl              ; clk          ; clk         ; 0.000        ; -0.156     ; 0.890      ;
+; 0.989 ; master:master|state.Default    ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 0.000        ; 0.034      ; 1.107      ;
+; 0.992 ; master:master|counter[0]       ; master:master|st_prev.Send_Reg ; clk          ; clk         ; 0.000        ; -0.157     ; 0.919      ;
+; 1.010 ; master:master|state.Stretch    ; master:master|state.Start      ; clk          ; clk         ; 0.000        ; -0.153     ; 0.941      ;
+; 1.017 ; master:master|state.Send_Add   ; master:master|counter[3]       ; clk          ; clk         ; 0.000        ; 0.046      ; 1.147      ;
+; 1.017 ; master:master|state.Send_Add   ; master:master|counter[0]       ; clk          ; clk         ; 0.000        ; 0.046      ; 1.147      ;
+; 1.017 ; master:master|state.Send_Add   ; master:master|counter[1]       ; clk          ; clk         ; 0.000        ; 0.046      ; 1.147      ;
+; 1.017 ; master:master|state.Send_Add   ; master:master|counter[2]       ; clk          ; clk         ; 0.000        ; 0.046      ; 1.147      ;
+; 1.017 ; master:master|state.Send_Add   ; master:master|counter[4]       ; clk          ; clk         ; 0.000        ; 0.046      ; 1.147      ;
+; 1.017 ; master:master|state.Send_Add   ; master:master|counter[5]       ; clk          ; clk         ; 0.000        ; 0.046      ; 1.147      ;
+; 1.017 ; master:master|state.Send_Add   ; master:master|counter[6]       ; clk          ; clk         ; 0.000        ; 0.046      ; 1.147      ;
+; 1.033 ; master:master|counter[8]       ; master:master|counter[8]       ; clk          ; clk         ; 0.000        ; 0.036      ; 1.153      ;
+; 1.048 ; master:master|counter[10]      ; master:master|counter[10]      ; clk          ; clk         ; 0.000        ; 0.036      ; 1.168      ;
 +-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -931,10 +931,10 @@ No synchronizer chains to report.
 +------------------+----------+-------+----------+---------+---------------------+
 ; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -27.235  ; 0.179 ; N/A      ; N/A     ; -3.000              ;
-;  clk             ; -27.235  ; 0.179 ; N/A      ; N/A     ; -3.000              ;
-; Design-wide TNS  ; -647.11  ; 0.0   ; 0.0      ; 0.0     ; -43.149             ;
-;  clk             ; -647.110 ; 0.000 ; N/A      ; N/A     ; -43.149             ;
+; Worst-case Slack ; -26.657  ; 0.178 ; N/A      ; N/A     ; -3.000              ;
+;  clk             ; -26.657  ; 0.178 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -630.301 ; 0.0   ; 0.0      ; 0.0     ; -41.662             ;
+;  clk             ; -630.301 ; 0.000 ; N/A      ; N/A     ; -41.662             ;
 +------------------+----------+-------+----------+---------+---------------------+
 
 
@@ -1098,7 +1098,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
-    Info: Processing started: Sun Jul  6 01:20:21 2025
+    Info: Processing started: Sun Jul  6 13:59:36 2025
 Info: Command: quartus_sta JASPI -c top
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1115,63 +1115,63 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -27.235
+Info (332146): Worst-case setup slack is -26.657
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -27.235            -647.110 clk 
-Info (332146): Worst-case hold slack is 0.432
+    Info (332119):   -26.657            -630.301 clk 
+Info (332146): Worst-case hold slack is 0.434
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.432               0.000 clk 
+    Info (332119):     0.434               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -43.149 clk 
+    Info (332119):    -3.000             -41.662 clk 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -24.860
+Info (332146): Worst-case setup slack is -24.352
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -24.860            -590.438 clk 
-Info (332146): Worst-case hold slack is 0.382
+    Info (332119):   -24.352            -575.643 clk 
+Info (332146): Worst-case hold slack is 0.383
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.382               0.000 clk 
+    Info (332119):     0.383               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -43.149 clk 
+    Info (332119):    -3.000             -41.662 clk 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -11.269
+Info (332146): Worst-case setup slack is -10.970
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -11.269            -268.235 clk 
-Info (332146): Worst-case hold slack is 0.179
+    Info (332119):   -10.970            -258.683 clk 
+Info (332146): Worst-case hold slack is 0.178
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.179               0.000 clk 
+    Info (332119):     0.178               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -32.082 clk 
+    Info (332119):    -3.000             -30.976 clk 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 440 megabytes
-    Info: Processing ended: Sun Jul  6 01:20:23 2025
+    Info: Peak virtual memory: 436 megabytes
+    Info: Processing ended: Sun Jul  6 13:59:38 2025
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

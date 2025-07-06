@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top
-Sun Jul  6 01:20:09 2025
+Sun Jul  6 13:59:24 2025
 Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 
 
@@ -52,15 +52,15 @@ on the Quartus Prime software download page.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Jul  6 01:20:09 2025           ;
+; Analysis & Synthesis Status        ; Successful - Sun Jul  6 13:59:24 2025           ;
 ; Quartus Prime Version              ; 24.1std.0 Build 1077 03/04/2025 SC Lite Edition ;
 ; Revision Name                      ; top                                             ;
 ; Top-level Entity Name              ; top                                             ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 451                                             ;
-;     Total combinational functions  ; 451                                             ;
-;     Dedicated logic registers      ; 27                                              ;
-; Total registers                    ; 27                                              ;
+; Total logic elements               ; 457                                             ;
+;     Total combinational functions  ; 457                                             ;
+;     Dedicated logic registers      ; 26                                              ;
+; Total registers                    ; 26                                              ;
 ; Total pins                         ; 4                                               ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -199,20 +199,20 @@ on the Quartus Prime software download page.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 451       ;
+; Estimated Total logic elements              ; 457       ;
 ;                                             ;           ;
-; Total combinational functions               ; 451       ;
+; Total combinational functions               ; 457       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 155       ;
-;     -- 3 input functions                    ; 111       ;
+;     -- 4 input functions                    ; 165       ;
+;     -- 3 input functions                    ; 107       ;
 ;     -- <=2 input functions                  ; 185       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 336       ;
+;     -- normal mode                          ; 342       ;
 ;     -- arithmetic mode                      ; 115       ;
 ;                                             ;           ;
-; Total registers                             ; 27        ;
-;     -- Dedicated logic registers            ; 27        ;
+; Total registers                             ; 26        ;
+;     -- Dedicated logic registers            ; 26        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 4         ;
@@ -220,9 +220,9 @@ on the Quartus Prime software download page.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 27        ;
-; Total fan-out                               ; 1385      ;
-; Average fan-out                             ; 2.85      ;
+; Maximum fan-out                             ; 26        ;
+; Total fan-out                               ; 1411      ;
+; Average fan-out                             ; 2.87      ;
 +---------------------------------------------+-----------+
 
 
@@ -231,8 +231,8 @@ on the Quartus Prime software download page.
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                ; Entity Name         ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |top                                      ; 451 (0)             ; 27 (0)                    ; 0           ; 0            ; 0       ; 0         ; 4    ; 0            ; |top                                                                                                               ; top                 ; work         ;
-;    |master:master|                        ; 451 (145)           ; 27 (27)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|master:master                                                                                                 ; master              ; work         ;
+; |top                                      ; 457 (0)             ; 26 (0)                    ; 0           ; 0            ; 0       ; 0         ; 4    ; 0            ; |top                                                                                                               ; top                 ; work         ;
+;    |master:master|                        ; 457 (151)           ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|master:master                                                                                                 ; master              ; work         ;
 ;       |lpm_divide:Mod0|                   ; 158 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|master:master|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
 ;          |lpm_divide_7bm:auto_generated|  ; 158 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|master:master|lpm_divide:Mod0|lpm_divide_7bm:auto_generated                                                   ; lpm_divide_7bm      ; work         ;
 ;             |sign_div_unsign_slh:divider| ; 158 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|master:master|lpm_divide:Mod0|lpm_divide_7bm:auto_generated|sign_div_unsign_slh:divider                       ; sign_div_unsign_slh ; work         ;
@@ -273,17 +273,18 @@ Encoding Type:  One-Hot
 +----------------+--------------+----------------+---------------+----------------+-------------+---------------+
 
 
-+------------------------------------------------------------+
-; Registers Removed During Synthesis                         ;
-+---------------------------------------+--------------------+
-; Register name                         ; Reason for Removal ;
-+---------------------------------------+--------------------+
-; master:master|st_prev~8               ; Lost fanout        ;
-; master:master|state~8                 ; Lost fanout        ;
-; master:master|state~9                 ; Lost fanout        ;
-; master:master|state~10                ; Lost fanout        ;
-; Total Number of Removed Registers = 4 ;                    ;
-+---------------------------------------+--------------------+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; master:master|st_prev~8               ; Lost fanout                            ;
+; master:master|state~8                 ; Lost fanout                            ;
+; master:master|state~9                 ; Lost fanout                            ;
+; master:master|state~10                ; Lost fanout                            ;
+; master:master|state.Listen            ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 5 ;                                        ;
++---------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -291,7 +292,7 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 27    ;
+; Total registers                              ; 26    ;
 ; Number of registers using Synchronous Clear  ; 14    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -306,8 +307,8 @@ Encoding Type:  One-Hot
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; master:master|sda_out                  ; 10      ;
-; master:master|sda_en                   ; 6       ;
+; master:master|sda_out                  ; 8       ;
+; master:master|sda_en                   ; 7       ;
 ; Total number of inverted registers = 2 ;         ;
 +----------------------------------------+---------+
 
@@ -318,7 +319,7 @@ Encoding Type:  One-Hot
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
 ; 16:1               ; 14 bits   ; 140 LEs       ; 14 LEs               ; 126 LEs                ; Yes        ; |top|master:master|counter[8] ;
-; 12:1               ; 2 bits    ; 16 LEs        ; 6 LEs                ; 10 LEs                 ; No         ; |top|master:master|Selector3  ;
+; 12:1               ; 3 bits    ; 24 LEs        ; 9 LEs                ; 15 LEs                 ; No         ; |top|master:master|Selector5  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
 
 
@@ -392,23 +393,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 4                           ;
-; cycloneiii_ff         ; 27                          ;
+; cycloneiii_ff         ; 26                          ;
 ;     ENA SCLR          ; 14                          ;
-;     plain             ; 13                          ;
+;     plain             ; 12                          ;
 ; cycloneiii_io_obuf    ; 1                           ;
-; cycloneiii_lcell_comb ; 451                         ;
+; cycloneiii_lcell_comb ; 457                         ;
 ;     arith             ; 115                         ;
 ;         2 data inputs ; 27                          ;
 ;         3 data inputs ; 88                          ;
-;     normal            ; 336                         ;
+;     normal            ; 342                         ;
 ;         0 data inputs ; 13                          ;
 ;         1 data inputs ; 1                           ;
 ;         2 data inputs ; 144                         ;
-;         3 data inputs ; 23                          ;
-;         4 data inputs ; 155                         ;
+;         3 data inputs ; 19                          ;
+;         4 data inputs ; 165                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 25.50                       ;
-; Average LUT depth     ; 20.14                       ;
+; Max LUT depth         ; 24.50                       ;
+; Average LUT depth     ; 19.26                       ;
 +-----------------------+-----------------------------+
 
 
@@ -417,7 +418,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -427,7 +428,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
-    Info: Processing started: Sun Jul  6 01:19:57 2025
+    Info: Processing started: Sun Jul  6 13:59:11 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off JASPI -c top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -468,15 +469,15 @@ Warning (10230): Verilog HDL assignment warning at master.v(165): truncated valu
 Warning (10230): Verilog HDL assignment warning at master.v(172): truncated value with size 32 to match size of target (14) File: /home/samuel/Documentos/Sem_6/Digital/Proyecto/Repo proyecto/JASPI-Proyecto-Digital/master.v Line: 172
 Warning (10230): Verilog HDL assignment warning at master.v(181): truncated value with size 32 to match size of target (14) File: /home/samuel/Documentos/Sem_6/Digital/Proyecto/Repo proyecto/JASPI-Proyecto-Digital/master.v Line: 181
 Warning (10230): Verilog HDL assignment warning at master.v(189): truncated value with size 32 to match size of target (14) File: /home/samuel/Documentos/Sem_6/Digital/Proyecto/Repo proyecto/JASPI-Proyecto-Digital/master.v Line: 189
-Warning (10230): Verilog HDL assignment warning at master.v(197): truncated value with size 32 to match size of target (14) File: /home/samuel/Documentos/Sem_6/Digital/Proyecto/Repo proyecto/JASPI-Proyecto-Digital/master.v Line: 197
-Warning (10230): Verilog HDL assignment warning at master.v(203): truncated value with size 32 to match size of target (14) File: /home/samuel/Documentos/Sem_6/Digital/Proyecto/Repo proyecto/JASPI-Proyecto-Digital/master.v Line: 203
-Warning (10230): Verilog HDL assignment warning at master.v(208): truncated value with size 32 to match size of target (14) File: /home/samuel/Documentos/Sem_6/Digital/Proyecto/Repo proyecto/JASPI-Proyecto-Digital/master.v Line: 208
-Warning (10230): Verilog HDL assignment warning at master.v(213): truncated value with size 32 to match size of target (14) File: /home/samuel/Documentos/Sem_6/Digital/Proyecto/Repo proyecto/JASPI-Proyecto-Digital/master.v Line: 213
-Warning (10230): Verilog HDL assignment warning at master.v(220): truncated value with size 32 to match size of target (14) File: /home/samuel/Documentos/Sem_6/Digital/Proyecto/Repo proyecto/JASPI-Proyecto-Digital/master.v Line: 220
-Warning (10230): Verilog HDL assignment warning at master.v(225): truncated value with size 32 to match size of target (14) File: /home/samuel/Documentos/Sem_6/Digital/Proyecto/Repo proyecto/JASPI-Proyecto-Digital/master.v Line: 225
-Warning (10230): Verilog HDL assignment warning at master.v(230): truncated value with size 32 to match size of target (14) File: /home/samuel/Documentos/Sem_6/Digital/Proyecto/Repo proyecto/JASPI-Proyecto-Digital/master.v Line: 230
-Warning (10230): Verilog HDL assignment warning at master.v(233): truncated value with size 32 to match size of target (14) File: /home/samuel/Documentos/Sem_6/Digital/Proyecto/Repo proyecto/JASPI-Proyecto-Digital/master.v Line: 233
+Warning (10230): Verilog HDL assignment warning at master.v(198): truncated value with size 32 to match size of target (14) File: /home/samuel/Documentos/Sem_6/Digital/Proyecto/Repo proyecto/JASPI-Proyecto-Digital/master.v Line: 198
+Warning (10230): Verilog HDL assignment warning at master.v(204): truncated value with size 32 to match size of target (14) File: /home/samuel/Documentos/Sem_6/Digital/Proyecto/Repo proyecto/JASPI-Proyecto-Digital/master.v Line: 204
+Warning (10230): Verilog HDL assignment warning at master.v(209): truncated value with size 32 to match size of target (14) File: /home/samuel/Documentos/Sem_6/Digital/Proyecto/Repo proyecto/JASPI-Proyecto-Digital/master.v Line: 209
+Warning (10230): Verilog HDL assignment warning at master.v(214): truncated value with size 32 to match size of target (14) File: /home/samuel/Documentos/Sem_6/Digital/Proyecto/Repo proyecto/JASPI-Proyecto-Digital/master.v Line: 214
+Warning (10230): Verilog HDL assignment warning at master.v(221): truncated value with size 32 to match size of target (14) File: /home/samuel/Documentos/Sem_6/Digital/Proyecto/Repo proyecto/JASPI-Proyecto-Digital/master.v Line: 221
+Warning (10230): Verilog HDL assignment warning at master.v(226): truncated value with size 32 to match size of target (14) File: /home/samuel/Documentos/Sem_6/Digital/Proyecto/Repo proyecto/JASPI-Proyecto-Digital/master.v Line: 226
+Warning (10230): Verilog HDL assignment warning at master.v(231): truncated value with size 32 to match size of target (14) File: /home/samuel/Documentos/Sem_6/Digital/Proyecto/Repo proyecto/JASPI-Proyecto-Digital/master.v Line: 231
 Warning (10230): Verilog HDL assignment warning at master.v(234): truncated value with size 32 to match size of target (14) File: /home/samuel/Documentos/Sem_6/Digital/Proyecto/Repo proyecto/JASPI-Proyecto-Digital/master.v Line: 234
+Warning (10230): Verilog HDL assignment warning at master.v(235): truncated value with size 32 to match size of target (14) File: /home/samuel/Documentos/Sem_6/Digital/Proyecto/Repo proyecto/JASPI-Proyecto-Digital/master.v Line: 235
 Info (278001): Inferred 2 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "master:master|Mod1" File: /home/samuel/Documentos/Sem_6/Digital/Proyecto/Repo proyecto/JASPI-Proyecto-Digital/master.v Line: 135
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "master:master|Mod0" File: /home/samuel/Documentos/Sem_6/Digital/Proyecto/Repo proyecto/JASPI-Proyecto-Digital/master.v Line: 130
@@ -513,15 +514,15 @@ Info (17049): 4 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file /home/samuel/Documentos/Sem_6/Digital/Proyecto/Repo proyecto/JASPI-Proyecto-Digital/output_files/top.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 456 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 461 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 2 output pins
-    Info (21061): Implemented 452 logic cells
+    Info (21061): Implemented 457 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 41 warnings
-    Info: Peak virtual memory: 386 megabytes
-    Info: Processing ended: Sun Jul  6 01:20:09 2025
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:26
+    Info: Peak virtual memory: 385 megabytes
+    Info: Processing ended: Sun Jul  6 13:59:24 2025
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:28
 
 
 +------------------------------------------+

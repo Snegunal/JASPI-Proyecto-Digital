@@ -14,6 +14,8 @@ always #41.667 clk = ~clk; // se simula un clock de 12MHz
 
 initial begin
     #416000.67 beg = 1'b1;
+    #2000000 beg = 0;
+    #3000000 beg = 1'b1;
 end
 
 top top(
@@ -26,7 +28,7 @@ top top(
 initial begin
     $dumpfile("tb_top.vcd");
     $dumpvars(-1,top);
-    #4000000 $finish;
+    #8000000 $finish;
 end
 
 endmodule
