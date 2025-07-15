@@ -1,0 +1,120 @@
+# Modelo 3D
+
+Este directorio contiene el diseño 3D del sistema, desarrollado en Autodesk Fusion. Incluye los archivos CAD de cada componente (Para Inventor), una animación del mecanismo en funcionamiento y parámetros personalizables para facilitar futuras modificaciones.
+
+## Tabla de contenido
+
+1. [Archivos incluidos](#Archivos-incluidos)
+2. [Animación del Funcionamiento](#Animación-del-Funcionamiento)
+3. [Componentes principales](#Componentes-principales)
+4. [Parámetros de diseño](#Parámetros-de-diseño)
+5. [Recomendaciones](#Recomendaciones)
+
+---
+
+## Archivos incluidos
+
+- Archivos `.ipt` del ensamblaje completo.
+- Animación del mecanismo (`.mp4`).
+- Parámetros de diseño editables para control dimensional centralizado.
+
+---
+
+## Animación del Funcionamiento
+
+<p align="center">
+  <img src="Animación.mp4" alt="Animación del sistema en Inventor" width="600"/>
+</p>
+
+---
+
+## Componentes principales
+
+### 1. **Deslizador**
+
+<p align="center">
+  <img src="Imagenes/Deslizante.jpg" alt="Deslizador" width="300"/>
+</p>
+
+Componente móvil encargado del desplazamiento guiado para ubicar el día del compartimento y retirar el contenido (pastillas).
+
+---
+
+### 2. **Espacio para módulo FPGA**
+
+<p align="center">
+  <img src="Imagenes/Espacio_FPGA.jpg" alt="Espacio para FPGA" width="300"/>
+</p>
+
+Alojamiento reservado para el módulo FPGA, con dimensiones adaptadas según los parámetros `largoFPGA` y `anchoFPGA`.
+
+---
+
+### 3. **LCD – Almacenamiento (1)**
+
+<p align="center">
+  <img src="Imagenes/LCD_Almacen(1).jpg" alt="LCD Almacen 1" width="300"/>
+</p>
+
+Primera parte para el montaje del display LCD, muestra una vista del soporte que tiene un agujero para las conexiones previstas.
+
+---
+
+### 4. **LCD – Almacenamiento (2)**
+
+<p align="center">
+  <img src="Imagenes/LCD_Almacen(2).jpg" alt="LCD Almacen 2" width="300"/>
+</p>
+
+Segunda parte "tapa" para el montaje del display LCD, se observa el espacio para los leds indicadores de espacio y agujero para la LCD.
+
+---
+
+### 5. **Pastillero**
+
+<p align="center">
+  <img src="Imagenes/Pastillero.jpg" alt="Pastillero" width="300"/>
+</p>
+
+Compartimentos que almacenan las pastillas del usuario dividiendo los dias. De igual manera existe como puente de conexion entre el alojamiento para la LCD y el alojamiento de la FPGA, permitiendo funcionalidad (agujero transversal).
+
+---
+
+### 6. **Vista del Ensamble**
+
+<p align="center">
+  <img src="Imagenes/Ensamble.jpg" alt="Vista del Ensamble" width="300"/>
+</p>
+
+Ensamble general del sistema, muestra la integración entre el módulo FPGA, el sistema de visualización, y la base contenedor.
+
+
+## Parámetros de diseño
+
+Los archivos usan parámetros en Fusion para facilitar cambios y mantener uniformidad dimensional. Algunos ejemplos:
+
+Los siguientes parámetros están definidos en el modelo CAD (Fusion):
+
+| Nombre     | Unidad | Valor    | Descripción |
+|------------|--------|----------|-------------|
+| Espesor    | mm     | 7        | Espesor general de cada pared     |
+| largoFPGA  | mm     | 120      | Largo de la FPGA (Valor medido)         |
+| anchoFPGA  | mm     | 95       | Ancho de la FPGA (Valor medido)           |
+| cable1     | mm     | 5        | Agujero para el cable 1 de la FPGA         |
+| cable2     | mm     | 6        | Agujero para el cable 2 de la FPGA           |
+| Cilindro   | mm     | 158.673  | Diametro que inscribe la FPGA dentro de sí          |
+| largoSSCD  | mm     | 35.8     | Largo del módulo LCD (Valor consultado)          |
+| anchoSSCD  | mm     | 106.4    | Ancho del módulo LCD (Valor consultado)           |
+| DimLed     | mm     | 3        | Diametro de led (Valor consultado)          |
+| Sep        | mm     | 5        | Separación X           |
+| CilindroSS | mm     | 164.614  | Diametro que inscribe el mÓdulo LCD dentro de sí          |
+| altSSCD    | mm     | 20       | Altura del modulo LCD con pines (Valor medido)          |
+---
+
+## Recomendaciones
+
+- Para modificar el diseño, se actualizan los parámetros desde el menú de "Parametros de usuario" en Fusion.
+- Se debe mantener la estructura de nombres para evitar errores de ensamblaje.
+- Hay que verificar interferencias tras cambios con la herramienta de análisis.
+
+---
