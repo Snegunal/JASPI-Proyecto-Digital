@@ -2,7 +2,7 @@
 
 Esta carpeta contiene la implementación y pruebas del sistema de reloj digital usando un módulo RTC DS3231 y una pantalla de 7 segmentos de 4 dígitos.
 
-## 📑 Tabla de contenido
+## Tabla de contenido
 
 1. [Estructura](#estructura)
 2. [Componentes utilizados](#-componentes-utilizados)
