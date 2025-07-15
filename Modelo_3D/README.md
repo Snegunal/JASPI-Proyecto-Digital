@@ -43,7 +43,7 @@ Componente móvil encargado del desplazamiento guiado para ubicar el día del co
 ### 2. **Espacio para módulo FPGA**
 
 <p align="center">
-  <img src="Imagenes/Espacio_FPGA.jpg" alt="Espacio para FPGA" width="300"/>
+  <img src="Imagenes/Espacio_FPGA.jpg" alt="Espacio para FPGA" width="600"/>
 </p>
 
 Alojamiento reservado para el módulo FPGA, con dimensiones adaptadas según los parámetros `largoFPGA` y `anchoFPGA`.
@@ -53,7 +53,7 @@ Alojamiento reservado para el módulo FPGA, con dimensiones adaptadas según los
 ### 3. **LCD – Almacenamiento (1)**
 
 <p align="center">
-  <img src="Imagenes/LCD_Almacen(1).jpg" alt="LCD Almacen 1" width="300"/>
+  <img src="Imagenes/LCD_Almacen(1).jpg" alt="LCD Almacen 1" width="600"/>
 </p>
 
 Primera parte para el montaje del display LCD, muestra una vista del soporte que tiene un agujero para las conexiones previstas.
@@ -63,7 +63,7 @@ Primera parte para el montaje del display LCD, muestra una vista del soporte que
 ### 4. **LCD – Almacenamiento (2)**
 
 <p align="center">
-  <img src="Imagenes/LCD_Almacen(2).jpg" alt="LCD Almacen 2" width="300"/>
+  <img src="Imagenes/LCD_Almacen(2).jpg" alt="LCD Almacen 2" width="600"/>
 </p>
 
 Segunda parte "tapa" para el montaje del display LCD, se observa el espacio para los leds indicadores de espacio y agujero para la LCD.
@@ -73,7 +73,7 @@ Segunda parte "tapa" para el montaje del display LCD, se observa el espacio para
 ### 5. **Pastillero**
 
 <p align="center">
-  <img src="Imagenes/Pastillero.jpg" alt="Pastillero" width="300"/>
+  <img src="Imagenes/Pastillero.jpg" alt="Pastillero" width="600"/>
 </p>
 
 Compartimentos que almacenan las pastillas del usuario dividiendo los dias. De igual manera existe como puente de conexion entre el alojamiento para la LCD y el alojamiento de la FPGA, permitiendo funcionalidad (agujero transversal).
@@ -83,7 +83,7 @@ Compartimentos que almacenan las pastillas del usuario dividiendo los dias. De i
 ### 6. **Vista del Ensamble**
 
 <p align="center">
-  <img src="Imagenes/Ensamble.jpg" alt="Vista del Ensamble" width="300"/>
+  <img src="Imagenes/Ensamble.jpg" alt="Vista del Ensamble" width="600"/>
 </p>
 
 Ensamble general del sistema, muestra la integración entre el módulo FPGA, el sistema de visualización, y la base contenedor.
@@ -95,20 +95,23 @@ Los archivos usan parámetros en Fusion para facilitar cambios y mantener unifor
 
 Los siguientes parámetros están definidos en el modelo CAD (Fusion):
 
-| Nombre     | Unidad | Valor    | Descripción |
-|------------|--------|----------|-------------|
-| Espesor    | mm     | 7        | Espesor general de cada pared     |
-| largoFPGA  | mm     | 120      | Largo de la FPGA (Valor medido)         |
-| anchoFPGA  | mm     | 95       | Ancho de la FPGA (Valor medido)           |
-| cable1     | mm     | 5        | Agujero para el cable 1 de la FPGA         |
-| cable2     | mm     | 6        | Agujero para el cable 2 de la FPGA           |
-| Cilindro   | mm     | 158.673  | Diametro que inscribe la FPGA dentro de sí          |
-| largoSSCD  | mm     | 35.8     | Largo del módulo LCD (Valor consultado)          |
-| anchoSSCD  | mm     | 106.4    | Ancho del módulo LCD (Valor consultado)           |
-| DimLed     | mm     | 3        | Diametro de led (Valor consultado)          |
-| Sep        | mm     | 5        | Separación X           |
-| CilindroSS | mm     | 164.614  | Diametro que inscribe el mÓdulo LCD dentro de sí          |
-| altSSCD    | mm     | 20       | Altura del modulo LCD con pines (Valor medido)          |
+<p align="center">
+    | Nombre     | Unidad | Valor    | Descripción |
+    |------------|--------|----------|-------------|
+    | Espesor    | mm     | 7        | Espesor general de cada pared     |
+    | largoFPGA  | mm     | 120      | Largo de la FPGA (Valor medido)         |
+    | anchoFPGA  | mm     | 95       | Ancho de la FPGA (Valor medido)           |
+    | cable1     | mm     | 5        | Agujero para el cable 1 de la FPGA         |
+    | cable2     | mm     | 6        | Agujero para el cable 2 de la FPGA           |
+    | Cilindro   | mm     | 158.673  | Diametro que inscribe la FPGA dentro de sí          |
+    | largoSSCD  | mm     | 35.8     | Largo del módulo LCD (Valor consultado)          |
+    | anchoSSCD  | mm     | 106.4    | Ancho del módulo LCD (Valor consultado)           |
+    | DimLed     | mm     | 3        | Diametro de led (Valor consultado)          |
+    | Sep        | mm     | 5        | Separación X           |
+    | CilindroSS | mm     | 164.614  | Diametro que inscribe el mÓdulo LCD dentro de sí          |
+    | altSSCD    | mm     | 20       | Altura del modulo LCD con pines (Valor medido)          |
+</p>
+
 ---
 
 ## Recomendaciones
