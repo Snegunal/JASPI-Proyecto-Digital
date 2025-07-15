@@ -44,7 +44,6 @@ Esta carpeta contiene la implementación y pruebas del sistema de reloj digital 
 Este archivo permite visualizar los valores de la hora en formato binario por el monitor serial.  
 Se extraen los dígitos de las horas y minutos, y se convierten en binario usando la función `bitRead` (Se implementa en la FPGA).
 
-```cpp
 ```
 
 #include <Wire.h>
@@ -78,8 +77,6 @@ void loop() {
   printBin(m2); Serial.println();
 }
 
-``` 
-
 ```
 
 ### `reloj_con_7_Segmentos.ino`
@@ -88,7 +85,6 @@ Este archivo muestra la hora en un display de 4 dígitos utilizando multiplexaci
 Usa un mapa de segmentos para representar cada número y un sistema de refresco rápido para activar un dígito a la vez.
 
 
-```cpp
 ```
 
 #include <Wire.h>
@@ -142,7 +138,6 @@ void loop() {
 
   refreshDisplay();
 }
-``` 
 
 ```
 ## Imagen del montaje
