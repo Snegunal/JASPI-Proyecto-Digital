@@ -143,7 +143,7 @@ void loop() {
 ## Imagen del montaje
 
 <p align="center"> 
-    <img src="reloj_con_7_Segmentos/IMG_20250618_190723.jpg" width="400" alt="Montaje del sistema Arduino con RTC y 7 segmentos"/> 
+    <img src="IMG_20250618_190723.jpg" width="400" alt="Montaje del sistema Arduino con RTC y 7 segmentos"/> 
 </p>
 
 ## Notas adicionales
