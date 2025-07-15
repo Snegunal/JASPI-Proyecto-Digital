@@ -23,7 +23,7 @@ Este directorio contiene el diseño 3D del sistema, desarrollado en Autodesk Fus
 ## Animación del Funcionamiento
 
 <p align="center">
-  <img src="Animación.mp4" alt="Animación del sistema en Inventor" width="600"/>
+  <img src="Animación.gif" alt="Animación del sistema en Inventor" width="600"/>
 </p>
 
 ---
@@ -33,7 +33,7 @@ Este directorio contiene el diseño 3D del sistema, desarrollado en Autodesk Fus
 ### 1. **Deslizador**
 
 <p align="center">
-  <img src="Imagenes/Deslizante.jpg" alt="Deslizador" width="300"/>
+  <img src="Imagenes/Deslizante.jpg" alt="Deslizador" width="600"/>
 </p>
 
 Componente móvil encargado del desplazamiento guiado para ubicar el día del compartimento y retirar el contenido (pastillas).
@@ -95,23 +95,20 @@ Los archivos usan parámetros en Fusion para facilitar cambios y mantener unifor
 
 Los siguientes parámetros están definidos en el modelo CAD (Fusion):
 
-<p align="center">
-    | Nombre     | Unidad | Valor    | Descripción |
-    |------------|--------|----------|-------------|
-    | Espesor    | mm     | 7        | Espesor general de cada pared     |
-    | largoFPGA  | mm     | 120      | Largo de la FPGA (Valor medido)         |
-    | anchoFPGA  | mm     | 95       | Ancho de la FPGA (Valor medido)           |
-    | cable1     | mm     | 5        | Agujero para el cable 1 de la FPGA         |
-    | cable2     | mm     | 6        | Agujero para el cable 2 de la FPGA           |
-    | Cilindro   | mm     | 158.673  | Diametro que inscribe la FPGA dentro de sí          |
-    | largoSSCD  | mm     | 35.8     | Largo del módulo LCD (Valor consultado)          |
-    | anchoSSCD  | mm     | 106.4    | Ancho del módulo LCD (Valor consultado)           |
-    | DimLed     | mm     | 3        | Diametro de led (Valor consultado)          |
-    | Sep        | mm     | 5        | Separación X           |
-    | CilindroSS | mm     | 164.614  | Diametro que inscribe el mÓdulo LCD dentro de sí          |
-    | altSSCD    | mm     | 20       | Altura del modulo LCD con pines (Valor medido)          |
-</p>
-
+| Nombre     | Unidad | Valor    | Descripción |
+|------------|--------|----------|-------------|
+| Espesor    | mm     | 7        | Espesor general de cada pared     |
+| largoFPGA  | mm     | 120      | Largo de la FPGA (Valor medido)         |
+| anchoFPGA  | mm     | 95       | Ancho de la FPGA (Valor medido)           |
+| cable1     | mm     | 5        | Agujero para el cable 1 de la FPGA         |
+| cable2     | mm     | 6        | Agujero para el cable 2 de la FPGA           |
+| Cilindro   | mm     | 158.673  | Diametro que inscribe la FPGA dentro de sí          |
+| largoSSCD  | mm     | 35.8     | Largo del módulo LCD (Valor consultado)          |
+| anchoSSCD  | mm     | 106.4    | Ancho del módulo LCD (Valor consultado)           |
+| DimLed     | mm     | 3        | Diametro de led (Valor consultado)          |
+| Sep        | mm     | 5        | Separación X           |
+| CilindroSS | mm     | 164.614  | Diametro que inscribe el mÓdulo LCD dentro de sí          |
+| altSSCD    | mm     | 20       | Altura del modulo LCD con pines (Valor medido)          |
 ---
 
 ## Recomendaciones
