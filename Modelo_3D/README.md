@@ -23,7 +23,7 @@ Este directorio contiene el diseño 3D del sistema, desarrollado en Autodesk Fus
 ## Animación del Funcionamiento
 
 <p align="center">
-  <img src="Animación.gif" alt="Animación del sistema en Inventor" width="600"/>
+  <img src="Animación.gif" alt="Animación del sistema en Inventor" width="800"/>
 </p>
 
 La animación muestra el funcionamiento mecánico completo del sistema. La primera sección del cuerpo aloja el módulo FPGA, mientras que la tercera alberga el display LCD. En la parte central se encuentra un deslizador rotativo que se alinea con el pastillero, permitiendo la extracción controlada de los elementos contenidos en los compartimentos. Uno de los espacios permanece cerrado durante parte del ciclo, actuando como zona de seguridad para garantizar que los elementos no se liberen accidentalmente al iniciar o finalizar el movimiento.
