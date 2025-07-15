@@ -7,6 +7,12 @@ Este directorio contiene el diseño 3D del sistema, desarrollado en Autodesk Fus
 1. [Archivos incluidos](#Archivos-incluidos)
 2. [Animación del Funcionamiento](#Animación-del-Funcionamiento)
 3. [Componentes principales](#Componentes-principales)
+    1. [1. Deslizador](#1-deslizador)
+    2. [2. Espacio para módulo FPGA](#2-espacio-para-módulo-fpga)
+    3. [3. LCD – Almacenamiento (1)](#3-lcd--almacenamiento-1)
+    4. [4. LCD – Almacenamiento (2)](#4-lcd--almacenamiento-2)
+    5. [5. Pastillero](#5-pastillero)
+    6. [6. Vista del Ensamble](#6-vista-del-ensamble)
 4. [Parámetros de diseño](#Parámetros-de-diseño)
 5. [Recomendaciones](#Recomendaciones)
 

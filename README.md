@@ -2,7 +2,7 @@
 
 ---
 
-## Tabla de contenidos
+## Tabla de contenido
 
 1. [Fase Arduino](#Fase-Arduino)
 2. [Modelo 3D](#Modelo-3D)
