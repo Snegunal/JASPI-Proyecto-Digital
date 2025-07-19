@@ -1,6 +1,5 @@
 module listen#(
-    parameter COUNT_MAX = 20,
-    Ndata = 59
+    parameter Ndata = 59
 )(
     input scl,
     input sda,

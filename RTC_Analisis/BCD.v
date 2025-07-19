@@ -7,7 +7,7 @@ module BCD #(parameter Maxcount = 100000)(
     output reg [3:0] bcd,
     output reg [7:0] c
   );
-  // maxcount 200000 para quartus || 25 para test
+  // maxcount 100000 para quartus || 25 para test
   //reg  algo = 0; esto se cambia por el rst
   reg [1:0]algo;
   reg [$clog2(Maxcount):0] count;
