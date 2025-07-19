@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE10E22C8
-set_global_assignment -name TOP_LEVEL_ENTITY top
+set_global_assignment -name TOP_LEVEL_ENTITY BCDtoSSeg
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 24.1STD.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "00:24:13  JULY 06, 2025"
 set_global_assignment -name LAST_QUARTUS_VERSION "24.1std.0 Lite Edition"
@@ -55,15 +55,36 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_location_assignment PIN_23 -to clk
-set_location_assignment PIN_30 -to scl
 set_location_assignment PIN_34 -to sda
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name VERILOG_FILE listen.v
+set_global_assignment -name VERILOG_FILE BCDtoSSeg.v
+set_global_assignment -name VERILOG_FILE BCD.v
 set_global_assignment -name VERILOG_FILE beg_com.v
 set_global_assignment -name VERILOG_FILE top.v
 set_global_assignment -name VERILOG_FILE master.v
-set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
-set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_location_assignment PIN_127 -to SSeg[6]
+set_location_assignment PIN_135 -to an[0]
+set_location_assignment PIN_136 -to an[1]
+set_location_assignment PIN_137 -to an[2]
+set_location_assignment PIN_138 -to an[3]
+set_location_assignment PIN_126 -to SSeg[5]
+set_location_assignment PIN_125 -to SSeg[4]
+set_location_assignment PIN_124 -to SSeg[3]
+set_location_assignment PIN_121 -to SSeg[2]
+set_location_assignment PIN_120 -to SSeg[1]
+set_location_assignment PIN_119 -to SSeg[0]
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_65 -to c[3]
+set_location_assignment PIN_66 -to c[2]
+set_location_assignment PIN_67 -to c[1]
+set_location_assignment PIN_68 -to c[0]
+set_location_assignment PIN_58 -to BCD[3]
+set_location_assignment PIN_59 -to BCD[2]
+set_location_assignment PIN_60 -to BCD[1]
+set_location_assignment PIN_64 -to BCD[0]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

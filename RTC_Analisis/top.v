@@ -1,11 +1,19 @@
 
 module top(
     input clk,
-    output sda,
-    output scl
+    inout sda,
+    output scl,
+    output [0:6] SSeg,
+    output [7:0] an
 );
 
 wire sda_out, sda_en, beg;
+wire [7:0] Seconds;
+wire [3:0] bcd;
+wire [7:0] c;
+wire [7:0] Minutes;
+wire [7:0] Hours;
+wire [2:0] Acknowledge;
 
 assign sda = (sda_en) ? sda_out: 1'bz;
 
@@ -20,5 +28,33 @@ master master(
     .sda_in(sda),
     .clk(clk),
     .beg(beg)
+);
+
+listen listen(
+    .scl(scl),
+    .sda(sda),
+    .sda_en(sda_en),
+    .beg(beg),
+    .Seconds(Seconds),
+    .Minutes(Minutes),
+    .Hours(Hours),
+    .Acknowledge(Acknowledge)
+);
+
+BCD BCD(
+    .Seconds(Seconds),  
+    .Minutes(Minutes),
+    .Hours(Hours),
+    .clk(clk),
+    .bcd(bcd),
+    .c(c),
+    .Acknowledge(Acknowledge)
+);
+
+BCDtoSSeg BCDtoSSeg(
+    .bcd(bcd), 
+    .c(c),
+    .SSeg(SSeg), 
+    .an(an)
 );
 endmodule

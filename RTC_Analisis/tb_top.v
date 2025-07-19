@@ -2,6 +2,9 @@
 `include "master.v"
 `include "top.v"
 `include "beg_com.v"
+`include "listen.v"
+`include "BCD.v"
+`include "BCDtoSSeg.v"
 
 module tb_top ();
 

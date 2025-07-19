@@ -1,93 +1,22 @@
-|top
-clk => clk.IN2
-sda << sda.DB_MAX_OUTPUT_PORT_TYPE
-scl << master:master.scl
-
-
-|top|beg_com:beg_com
-clk => count[0].CLK
-clk => count[1].CLK
-clk => count[2].CLK
-clk => count[3].CLK
-clk => count[4].CLK
-clk => count[5].CLK
-clk => count[6].CLK
-clk => count[7].CLK
-clk => count[8].CLK
-clk => count[9].CLK
-clk => count[10].CLK
-clk => count[11].CLK
-clk => count[12].CLK
-clk => count[13].CLK
-clk => count[14].CLK
-clk => count[15].CLK
-clk => count[16].CLK
-clk => count[17].CLK
-clk => count[18].CLK
-clk => count[19].CLK
-clk => count[20].CLK
-clk => count[21].CLK
-clk => count[22].CLK
-clk => count[23].CLK
-clk => count[24].CLK
-clk => count[25].CLK
-clk => count[26].CLK
-clk => beg~reg0.CLK
-beg <= beg~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|master:master
-scl <= scl~reg0.DB_MAX_OUTPUT_PORT_TYPE
-sda_out <= sda_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
-sda_en <= sda_en~reg0.DB_MAX_OUTPUT_PORT_TYPE
-sda_in => ~NO_FANOUT~
-clk => listen_count[0].CLK
-clk => listen_count[1].CLK
-clk => listen_count[2].CLK
-clk => listen_count[3].CLK
-clk => sda_en~reg0.CLK
-clk => counter[0].CLK
-clk => counter[1].CLK
-clk => counter[2].CLK
-clk => counter[3].CLK
-clk => counter[4].CLK
-clk => counter[5].CLK
-clk => counter[6].CLK
-clk => counter[7].CLK
-clk => counter[8].CLK
-clk => counter[9].CLK
-clk => counter[10].CLK
-clk => counter[11].CLK
-clk => counter[12].CLK
-clk => counter[13].CLK
-clk => sda_out~reg0.CLK
-clk => scl~reg0.CLK
-clk => st_prev~6.DATAIN
-clk => state~8.DATAIN
-beg => scl.OUTPUTSELECT
-beg => sda_out.OUTPUTSELECT
-beg => counter.OUTPUTSELECT
-beg => counter.OUTPUTSELECT
-beg => counter.OUTPUTSELECT
-beg => counter.OUTPUTSELECT
-beg => counter.OUTPUTSELECT
-beg => counter.OUTPUTSELECT
-beg => counter.OUTPUTSELECT
-beg => counter.OUTPUTSELECT
-beg => counter.OUTPUTSELECT
-beg => counter.OUTPUTSELECT
-beg => counter.OUTPUTSELECT
-beg => counter.OUTPUTSELECT
-beg => counter.OUTPUTSELECT
-beg => counter.OUTPUTSELECT
-beg => Selector1.IN6
-beg => state.OUTPUTSELECT
-beg => state.OUTPUTSELECT
-beg => state.OUTPUTSELECT
-beg => state.OUTPUTSELECT
-beg => state.OUTPUTSELECT
-beg => state.OUTPUTSELECT
-beg => state.OUTPUTSELECT
-beg => Selector0.IN5
+|BCDtoSSeg
+BCD[0] => Decoder0.IN3
+BCD[1] => Decoder0.IN2
+BCD[2] => Decoder0.IN1
+BCD[3] => Decoder0.IN0
+c[0] => an[0].DATAIN
+c[1] => an[1].DATAIN
+c[2] => an[2].DATAIN
+c[3] => an[3].DATAIN
+SSeg[6] << WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[5] << WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[4] << WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[3] << WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[2] << WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[1] << WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[0] << WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+an[0] << c[0].DB_MAX_OUTPUT_PORT_TYPE
+an[1] << c[1].DB_MAX_OUTPUT_PORT_TYPE
+an[2] << c[2].DB_MAX_OUTPUT_PORT_TYPE
+an[3] << c[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
