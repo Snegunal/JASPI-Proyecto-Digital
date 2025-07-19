@@ -20,20 +20,23 @@ Esta carpeta contiene el desarrollo de los módulos necesarios para establecer l
 
 El primer paso para el desarrollo del proyecto fue su versión en Arduino, haciendo uso de está, por medio de un analizador lógico se pudo observar la secuencia completa de comunicación, e identificar lo que iba a ser necesario realizar con la FPGA para obtener respuesta del RTC
 
-<p align="center">
-  <img src="Videos_e_imagenes/Puls_1.png" alt="Pulseview inicial" width="600">
-   <p><em>Figura 1: Pulseview inicial</em></p>
-</p>
+<div style="text-align: center;">
+  <img src="Videos_e_imagenes/Puls_1.png" alt="Pulseview inicial" height="300">
+  <div><em>Figura 1: Pulseview inicial</em></div>
+</div>
 
-<p align="center">
-  <img src="Videos_e_imagenes/I2C_Data_Transfer_Overview.png" alt="I²C Data Transfer Overview *Datasheet*" width="600">
-  <p><em>Figura 2: I²C Data Transfer Overview *Datasheet*</em></p>
-</p>
-
-<p align="center">
-  <img src="Videos_e_imagenes/I2C_RW_Mode.png" alt="I²C RW Mode" width="600">
-   <p><em>Figura 3: I²C RW Mode *Datasheet*</em></p>
-</p>
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="Videos_e_imagenes/I2C_Data_Transfer_Overview.png" alt="I²C Data Transfer Overview" height="300">
+      <div><em>Figura 2: I²C Data Transfer Overview <i>Datasheet</i></em></div>
+    </td>
+    <td align="center">
+      <img src="Videos_e_imagenes/I2C_RW_Mode.png" alt="I²C RW Mode" height="300">
+      <div><em>Figura 3: I²C RW Mode <i>Datasheet</i></em></div>
+    </td>
+  </tr>
+</table>
 
 
 Usando como guía lo visto en *Pulseview* y la información del *Datasheet* correspondiente se comprendió por completo el protocolo. Entonces se crean los módulos **master** y **beg_com** para replicar esta secuencia. Una vez se confirmó la respuesta del RTC a las señales creadas por la FPGA nuevamente haciendo uso del analizador lógico, se buscó la forma de guardar esa información temporalmente para visualización y el control de alarma creando el módulo **listen**. Para poder confirmar el registro de la información se hace uso de los 7 Segmentos disponibles en la placa de desarrollo.
