@@ -64,8 +64,8 @@ Convierte los valores BCD en los códigos necesarios para controlar un **display
 
 A continuación se incluyen enlaces a videos donde se muestra el sistema en funcionamiento:
 
-- [Video 1 - Comunicación básica I²C, Respuesta RTC](RTC_Analisis/Videos_e_imagenes/Jaspi_1.mp4)
-- [Video 2 - Lectura y visualización de la hora](RTC_Analisis/Videos_e_imagenes/Jaspi_2.mp4)
+- [Video 1 - Comunicación básica I²C, Respuesta RTC](Videos_e_imagenes/Jaspi_1.mp4)
+- [Video 2 - Lectura y visualización de la hora](Videos_e_imagenes/Jaspi_2.mp4)
 
 
 ## Notas adicionales
