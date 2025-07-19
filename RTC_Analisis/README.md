@@ -20,9 +20,9 @@ Esta carpeta contiene el desarrollo de los módulos necesarios para establecer l
 
 El primer paso para el desarrollo del proyecto fue su versión en Arduino, haciendo uso de está, por medio de un analizador lógico se pudo observar la secuencia completa de comunicación, e identificar lo que iba a ser necesario realizar con la FPGA para obtener respuesta del RTC
 
-<div style="text-align: center;">
+<div align="center">
   <img src="Videos_e_imagenes/Puls_1.png" alt="Pulseview inicial" height="300">
-  <div><em>Figura 1: Pulseview inicial</em></div>
+  <p><em>Figura 1: Pulseview inicial</em></p>
 </div>
 
 <table align="center">
