@@ -7,10 +7,15 @@ module alarm_led (
     output reg [6:0] leds        
 );
 
-    reg [5:0] intervalo = 6'b000101;
-    reg [7:0] last_min_bin = 0;
-    reg [2:0] led_index = 0;
+    reg [5:0] intervalo; 
+    reg [7:0] last_min_bin;
+    reg [2:0] led_index;
 
+    initial begin
+        intervalo <= 6'b000101;
+        last_min_bin <= 0;
+        led_index <= 0;
+    end
     wire [7:0] Minutes_C = (Minutes[7:4] * 8'd10) + Minutes[3:0]; 
 
     always @(posedge clk) begin

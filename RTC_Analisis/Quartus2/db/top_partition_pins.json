@@ -8,6 +8,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "data[0]",
+					"strict" : false
+				},
+				{
+					"name" : "data[3]",
+					"strict" : false
+				},
+				{
 					"name" : "enable",
 					"strict" : false
 				},
