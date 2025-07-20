@@ -3,8 +3,15 @@ module top(
     input clk,
     inout sda,
     output scl,
-    output [0:6] SSeg,
-    output [7:0] an
+    //output [0:6] SSeg,
+    //output [7:0] an
+    output [6:0] leds_out
+    output [7:0] data,
+    output rs,
+    output rw,
+    output enable;
+    output [6:0] leds,
+    output buzzer
 );
 
 wire sda_out, sda_en, beg;
@@ -45,7 +52,18 @@ listen listen(
 lcddin_mod lcd_display (
     .clk(clk),
     .Hours(Hours),
-    .Minutes(Minutes)
+    .Minutes(Minutes),
+    .rs(rs),
+    .rw(rw),
+    .data(data),
+    .enable(enable)
+);
+
+alarm_led alarm_led (
+    .clk(clk),
+    .Minutes(Minutes),
+    .buzzer(buzzer),
+    .leds(leds)
 );
 
 /* BCD BCD(
