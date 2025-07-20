@@ -111,11 +111,7 @@ always @(*) begin
     // Creo que, decido a que estado ir para el estado actual dependiente de los cases
     case (fsm_state)
         IDLE: begin
-            next_state = STORE_DATA;
-        end
-
-        STORE_DATA: begin
-            next_state = (input_counter == NUM_DATA_ALL) ? CONFIG_CMD1 : STORE_DATA;
+            next_state = CONFIG_CMD1;
         end
 
         CONFIG_CMD1: begin
@@ -149,15 +145,7 @@ always @(posedge clk_16ms) begin
             data <= 0;
             last_sw_data <= 0; 
         end
-
-        STORE_DATA: begin
-            if ((din_data != last_sw_data) && (input_counter < NUM_DATA_ALL)) begin
-                static_data_mem[input_counter] <= din_data;
-                input_counter <= input_counter + 1;
-                last_sw_data <= din_data;  
-            end
-        end
-
+        
         CONFIG_CMD1: begin
             rs <= 0;
             rw <= 0;
