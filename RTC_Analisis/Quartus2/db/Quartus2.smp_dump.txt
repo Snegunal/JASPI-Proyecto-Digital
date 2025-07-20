@@ -1,12 +1,11 @@
 
 State Machine - |top|lcddin_mod:lcd_display|fsm_state
-Name fsm_state.WR_STATIC_TEXT_2L fsm_state.CONFIG_CMD2 fsm_state.WR_STATIC_TEXT_1L fsm_state.CONFIG_CMD1 fsm_state.STORE_DATA fsm_state.IDLE 
-fsm_state.IDLE 0 0 0 0 0 0 
-fsm_state.STORE_DATA 0 0 0 0 1 1 
-fsm_state.CONFIG_CMD1 0 0 0 1 0 1 
-fsm_state.WR_STATIC_TEXT_1L 0 0 1 0 0 1 
-fsm_state.CONFIG_CMD2 0 1 0 0 0 1 
-fsm_state.WR_STATIC_TEXT_2L 1 0 0 0 0 1 
+Name fsm_state.WR_STATIC_TEXT_2L fsm_state.CONFIG_CMD2 fsm_state.WR_STATIC_TEXT_1L fsm_state.CONFIG_CMD1 fsm_state.IDLE 
+fsm_state.IDLE 0 0 0 0 0 
+fsm_state.CONFIG_CMD1 0 0 0 1 1 
+fsm_state.WR_STATIC_TEXT_1L 0 0 1 0 1 
+fsm_state.CONFIG_CMD2 0 1 0 0 1 
+fsm_state.WR_STATIC_TEXT_2L 1 0 0 0 1 
 
 State Machine - |top|master:master|st_prev
 Name st_prev.Listen st_prev.Send_Reg st_prev.Send_Add st_prev.Default st_prev.Restart 

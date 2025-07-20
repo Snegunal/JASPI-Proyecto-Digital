@@ -1,4 +1,4 @@
-module BCD #(parameter Maxcount = 25)(
+module BCD #(parameter Maxcount = 100000)(
     input [7:0] Seconds,
     input [7:0] Minutes,
     input [7:0] Hours,
