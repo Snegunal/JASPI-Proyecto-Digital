@@ -145,6 +145,7 @@ always @(posedge clk_16ms) begin
             command_counter <= 0;
             data_counter <= 0;
             input_counter <= 0;
+            rw <= 0;
             rs <= 0;
             data <= 0;
             last_sw_data <= 0; 
