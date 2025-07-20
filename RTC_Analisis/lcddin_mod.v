@@ -189,6 +189,6 @@ always @(posedge clk_16ms) begin
 end
 
 
-assign enable = clk_16ms;
+assign enable = ~clk_16ms;
 
 endmodule
