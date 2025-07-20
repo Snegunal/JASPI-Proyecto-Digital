@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition"
 
-// DATE "07/20/2025 16:47:09"
+// DATE "07/20/2025 17:10:24"
 
 // 
 // Device: Altera EP4CE10E22C8 Package TQFP144
@@ -1296,7 +1296,7 @@ defparam \rw~output .open_drain_output = "false";
 
 // Location: IOOBUF_X34_Y17_N2
 cycloneive_io_obuf \enable~output (
-	.i(\lcd_display|clk_16ms~q ),
+	.i(!\lcd_display|clk_16ms~q ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),

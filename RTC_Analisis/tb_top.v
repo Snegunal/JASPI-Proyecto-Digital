@@ -1,10 +1,12 @@
 `timescale 1ns/1ps //(unidad de tiempo)/(resolución)
-`include "master.v"
-`include "top.v"
-`include "beg_com.v"
-`include "listen.v"
-`include "BCD.v"
-`include "BCDtoSSeg.v"
+`include "RTC_Analisis/master.v"
+`include "RTC_Analisis/top.v"
+`include "RTC_Analisis/beg_com.v"
+`include "RTC_Analisis/listen.v"
+`include "RTC_Analisis/BCD.v"
+`include "RTC_Analisis/BCDtoSSeg.v"
+`include "RTC_Analisis/lcddin_mod.v"
+`include "RTC_Analisis/alarm_led.v"
 
 module tb_top ();
 
