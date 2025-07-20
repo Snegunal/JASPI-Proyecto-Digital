@@ -21,6 +21,7 @@ beg_com beg_com(
     .clk(clk),
     .beg(beg)
 );
+
 master master(
     .scl(scl),
     .sda_out(sda_out),
@@ -41,7 +42,13 @@ listen listen(
     .Acknowledge(Acknowledge)
 );
 
-BCD BCD(
+lcddin_mod lcd_display (
+    .clk(clk),
+    .Hours(Hours),
+    .Minutes(Minutes)
+);
+
+/* BCD BCD(
     .Seconds(Seconds),  
     .Minutes(Minutes),
     .Hours(Hours),
@@ -56,5 +63,5 @@ BCDtoSSeg BCDtoSSeg(
     .c(c),
     .SSeg(SSeg), 
     .an(an)
-);
+); */
 endmodule
