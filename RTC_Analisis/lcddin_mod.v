@@ -167,7 +167,7 @@ always @(posedge clk_16ms) begin
 
         WR_STATIC_TEXT_1L: begin
             rs <= 1;
-            rw <= 1;
+            rw <= 0;
             data <= text[data_counter];
             data_counter <= data_counter + 1;
         end
@@ -181,7 +181,7 @@ always @(posedge clk_16ms) begin
 
         WR_STATIC_TEXT_2L: begin
             rs <= 1;
-            rw <= 1;
+            rw <= 0;
             data <= text[NUM_DATA_PERLINE + data_counter];
             data_counter <= data_counter + 1;
         end
