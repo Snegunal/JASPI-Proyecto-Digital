@@ -145,7 +145,6 @@ always @(posedge clk_16ms) begin
             command_counter <= 0;
             data_counter <= 0;
             input_counter <= 0;
-            rw <= 0;
             rs <= 0;
             data <= 0;
             last_sw_data <= 0; 
@@ -161,24 +160,28 @@ always @(posedge clk_16ms) begin
 
         CONFIG_CMD1: begin
             rs <= 0;
+            rw <= 0;
             data <= config_mem[command_counter];
             command_counter <= command_counter + 1;
         end
 
         WR_STATIC_TEXT_1L: begin
             rs <= 1;
+            rw <= 0;
             data <= text[data_counter];
             data_counter <= data_counter + 1;
         end
 
         CONFIG_CMD2: begin
             rs <= 0;
+            rw <= 0;
             data <= START_2LINE;
             data_counter <= 0;
         end
 
         WR_STATIC_TEXT_2L: begin
             rs <= 1;
+            rw <= 0;
             data <= text[NUM_DATA_PERLINE + data_counter];
             data_counter <= data_counter + 1;
         end
