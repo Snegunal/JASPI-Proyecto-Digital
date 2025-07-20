@@ -5,7 +5,6 @@ module top(
     output scl,
     //output [0:6] SSeg,
     //output [7:0] an
-    output [6:0] leds_out,
     output [7:0] data,
     output rs,
     output rw,

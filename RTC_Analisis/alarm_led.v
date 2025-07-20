@@ -14,10 +14,10 @@ module alarm_led (
     wire [7:0] Minutes_C = (Minutes[7:4] * 8'd10) + Minutes[3:0]; 
 
     always @(posedge clk) begin
-        buzzer <= 0; 
+        buzzer <= 1; 
 
         if ((Minutes_C != last_min_bin) & (Minutes_C % intervalo == 0)) begin
-            buzzer <= 1;
+            buzzer <= 0;
             last_min_bin <= Minutes_C; // Ultimo dato del minuto
 
             case (led_index)
