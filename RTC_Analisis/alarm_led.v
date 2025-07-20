@@ -12,7 +12,7 @@ module alarm_led (
     reg [2:0] led_index;
 
     initial begin
-        intervalo <= 6'b000101;
+        intervalo <= 6'b000001;
         last_min_bin <= 0;
         led_index <= 0;
     end
