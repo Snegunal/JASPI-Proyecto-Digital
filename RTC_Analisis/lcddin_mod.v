@@ -1,4 +1,4 @@
-module LCD1602_controller #(
+module lcddin_mod #(
     parameter NUM_COMMANDS = 4,
     NUM_DATA_ALL = 32,
     NUM_DATA_PERLINE = 16,
@@ -72,6 +72,8 @@ reg [$clog2(NUM_DATA_ALL):0] input_counter;
 // Memorias internas
 reg [DATA_BITS-1:0] static_data_mem [0:NUM_DATA_ALL-1];
 reg [DATA_BITS-1:0] config_mem [0:NUM_COMMANDS-1];
+
+reg [DATA_BITS-1:0] last_sw_data;
 
 // Otro clock para guardar  - no se si se podria hacer con beg, pero mejor cree otro clock
 always @(posedge clk) begin

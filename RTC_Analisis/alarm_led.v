@@ -16,7 +16,7 @@ module alarm_led (
     always @(posedge clk) begin
         buzzer <= 0; 
 
-        if (Minutes_C ! = last_min_bin && (Minutes_C % intervalo == 0)) begin
+        if ((Minutes_C != last_min_bin) & (Minutes_C % intervalo == 0)) begin
             buzzer <= 1;
             last_min_bin <= Minutes_C; // Ultimo dato del minuto
 
