@@ -10,12 +10,13 @@ module alarm_led (
     reg [5:0] intervalo; 
     reg [7:0] last_min_bin;
     reg [2:0] led_index;
+    reg buzzer_minute;
 
     initial begin
         intervalo <= 6'b000010;
         last_min_bin <= 0;
         led_index <= 0;
-        buzzer <= 1;
+        buzzer_minute <= 0;
     end
 
     wire [7:0] Minutes_C = (Minutes[7:4] * 8'd10) + Minutes[3:0]; 
@@ -25,6 +26,7 @@ module alarm_led (
 
         if ((Minutes_C != last_min_bin) & (Minutes_C % intervalo == 0)) begin
             last_min_bin <= Minutes_C; // Ultimo dato del minuto
+            buzzer_minute <= 1;
 
             case (led_index)
                 3'd0: leds <= 7'b1111110;
@@ -38,16 +40,18 @@ module alarm_led (
 
             led_index <= (led_index == 3'd6) ? 3'd0 : led_index + 1; // Cambiar los leds en cada coincidencia
 
-            if (Seconds_C == 2 | Seconds_C == 3) begin
-                buzzer <= 0; 
-            end else begin
-                buzzer <= 1; 
-            end
-
         end else if (Minutes_C != last_min_bin) begin
             last_min_bin <= Minutes_C;
-            buzzer <= 1;
+            buzzer_minute_active <= 0;
             leds <= 7'b1111111;
+        end
+    end
+
+    always @(posedge clk) begin 
+        if (buzzer_minute) begin
+            buzzer <= (Seconds_C == 2 || Seconds_C == 3) ? 0 : 1;
+        end else begin
+            buzzer <= 1;
         end
     end
 
