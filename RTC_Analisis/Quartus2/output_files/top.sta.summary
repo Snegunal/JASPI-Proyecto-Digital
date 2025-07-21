@@ -3,147 +3,147 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -26.928
-TNS   : -1216.275
+Slack : -26.036
+TNS   : -1205.333
 
 Type  : Slow 1200mV 85C Model Setup 'lcddin_mod:lcd_display|clk_16ms'
-Slack : -2.620
-TNS   : -33.431
+Slack : -2.889
+TNS   : -34.933
 
 Type  : Slow 1200mV 85C Model Setup 'master:master|scl'
-Slack : -2.310
-TNS   : -43.975
+Slack : -2.730
+TNS   : -70.865
 
 Type  : Slow 1200mV 85C Model Setup 'beg_com:beg_com|beg'
-Slack : -1.387
-TNS   : -17.455
-
-Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.433
-TNS   : 0.000
+Slack : -1.744
+TNS   : -23.137
 
 Type  : Slow 1200mV 85C Model Hold 'lcddin_mod:lcd_display|clk_16ms'
-Slack : 0.454
+Slack : 0.434
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.436
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'master:master|scl'
-Slack : 0.498
+Slack : 0.523
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'beg_com:beg_com|beg'
-Slack : 1.000
+Slack : 1.075
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -175.492
+TNS   : -187.388
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'master:master|scl'
 Slack : -1.487
-TNS   : -34.201
+TNS   : -46.097
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'beg_com:beg_com|beg'
+Slack : -1.487
+TNS   : -35.688
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'lcddin_mod:lcd_display|clk_16ms'
 Slack : -1.487
 TNS   : -32.714
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'beg_com:beg_com|beg'
-Slack : -1.487
-TNS   : -23.792
-
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -24.564
-TNS   : -1105.540
+Slack : -23.758
+TNS   : -1095.344
 
 Type  : Slow 1200mV 0C Model Setup 'lcddin_mod:lcd_display|clk_16ms'
-Slack : -2.362
-TNS   : -29.500
+Slack : -2.581
+TNS   : -31.327
 
 Type  : Slow 1200mV 0C Model Setup 'master:master|scl'
-Slack : -2.089
-TNS   : -39.375
+Slack : -2.484
+TNS   : -64.276
 
 Type  : Slow 1200mV 0C Model Setup 'beg_com:beg_com|beg'
-Slack : -1.422
-TNS   : -18.211
-
-Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.383
-TNS   : 0.000
+Slack : -1.766
+TNS   : -24.120
 
 Type  : Slow 1200mV 0C Model Hold 'lcddin_mod:lcd_display|clk_16ms'
-Slack : 0.402
+Slack : 0.319
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.385
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'master:master|scl'
-Slack : 0.461
+Slack : 0.483
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'beg_com:beg_com|beg'
-Slack : 1.121
+Slack : 1.196
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -175.492
+TNS   : -187.388
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'master:master|scl'
 Slack : -1.487
-TNS   : -34.990
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'lcddin_mod:lcd_display|clk_16ms'
-Slack : -1.487
-TNS   : -32.714
+TNS   : -46.097
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'beg_com:beg_com|beg'
 Slack : -1.487
-TNS   : -23.792
+TNS   : -35.688
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'lcddin_mod:lcd_display|clk_16ms'
+Slack : -1.487
+TNS   : -32.747
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -11.086
-TNS   : -477.842
+Slack : -10.586
+TNS   : -466.344
 
 Type  : Fast 1200mV 0C Model Setup 'lcddin_mod:lcd_display|clk_16ms'
-Slack : -0.506
-TNS   : -3.051
+Slack : -0.693
+TNS   : -4.704
 
 Type  : Fast 1200mV 0C Model Setup 'master:master|scl'
-Slack : -0.425
-TNS   : -5.420
+Slack : -0.691
+TNS   : -14.309
 
 Type  : Fast 1200mV 0C Model Setup 'beg_com:beg_com|beg'
-Slack : -0.078
-TNS   : -0.474
+Slack : -0.307
+TNS   : -0.821
 
-Type  : Fast 1200mV 0C Model Hold 'clk'
+Type  : Fast 1200mV 0C Model Hold 'lcddin_mod:lcd_display|clk_16ms'
 Slack : 0.179
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'lcddin_mod:lcd_display|clk_16ms'
-Slack : 0.187
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.180
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'master:master|scl'
-Slack : 0.200
+Slack : 0.212
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'beg_com:beg_com|beg'
-Slack : 0.447
+Slack : 0.537
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -126.715
+TNS   : -135.262
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'master:master|scl'
 Slack : -1.000
-TNS   : -23.000
+TNS   : -31.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'beg_com:beg_com|beg'
+Slack : -1.000
+TNS   : -24.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'lcddin_mod:lcd_display|clk_16ms'
 Slack : -1.000
 TNS   : -22.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'beg_com:beg_com|beg'
-Slack : -1.000
-TNS   : -16.000
 
 ------------------------------------------------------------

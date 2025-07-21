@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top
-Sun Jul 20 18:55:40 2025
+Sun Jul 20 19:20:18 2025
 Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 
 
@@ -60,15 +60,15 @@ on the Quartus Prime software download page.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Jul 20 18:55:40 2025           ;
+; Analysis & Synthesis Status        ; Successful - Sun Jul 20 19:20:18 2025           ;
 ; Quartus Prime Version              ; 24.1std.0 Build 1077 03/04/2025 SC Lite Edition ;
 ; Revision Name                      ; top                                             ;
 ; Top-level Entity Name              ; top                                             ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 829                                             ;
-;     Total combinational functions  ; 795                                             ;
-;     Dedicated logic registers      ; 177                                             ;
-; Total registers                    ; 177                                             ;
+; Total logic elements               ; 880                                             ;
+;     Total combinational functions  ; 830                                             ;
+;     Dedicated logic registers      ; 201                                             ;
+; Total registers                    ; 201                                             ;
 ; Total pins                         ; 22                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -214,20 +214,20 @@ on the Quartus Prime software download page.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 829       ;
+; Estimated Total logic elements              ; 880       ;
 ;                                             ;           ;
-; Total combinational functions               ; 795       ;
+; Total combinational functions               ; 830       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 282       ;
-;     -- 3 input functions                    ; 186       ;
-;     -- <=2 input functions                  ; 327       ;
+;     -- 4 input functions                    ; 297       ;
+;     -- 3 input functions                    ; 202       ;
+;     -- <=2 input functions                  ; 331       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 593       ;
-;     -- arithmetic mode                      ; 202       ;
+;     -- normal mode                          ; 622       ;
+;     -- arithmetic mode                      ; 208       ;
 ;                                             ;           ;
-; Total registers                             ; 177       ;
-;     -- Dedicated logic registers            ; 177       ;
+; Total registers                             ; 201       ;
+;     -- Dedicated logic registers            ; 201       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 22        ;
@@ -235,8 +235,8 @@ on the Quartus Prime software download page.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 116       ;
-; Total fan-out                               ; 2757      ;
+; Maximum fan-out                             ; 124       ;
+; Total fan-out                               ; 2921      ;
 ; Average fan-out                             ; 2.71      ;
 +---------------------------------------------+-----------+
 
@@ -246,16 +246,16 @@ on the Quartus Prime software download page.
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                      ; Entity Name         ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |top                                      ; 795 (0)             ; 177 (0)                   ; 0           ; 0            ; 0       ; 0         ; 22   ; 0            ; |top                                                                                                                     ; top                 ; work         ;
-;    |alarm_led:alarm_led|                  ; 113 (35)            ; 19 (19)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alarm_led:alarm_led                                                                                                 ; alarm_led           ; work         ;
+; |top                                      ; 830 (0)             ; 201 (0)                   ; 0           ; 0            ; 0       ; 0         ; 22   ; 0            ; |top                                                                                                                     ; top                 ; work         ;
+;    |alarm_led:alarm_led|                  ; 128 (50)            ; 19 (19)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alarm_led:alarm_led                                                                                                 ; alarm_led           ; work         ;
 ;       |lpm_divide:Mod0|                   ; 78 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alarm_led:alarm_led|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
 ;          |lpm_divide_o9m:auto_generated|  ; 78 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alarm_led:alarm_led|lpm_divide:Mod0|lpm_divide_o9m:auto_generated                                                   ; lpm_divide_o9m      ; work         ;
 ;             |sign_div_unsign_dkh:divider| ; 78 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alarm_led:alarm_led|lpm_divide:Mod0|lpm_divide_o9m:auto_generated|sign_div_unsign_dkh:divider                       ; sign_div_unsign_dkh ; work         ;
 ;                |alt_u_div_e4f:divider|    ; 78 (78)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alarm_led:alarm_led|lpm_divide:Mod0|lpm_divide_o9m:auto_generated|sign_div_unsign_dkh:divider|alt_u_div_e4f:divider ; alt_u_div_e4f       ; work         ;
 ;    |beg_com:beg_com|                      ; 50 (50)             ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|beg_com:beg_com                                                                                                     ; beg_com             ; work         ;
-;    |lcddin_mod:lcd_display|               ; 93 (93)             ; 59 (59)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcddin_mod:lcd_display                                                                                              ; lcddin_mod          ; work         ;
-;    |listen:listen|                        ; 37 (37)             ; 39 (39)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|listen:listen                                                                                                       ; listen              ; work         ;
-;    |master:master|                        ; 502 (196)           ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|master:master                                                                                                       ; master              ; work         ;
+;    |lcddin_mod:lcd_display|               ; 93 (93)             ; 67 (67)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcddin_mod:lcd_display                                                                                              ; lcddin_mod          ; work         ;
+;    |listen:listen|                        ; 56 (56)             ; 55 (55)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|listen:listen                                                                                                       ; listen              ; work         ;
+;    |master:master|                        ; 503 (197)           ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|master:master                                                                                                       ; master              ; work         ;
 ;       |lpm_divide:Mod0|                   ; 158 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|master:master|lpm_divide:Mod0                                                                                       ; lpm_divide          ; work         ;
 ;          |lpm_divide_7bm:auto_generated|  ; 158 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|master:master|lpm_divide:Mod0|lpm_divide_7bm:auto_generated                                                         ; lpm_divide_7bm      ; work         ;
 ;             |sign_div_unsign_slh:divider| ; 158 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|master:master|lpm_divide:Mod0|lpm_divide_7bm:auto_generated|sign_div_unsign_slh:divider                             ; sign_div_unsign_slh ; work         ;
@@ -312,95 +312,255 @@ Encoding Type:  One-Hot
 +----------------+------------+--------------+----------------+---------------+----------------+-------------+---------------+
 
 
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+----------------------------------------+----------------------------------------+
-; Register name                          ; Reason for Removal                     ;
-+----------------------------------------+----------------------------------------+
-; lcddin_mod:lcd_display|rw              ; Stuck at GND due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[10][4]     ; Stuck at VCC due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[10][5]     ; Stuck at VCC due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[10][6]     ; Stuck at GND due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[10][7]     ; Stuck at GND due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[9][4]      ; Stuck at VCC due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[9][5]      ; Stuck at VCC due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[9][6]      ; Stuck at GND due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[9][7]      ; Stuck at GND due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[8][0]      ; Stuck at GND due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[8][1]      ; Stuck at VCC due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[8][2]      ; Stuck at GND due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[8][3]      ; Stuck at VCC due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[8][4]      ; Stuck at VCC due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[8][5]      ; Stuck at VCC due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[8][6]      ; Stuck at GND due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[8][7]      ; Stuck at GND due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[7][4]      ; Stuck at VCC due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[7][5]      ; Stuck at VCC due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[7][6]      ; Stuck at GND due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[7][7]      ; Stuck at GND due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[6][4]      ; Stuck at VCC due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[6][5]      ; Stuck at VCC due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[6][6]      ; Stuck at GND due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[6][7]      ; Stuck at GND due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[5][0]      ; Stuck at GND due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[5][1]      ; Stuck at GND due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[5][2]      ; Stuck at GND due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[5][3]      ; Stuck at GND due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[5][4]      ; Stuck at GND due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[5][5]      ; Stuck at VCC due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[5][6]      ; Stuck at GND due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[5][7]      ; Stuck at GND due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[4][0]      ; Stuck at GND due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[4][1]      ; Stuck at GND due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[4][2]      ; Stuck at GND due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[4][3]      ; Stuck at GND due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[4][4]      ; Stuck at GND due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[4][5]      ; Stuck at VCC due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[4][6]      ; Stuck at GND due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[4][7]      ; Stuck at GND due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[3][0]      ; Stuck at VCC due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[3][1]      ; Stuck at GND due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[3][2]      ; Stuck at GND due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[3][3]      ; Stuck at GND due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[3][4]      ; Stuck at GND due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[3][5]      ; Stuck at VCC due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[3][6]      ; Stuck at VCC due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[3][7]      ; Stuck at GND due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[2][0]      ; Stuck at GND due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[2][1]      ; Stuck at VCC due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[2][2]      ; Stuck at GND due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[2][3]      ; Stuck at GND due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[2][4]      ; Stuck at VCC due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[2][5]      ; Stuck at VCC due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[2][6]      ; Stuck at VCC due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[2][7]      ; Stuck at GND due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[1][0]      ; Stuck at VCC due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[1][1]      ; Stuck at VCC due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[1][2]      ; Stuck at VCC due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[1][3]      ; Stuck at VCC due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[1][4]      ; Stuck at GND due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[1][5]      ; Stuck at VCC due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[1][6]      ; Stuck at VCC due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[1][7]      ; Stuck at GND due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[0][0]      ; Stuck at GND due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[0][1]      ; Stuck at GND due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[0][2]      ; Stuck at GND due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[0][3]      ; Stuck at VCC due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[0][4]      ; Stuck at GND due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[0][5]      ; Stuck at GND due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[0][6]      ; Stuck at VCC due to stuck port data_in ;
-; lcddin_mod:lcd_display|text[0][7]      ; Stuck at GND due to stuck port data_in ;
-; lcddin_mod:lcd_display|fsm_state~2     ; Lost fanout                            ;
-; lcddin_mod:lcd_display|fsm_state~3     ; Lost fanout                            ;
-; lcddin_mod:lcd_display|fsm_state~4     ; Lost fanout                            ;
-; master:master|st_prev~8                ; Lost fanout                            ;
-; master:master|st_prev~9                ; Lost fanout                            ;
-; master:master|state~9                  ; Lost fanout                            ;
-; master:master|state~10                 ; Lost fanout                            ;
-; master:master|state~11                 ; Lost fanout                            ;
-; master:master|st_prev.Listen           ; Lost fanout                            ;
-; Total Number of Removed Registers = 82 ;                                        ;
-+----------------------------------------+----------------------------------------+
++----------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                               ;
++-----------------------------------------+----------------------------------------+
+; Register name                           ; Reason for Removal                     ;
++-----------------------------------------+----------------------------------------+
+; lcddin_mod:lcd_display|text[31][0]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|rw               ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[31][1]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[31][2]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[31][3]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[31][4]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[31][5]      ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[31][6]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[31][7]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[30][0]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[30][1]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[30][2]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[30][3]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[30][4]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[30][5]      ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[30][6]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[30][7]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[29][0]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[29][1]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[29][2]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[29][3]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[29][4]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[29][5]      ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[29][6]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[29][7]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[28][0]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[28][1]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[28][2]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[28][3]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[28][4]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[28][5]      ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[28][6]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[28][7]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[27][0]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[27][1]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[27][2]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[27][3]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[27][4]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[27][5]      ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[27][6]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[27][7]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[26][0]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[26][1]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[26][2]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[26][3]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[26][4]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[26][5]      ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[26][6]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[26][7]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[25][0]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[25][1]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[25][2]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[25][3]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[25][4]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[25][5]      ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[25][6]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[25][7]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[24][0]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[24][1]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[24][2]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[24][3]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[24][4]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[24][5]      ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[24][6]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[24][7]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[23][0]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[23][1]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[23][2]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[23][3]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[23][4]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[23][5]      ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[23][6]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[23][7]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[22][0]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[22][1]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[22][2]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[22][3]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[22][4]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[22][5]      ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[22][6]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[22][7]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[21][0]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[21][1]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[21][2]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[21][3]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[21][4]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[21][5]      ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[21][6]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[21][7]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[20][0]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[20][1]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[20][2]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[20][3]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[20][4]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[20][5]      ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[20][6]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[20][7]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[19][0]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[19][1]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[19][2]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[19][3]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[19][4]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[19][5]      ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[19][6]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[19][7]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[18][0]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[18][1]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[18][2]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[18][3]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[18][4]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[18][5]      ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[18][6]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[18][7]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[17][0]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[17][1]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[17][2]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[17][3]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[17][4]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[17][5]      ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[17][6]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[17][7]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[16][0]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[16][1]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[16][2]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[16][3]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[16][4]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[16][5]      ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[16][6]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[16][7]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[15][0]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[15][1]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[15][2]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[15][3]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[15][4]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[15][5]      ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[15][6]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[15][7]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[14][0]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[14][1]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[14][2]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[14][3]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[14][4]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[14][5]      ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[14][6]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[14][7]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[13][4]      ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[13][5]      ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[13][6]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[13][7]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[12][4]      ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[12][5]      ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[12][6]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[12][7]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[11][0]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[11][1]      ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[11][2]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[11][3]      ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[11][4]      ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[11][5]      ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[11][6]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[11][7]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[10][4]      ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[10][5]      ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[10][6]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[10][7]      ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[9][4]       ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[9][5]       ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[9][6]       ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[9][7]       ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[8][0]       ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[8][1]       ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[8][2]       ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[8][3]       ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[8][4]       ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[8][5]       ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[8][6]       ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[8][7]       ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[7][4]       ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[7][5]       ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[7][6]       ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[7][7]       ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[6][4]       ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[6][5]       ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[6][6]       ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[6][7]       ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[5][0]       ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[5][1]       ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[5][2]       ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[5][3]       ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[5][4]       ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[5][5]       ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[5][6]       ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[5][7]       ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[4][0]       ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[4][1]       ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[4][2]       ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[4][3]       ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[4][4]       ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[4][5]       ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[4][6]       ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[4][7]       ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[3][0]       ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[3][1]       ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[3][2]       ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[3][3]       ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[3][4]       ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[3][5]       ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[3][6]       ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[3][7]       ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[2][0]       ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[2][1]       ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[2][2]       ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[2][3]       ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[2][4]       ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[2][5]       ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[2][6]       ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[2][7]       ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[1][0]       ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[1][1]       ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[1][2]       ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[1][3]       ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[1][4]       ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[1][5]       ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[1][6]       ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[1][7]       ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[0][0]       ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[0][1]       ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[0][2]       ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[0][3]       ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[0][4]       ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[0][5]       ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[0][6]       ; Stuck at VCC due to stuck port data_in ;
+; lcddin_mod:lcd_display|text[0][7]       ; Stuck at GND due to stuck port data_in ;
+; lcddin_mod:lcd_display|fsm_state~2      ; Lost fanout                            ;
+; lcddin_mod:lcd_display|fsm_state~3      ; Lost fanout                            ;
+; lcddin_mod:lcd_display|fsm_state~4      ; Lost fanout                            ;
+; master:master|st_prev~8                 ; Lost fanout                            ;
+; master:master|st_prev~9                 ; Lost fanout                            ;
+; master:master|state~9                   ; Lost fanout                            ;
+; master:master|state~10                  ; Lost fanout                            ;
+; master:master|state~11                  ; Lost fanout                            ;
+; master:master|st_prev.Listen            ; Lost fanout                            ;
+; Total Number of Removed Registers = 242 ;                                        ;
++-----------------------------------------+----------------------------------------+
 
 
 +---------------------------------------------------------------------------------------+
@@ -417,7 +577,7 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 177   ;
+; Total registers                              ; 201   ;
 ; Number of registers using Synchronous Clear  ; 26    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -434,7 +594,7 @@ Encoding Type:  One-Hot
 +----------------------------------------+---------+
 ; alarm_led:alarm_led|buzzer             ; 2       ;
 ; master:master|sda_out                  ; 4       ;
-; master:master|sda_en                   ; 9       ;
+; master:master|sda_en                   ; 10      ;
 ; Total number of inverted registers = 3 ;         ;
 +----------------------------------------+---------+
 
@@ -444,13 +604,13 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
-; 8:1                ; 7 bits    ; 35 LEs        ; 28 LEs               ; 7 LEs                  ; Yes        ; |top|alarm_led:alarm_led|leds[0]            ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |top|listen:listen|count[5]                 ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top|lcddin_mod:lcd_display|data_counter[0] ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top|lcddin_mod:lcd_display|data[5]         ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top|master:master|listen_count[0]          ;
-; 13:1               ; 2 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |top|lcddin_mod:lcd_display|data[3]         ;
-; 22:1               ; 14 bits   ; 196 LEs       ; 14 LEs               ; 182 LEs                ; Yes        ; |top|master:master|counter[0]               ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |top|listen:listen|count[1]                 ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top|lcddin_mod:lcd_display|data_counter[4] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top|lcddin_mod:lcd_display|data[4]         ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top|master:master|listen_count[1]          ;
+; 10:1               ; 7 bits    ; 42 LEs        ; 35 LEs               ; 7 LEs                  ; Yes        ; |top|alarm_led:alarm_led|leds[0]            ;
+; 15:1               ; 2 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; Yes        ; |top|lcddin_mod:lcd_display|data[1]         ;
+; 22:1               ; 14 bits   ; 196 LEs       ; 14 LEs               ; 182 LEs                ; Yes        ; |top|master:master|counter[3]               ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |top|master:master|sda_en                   ;
 ; 15:1               ; 3 bits    ; 30 LEs        ; 12 LEs               ; 18 LEs                 ; No         ; |top|master:master|Selector6                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
@@ -593,7 +753,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------+--------+----------+----------------------------------------------------------------------------------------------------------+
 ; Port        ; Type   ; Severity ; Details                                                                                                  ;
 +-------------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; Seconds     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
 ; Acknowledge ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
 ; Day         ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
 ; Date        ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
@@ -608,26 +767,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 22                          ;
-; cycloneiii_ff         ; 177                         ;
+; cycloneiii_ff         ; 201                         ;
 ;     ENA               ; 18                          ;
 ;     ENA SCLR          ; 19                          ;
 ;     SCLR              ; 7                           ;
-;     plain             ; 133                         ;
+;     plain             ; 157                         ;
 ; cycloneiii_io_obuf    ; 1                           ;
-; cycloneiii_lcell_comb ; 798                         ;
-;     arith             ; 202                         ;
+; cycloneiii_lcell_comb ; 833                         ;
+;     arith             ; 208                         ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 83                          ;
-;         3 data inputs ; 118                         ;
-;     normal            ; 596                         ;
+;         2 data inputs ; 84                          ;
+;         3 data inputs ; 123                         ;
+;     normal            ; 625                         ;
 ;         0 data inputs ; 20                          ;
 ;         1 data inputs ; 7                           ;
-;         2 data inputs ; 219                         ;
-;         3 data inputs ; 68                          ;
-;         4 data inputs ; 282                         ;
+;         2 data inputs ; 222                         ;
+;         3 data inputs ; 79                          ;
+;         4 data inputs ; 297                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 25.50                       ;
-; Average LUT depth     ; 13.82                       ;
+; Average LUT depth     ; 13.39                       ;
 +-----------------------+-----------------------------+
 
 
@@ -636,7 +795,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:05     ;
 +----------------+--------------+
 
 
@@ -646,7 +805,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
-    Info: Processing started: Sun Jul 20 18:55:20 2025
+    Info: Processing started: Sun Jul 20 19:19:58 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Quartus2 -c top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -719,25 +878,24 @@ Warning (10230): Verilog HDL assignment warning at master.v(289): truncated valu
 Warning (10230): Verilog HDL assignment warning at master.v(290): truncated value with size 32 to match size of target (14) File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/master.v Line: 290
 Info (12128): Elaborating entity "listen" for hierarchy "listen:listen" File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/top.v Line: 49
 Warning (10230): Verilog HDL assignment warning at listen.v(39): truncated value with size 32 to match size of target (7) File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/listen.v Line: 39
-Info (12128): Elaborating entity "lcddin_mod" for hierarchy "lcddin_mod:lcd_display" File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/top.v Line: 59
-Warning (10036): Verilog HDL or VHDL warning at lcddin_mod.v(70): object "input_counter" assigned a value but never read File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/lcddin_mod.v Line: 70
-Warning (10036): Verilog HDL or VHDL warning at lcddin_mod.v(76): object "last_sw_data" assigned a value but never read File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/lcddin_mod.v Line: 76
-Warning (10230): Verilog HDL assignment warning at lcddin_mod.v(84): truncated value with size 32 to match size of target (20) File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/lcddin_mod.v Line: 84
-Warning (10230): Verilog HDL assignment warning at lcddin_mod.v(153): truncated value with size 32 to match size of target (3) File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/lcddin_mod.v Line: 153
-Warning (10230): Verilog HDL assignment warning at lcddin_mod.v(160): truncated value with size 32 to match size of target (5) File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/lcddin_mod.v Line: 160
-Warning (10230): Verilog HDL assignment warning at lcddin_mod.v(174): truncated value with size 32 to match size of target (5) File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/lcddin_mod.v Line: 174
-Warning (10030): Net "text[11..31]" at lcddin_mod.v(37) has no driver or initial value, using a default initial value '0' File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/lcddin_mod.v Line: 37
-Warning (10030): Net "config_mem.data_a" at lcddin_mod.v(74) has no driver or initial value, using a default initial value '0' File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/lcddin_mod.v Line: 74
-Warning (10030): Net "config_mem.waddr_a" at lcddin_mod.v(74) has no driver or initial value, using a default initial value '0' File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/lcddin_mod.v Line: 74
-Warning (10030): Net "config_mem.we_a" at lcddin_mod.v(74) has no driver or initial value, using a default initial value '0' File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/lcddin_mod.v Line: 74
-Info (12128): Elaborating entity "alarm_led" for hierarchy "alarm_led:alarm_led" File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/top.v Line: 66
-Warning (10230): Verilog HDL assignment warning at alarm_led.v(38): truncated value with size 32 to match size of target (3) File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/alarm_led.v Line: 38
+Info (12128): Elaborating entity "lcddin_mod" for hierarchy "lcddin_mod:lcd_display" File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/top.v Line: 60
+Warning (10036): Verilog HDL or VHDL warning at lcddin_mod.v(95): object "input_counter" assigned a value but never read File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/lcddin_mod.v Line: 95
+Warning (10036): Verilog HDL or VHDL warning at lcddin_mod.v(101): object "last_sw_data" assigned a value but never read File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/lcddin_mod.v Line: 101
+Warning (10230): Verilog HDL assignment warning at lcddin_mod.v(109): truncated value with size 32 to match size of target (20) File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/lcddin_mod.v Line: 109
+Warning (10230): Verilog HDL assignment warning at lcddin_mod.v(178): truncated value with size 32 to match size of target (3) File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/lcddin_mod.v Line: 178
+Warning (10230): Verilog HDL assignment warning at lcddin_mod.v(185): truncated value with size 32 to match size of target (5) File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/lcddin_mod.v Line: 185
+Warning (10230): Verilog HDL assignment warning at lcddin_mod.v(199): truncated value with size 32 to match size of target (5) File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/lcddin_mod.v Line: 199
+Warning (10030): Net "config_mem.data_a" at lcddin_mod.v(99) has no driver or initial value, using a default initial value '0' File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/lcddin_mod.v Line: 99
+Warning (10030): Net "config_mem.waddr_a" at lcddin_mod.v(99) has no driver or initial value, using a default initial value '0' File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/lcddin_mod.v Line: 99
+Warning (10030): Net "config_mem.we_a" at lcddin_mod.v(99) has no driver or initial value, using a default initial value '0' File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/lcddin_mod.v Line: 99
+Info (12128): Elaborating entity "alarm_led" for hierarchy "alarm_led:alarm_led" File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/top.v Line: 68
+Warning (10230): Verilog HDL assignment warning at alarm_led.v(39): truncated value with size 32 to match size of target (3) File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/alarm_led.v Line: 39
 Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276004): RAM logic "lcddin_mod:lcd_display|config_mem" is uninferred due to inappropriate RAM size File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/lcddin_mod.v Line: 74
+    Info (276004): RAM logic "lcddin_mod:lcd_display|config_mem" is uninferred due to inappropriate RAM size File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/lcddin_mod.v Line: 99
 Info (278001): Inferred 3 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "master:master|Mod1" File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/master.v Line: 141
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "master:master|Mod0" File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/master.v Line: 136
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "alarm_led:alarm_led|Mod0" File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/alarm_led.v Line: 24
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "alarm_led:alarm_led|Mod0" File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/alarm_led.v Line: 26
 Info (12130): Elaborated megafunction instantiation "master:master|lpm_divide:Mod1" File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/master.v Line: 141
 Info (12133): Instantiated megafunction "master:master|lpm_divide:Mod1" with the following parameter: File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/master.v Line: 141
     Info (12134): Parameter "LPM_WIDTHN" = "14"
@@ -766,8 +924,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_slh File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/Quartus2/db/sign_div_unsign_slh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_c7f.tdf
     Info (12023): Found entity 1: alt_u_div_c7f File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/Quartus2/db/alt_u_div_c7f.tdf Line: 27
-Info (12130): Elaborated megafunction instantiation "alarm_led:alarm_led|lpm_divide:Mod0" File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/alarm_led.v Line: 24
-Info (12133): Instantiated megafunction "alarm_led:alarm_led|lpm_divide:Mod0" with the following parameter: File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/alarm_led.v Line: 24
+Info (12130): Elaborated megafunction instantiation "alarm_led:alarm_led|lpm_divide:Mod0" File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/alarm_led.v Line: 26
+Info (12133): Instantiated megafunction "alarm_led:alarm_led|lpm_divide:Mod0" with the following parameter: File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/alarm_led.v Line: 26
     Info (12134): Parameter "LPM_WIDTHN" = "8"
     Info (12134): Parameter "LPM_WIDTHD" = "6"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -786,16 +944,16 @@ Info (17049): 9 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/Quartus2/output_files/top.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 859 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 910 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 20 output pins
     Info (21060): Implemented 1 bidirectional pins
-    Info (21061): Implemented 837 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 68 warnings
+    Info (21061): Implemented 888 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 67 warnings
     Info: Peak virtual memory: 385 megabytes
-    Info: Processing ended: Sun Jul 20 18:55:41 2025
-    Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:44
+    Info: Processing ended: Sun Jul 20 19:20:18 2025
+    Info: Elapsed time: 00:00:20
+    Info: Total CPU time (on all processors): 00:00:42
 
 
 +------------------------------------------+
