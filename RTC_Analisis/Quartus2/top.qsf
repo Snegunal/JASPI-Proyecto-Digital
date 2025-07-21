@@ -87,13 +87,13 @@ set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
 set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
-set_location_assignment PIN_31 -to leds[6]
-set_location_assignment PIN_33 -to leds[5]
-set_location_assignment PIN_38 -to leds[4]
-set_location_assignment PIN_43 -to leds[3]
-set_location_assignment PIN_46 -to leds[2]
-set_location_assignment PIN_50 -to leds[1]
-set_location_assignment PIN_51 -to leds[0]
+set_location_assignment PIN_77 -to leds[6]
+set_location_assignment PIN_84 -to leds[5]
+set_location_assignment PIN_83 -to leds[4]
+set_location_assignment PIN_80 -to leds[3]
+set_location_assignment PIN_74 -to leds[2]
+set_location_assignment PIN_73 -to leds[1]
+set_location_assignment PIN_72 -to leds[0]
 set_location_assignment PIN_53 -to leds_out[6]
 set_location_assignment PIN_55 -to leds_out[5]
 set_location_assignment PIN_42 -to leds_out[4]
