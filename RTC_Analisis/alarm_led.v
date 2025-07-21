@@ -13,7 +13,7 @@ module alarm_led (
     reg buzzer_minute;
 
     initial begin
-        intervalo <= 6'b000010;
+        intervalo <= 6'b000001;
         last_min_bin <= 0;
         led_index <= 0;
         buzzer_minute <= 0;
