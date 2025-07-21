@@ -3,26 +3,26 @@ clk => clk.IN4
 sda <> master:master.sda_in
 sda <> listen:listen.sda
 sda <> sda
-scl <= scl.DB_MAX_OUTPUT_PORT_TYPE
-data[0] <= lcddin_mod:lcd_display.data
-data[1] <= lcddin_mod:lcd_display.data
-data[2] <= lcddin_mod:lcd_display.data
-data[3] <= lcddin_mod:lcd_display.data
-data[4] <= lcddin_mod:lcd_display.data
-data[5] <= lcddin_mod:lcd_display.data
-data[6] <= lcddin_mod:lcd_display.data
-data[7] <= lcddin_mod:lcd_display.data
-rs <= lcddin_mod:lcd_display.rs
-rw <= lcddin_mod:lcd_display.rw
-enable <= lcddin_mod:lcd_display.enable
-leds[0] <= alarm_led:alarm_led.leds
-leds[1] <= alarm_led:alarm_led.leds
-leds[2] <= alarm_led:alarm_led.leds
-leds[3] <= alarm_led:alarm_led.leds
-leds[4] <= alarm_led:alarm_led.leds
-leds[5] <= alarm_led:alarm_led.leds
-leds[6] <= alarm_led:alarm_led.leds
-buzzer <= alarm_led:alarm_led.buzzer
+scl << scl.DB_MAX_OUTPUT_PORT_TYPE
+data[0] << lcddin_mod:lcd_display.data
+data[1] << lcddin_mod:lcd_display.data
+data[2] << lcddin_mod:lcd_display.data
+data[3] << lcddin_mod:lcd_display.data
+data[4] << lcddin_mod:lcd_display.data
+data[5] << lcddin_mod:lcd_display.data
+data[6] << lcddin_mod:lcd_display.data
+data[7] << lcddin_mod:lcd_display.data
+rs << lcddin_mod:lcd_display.rs
+rw << lcddin_mod:lcd_display.rw
+enable << lcddin_mod:lcd_display.enable
+leds[0] << alarm_led:alarm_led.leds
+leds[1] << alarm_led:alarm_led.leds
+leds[2] << alarm_led:alarm_led.leds
+leds[3] << alarm_led:alarm_led.leds
+leds[4] << alarm_led:alarm_led.leds
+leds[5] << alarm_led:alarm_led.leds
+leds[6] << alarm_led:alarm_led.leds
+buzzer << alarm_led:alarm_led.buzzer
 
 
 |top|beg_com:beg_com
@@ -52,7 +52,6 @@ clk => count[22].CLK
 clk => count[23].CLK
 clk => count[24].CLK
 clk => count[25].CLK
-clk => count[26].CLK
 clk => beg~reg0.CLK
 beg <= beg~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
@@ -365,7 +364,6 @@ clk => clk_counter[15].CLK
 clk => clk_counter[16].CLK
 clk => clk_counter[17].CLK
 clk => clk_counter[18].CLK
-clk => clk_counter[19].CLK
 clk => clk_16ms.CLK
 clk => text[31][0].CLK
 clk => text[31][1].CLK
@@ -689,7 +687,7 @@ clk => last_min_bin[5].CLK
 clk => last_min_bin[6].CLK
 clk => last_min_bin[7].CLK
 Minutes[0] => Mod0.IN13
-Minutes[0] => Equal2.IN15
+Minutes[0] => Equal4.IN15
 Minutes[0] => last_min_bin.DATAB
 Minutes[0] => last_min_bin.DATAB
 Minutes[1] => Add1.IN14
@@ -703,13 +701,8 @@ Minutes[6] => Add0.IN5
 Minutes[6] => Add0.IN6
 Minutes[7] => Add0.IN3
 Minutes[7] => Add0.IN4
-Seconds[0] => LessThan0.IN16
-Seconds[0] => LessThan1.IN16
-Seconds[0] => LessThan2.IN16
-Seconds[0] => LessThan3.IN16
-Seconds[0] => LessThan4.IN16
-Seconds[0] => LessThan5.IN16
-Seconds[0] => LessThan6.IN16
+Seconds[0] => Equal2.IN30
+Seconds[0] => Equal3.IN55
 Seconds[1] => Add3.IN14
 Seconds[2] => Add3.IN13
 Seconds[3] => Add3.IN12

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top
-Sun Jul 20 19:20:18 2025
+Sun Jul 20 19:51:04 2025
 Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 
 
@@ -60,15 +60,15 @@ on the Quartus Prime software download page.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Jul 20 19:20:18 2025           ;
+; Analysis & Synthesis Status        ; Successful - Sun Jul 20 19:51:04 2025           ;
 ; Quartus Prime Version              ; 24.1std.0 Build 1077 03/04/2025 SC Lite Edition ;
 ; Revision Name                      ; top                                             ;
 ; Top-level Entity Name              ; top                                             ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 880                                             ;
-;     Total combinational functions  ; 830                                             ;
-;     Dedicated logic registers      ; 201                                             ;
-; Total registers                    ; 201                                             ;
+; Total logic elements               ; 875                                             ;
+;     Total combinational functions  ; 825                                             ;
+;     Dedicated logic registers      ; 199                                             ;
+; Total registers                    ; 199                                             ;
 ; Total pins                         ; 22                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -214,20 +214,20 @@ on the Quartus Prime software download page.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 880       ;
+; Estimated Total logic elements              ; 875       ;
 ;                                             ;           ;
-; Total combinational functions               ; 830       ;
+; Total combinational functions               ; 825       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 297       ;
-;     -- 3 input functions                    ; 202       ;
-;     -- <=2 input functions                  ; 331       ;
+;     -- 4 input functions                    ; 300       ;
+;     -- 3 input functions                    ; 198       ;
+;     -- <=2 input functions                  ; 327       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 622       ;
-;     -- arithmetic mode                      ; 208       ;
+;     -- normal mode                          ; 619       ;
+;     -- arithmetic mode                      ; 206       ;
 ;                                             ;           ;
-; Total registers                             ; 201       ;
-;     -- Dedicated logic registers            ; 201       ;
+; Total registers                             ; 199       ;
+;     -- Dedicated logic registers            ; 199       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 22        ;
@@ -235,9 +235,9 @@ on the Quartus Prime software download page.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 124       ;
-; Total fan-out                               ; 2921      ;
-; Average fan-out                             ; 2.71      ;
+; Maximum fan-out                             ; 122       ;
+; Total fan-out                               ; 2909      ;
+; Average fan-out                             ; 2.72      ;
 +---------------------------------------------+-----------+
 
 
@@ -246,14 +246,14 @@ on the Quartus Prime software download page.
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                      ; Entity Name         ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |top                                      ; 830 (0)             ; 201 (0)                   ; 0           ; 0            ; 0       ; 0         ; 22   ; 0            ; |top                                                                                                                     ; top                 ; work         ;
-;    |alarm_led:alarm_led|                  ; 128 (50)            ; 19 (19)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alarm_led:alarm_led                                                                                                 ; alarm_led           ; work         ;
+; |top                                      ; 825 (0)             ; 199 (0)                   ; 0           ; 0            ; 0       ; 0         ; 22   ; 0            ; |top                                                                                                                     ; top                 ; work         ;
+;    |alarm_led:alarm_led|                  ; 127 (49)            ; 19 (19)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alarm_led:alarm_led                                                                                                 ; alarm_led           ; work         ;
 ;       |lpm_divide:Mod0|                   ; 78 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alarm_led:alarm_led|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
 ;          |lpm_divide_o9m:auto_generated|  ; 78 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alarm_led:alarm_led|lpm_divide:Mod0|lpm_divide_o9m:auto_generated                                                   ; lpm_divide_o9m      ; work         ;
 ;             |sign_div_unsign_dkh:divider| ; 78 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alarm_led:alarm_led|lpm_divide:Mod0|lpm_divide_o9m:auto_generated|sign_div_unsign_dkh:divider                       ; sign_div_unsign_dkh ; work         ;
 ;                |alt_u_div_e4f:divider|    ; 78 (78)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alarm_led:alarm_led|lpm_divide:Mod0|lpm_divide_o9m:auto_generated|sign_div_unsign_dkh:divider|alt_u_div_e4f:divider ; alt_u_div_e4f       ; work         ;
-;    |beg_com:beg_com|                      ; 50 (50)             ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|beg_com:beg_com                                                                                                     ; beg_com             ; work         ;
-;    |lcddin_mod:lcd_display|               ; 93 (93)             ; 67 (67)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcddin_mod:lcd_display                                                                                              ; lcddin_mod          ; work         ;
+;    |beg_com:beg_com|                      ; 49 (49)             ; 27 (27)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|beg_com:beg_com                                                                                                     ; beg_com             ; work         ;
+;    |lcddin_mod:lcd_display|               ; 90 (90)             ; 66 (66)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcddin_mod:lcd_display                                                                                              ; lcddin_mod          ; work         ;
 ;    |listen:listen|                        ; 56 (56)             ; 55 (55)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|listen:listen                                                                                                       ; listen              ; work         ;
 ;    |master:master|                        ; 503 (197)           ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|master:master                                                                                                       ; master              ; work         ;
 ;       |lpm_divide:Mod0|                   ; 158 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|master:master|lpm_divide:Mod0                                                                                       ; lpm_divide          ; work         ;
@@ -577,7 +577,7 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 201   ;
+; Total registers                              ; 199   ;
 ; Number of registers using Synchronous Clear  ; 26    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -604,13 +604,13 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |top|listen:listen|count[1]                 ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |top|listen:listen|count[6]                 ;
 ; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top|lcddin_mod:lcd_display|data_counter[4] ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top|lcddin_mod:lcd_display|data[4]         ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top|master:master|listen_count[1]          ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 35 LEs               ; 7 LEs                  ; Yes        ; |top|alarm_led:alarm_led|leds[0]            ;
-; 15:1               ; 2 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; Yes        ; |top|lcddin_mod:lcd_display|data[1]         ;
-; 22:1               ; 14 bits   ; 196 LEs       ; 14 LEs               ; 182 LEs                ; Yes        ; |top|master:master|counter[3]               ;
+; 10:1               ; 7 bits    ; 42 LEs        ; 35 LEs               ; 7 LEs                  ; Yes        ; |top|alarm_led:alarm_led|leds[2]            ;
+; 15:1               ; 2 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; Yes        ; |top|lcddin_mod:lcd_display|data[0]         ;
+; 22:1               ; 14 bits   ; 196 LEs       ; 14 LEs               ; 182 LEs                ; Yes        ; |top|master:master|counter[0]               ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |top|master:master|sda_en                   ;
 ; 15:1               ; 3 bits    ; 30 LEs        ; 12 LEs               ; 18 LEs                 ; No         ; |top|master:master|Selector6                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
@@ -621,7 +621,7 @@ Encoding Type:  One-Hot
 +----------------+----------+----------------------------------+
 ; Parameter Name ; Value    ; Type                             ;
 +----------------+----------+----------------------------------+
-; freq           ; 50000000 ; Signed Integer                   ;
+; freq           ; 25000000 ; Signed Integer                   ;
 ; tiempo         ; 1        ; Signed Integer                   ;
 +----------------+----------+----------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
@@ -665,7 +665,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; NUM_DATA_ALL     ; 32     ; Signed Integer                          ;
 ; NUM_DATA_PERLINE ; 16     ; Signed Integer                          ;
 ; DATA_BITS        ; 8      ; Signed Integer                          ;
-; COUNT_MAX        ; 800000 ; Signed Integer                          ;
+; COUNT_MAX        ; 400000 ; Signed Integer                          ;
 +------------------+--------+-----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -767,26 +767,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 22                          ;
-; cycloneiii_ff         ; 201                         ;
+; cycloneiii_ff         ; 199                         ;
 ;     ENA               ; 18                          ;
 ;     ENA SCLR          ; 19                          ;
 ;     SCLR              ; 7                           ;
-;     plain             ; 157                         ;
+;     plain             ; 155                         ;
 ; cycloneiii_io_obuf    ; 1                           ;
-; cycloneiii_lcell_comb ; 833                         ;
-;     arith             ; 208                         ;
+; cycloneiii_lcell_comb ; 828                         ;
+;     arith             ; 206                         ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 84                          ;
+;         2 data inputs ; 82                          ;
 ;         3 data inputs ; 123                         ;
-;     normal            ; 625                         ;
+;     normal            ; 622                         ;
 ;         0 data inputs ; 20                          ;
 ;         1 data inputs ; 7                           ;
-;         2 data inputs ; 222                         ;
-;         3 data inputs ; 79                          ;
-;         4 data inputs ; 297                         ;
+;         2 data inputs ; 220                         ;
+;         3 data inputs ; 75                          ;
+;         4 data inputs ; 300                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 25.50                       ;
-; Average LUT depth     ; 13.39                       ;
+; Average LUT depth     ; 13.51                       ;
 +-----------------------+-----------------------------+
 
 
@@ -795,7 +795,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:05     ;
+; Top            ; 00:00:14     ;
 +----------------+--------------+
 
 
@@ -805,7 +805,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
-    Info: Processing started: Sun Jul 20 19:19:58 2025
+    Info: Processing started: Sun Jul 20 19:50:01 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Quartus2 -c top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -823,7 +823,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file /home/s
     Info (12023): Found entity 1: beg_com File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/beg_com.v Line: 1
 Info (12127): Elaborating entity "top" for the top level hierarchy
 Info (12128): Elaborating entity "beg_com" for hierarchy "beg_com:beg_com" File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/top.v Line: 29
-Warning (10230): Verilog HDL assignment warning at beg_com.v(16): truncated value with size 32 to match size of target (27) File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/beg_com.v Line: 16
+Warning (10230): Verilog HDL assignment warning at beg_com.v(16): truncated value with size 32 to match size of target (26) File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/beg_com.v Line: 16
 Info (12128): Elaborating entity "master" for hierarchy "master:master" File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/top.v Line: 38
 Warning (10230): Verilog HDL assignment warning at master.v(53): truncated value with size 32 to match size of target (14) File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/master.v Line: 53
 Warning (10230): Verilog HDL assignment warning at master.v(57): truncated value with size 32 to match size of target (14) File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/master.v Line: 57
@@ -881,7 +881,7 @@ Warning (10230): Verilog HDL assignment warning at listen.v(39): truncated value
 Info (12128): Elaborating entity "lcddin_mod" for hierarchy "lcddin_mod:lcd_display" File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/top.v Line: 60
 Warning (10036): Verilog HDL or VHDL warning at lcddin_mod.v(95): object "input_counter" assigned a value but never read File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/lcddin_mod.v Line: 95
 Warning (10036): Verilog HDL or VHDL warning at lcddin_mod.v(101): object "last_sw_data" assigned a value but never read File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/lcddin_mod.v Line: 101
-Warning (10230): Verilog HDL assignment warning at lcddin_mod.v(109): truncated value with size 32 to match size of target (20) File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/lcddin_mod.v Line: 109
+Warning (10230): Verilog HDL assignment warning at lcddin_mod.v(109): truncated value with size 32 to match size of target (19) File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/lcddin_mod.v Line: 109
 Warning (10230): Verilog HDL assignment warning at lcddin_mod.v(178): truncated value with size 32 to match size of target (3) File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/lcddin_mod.v Line: 178
 Warning (10230): Verilog HDL assignment warning at lcddin_mod.v(185): truncated value with size 32 to match size of target (5) File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/lcddin_mod.v Line: 185
 Warning (10230): Verilog HDL assignment warning at lcddin_mod.v(199): truncated value with size 32 to match size of target (5) File: /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/lcddin_mod.v Line: 199
@@ -944,16 +944,16 @@ Info (17049): 9 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file /home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/Quartus2/output_files/top.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 910 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 905 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 20 output pins
     Info (21060): Implemented 1 bidirectional pins
-    Info (21061): Implemented 888 logic cells
+    Info (21061): Implemented 883 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 67 warnings
-    Info: Peak virtual memory: 385 megabytes
-    Info: Processing ended: Sun Jul 20 19:20:18 2025
-    Info: Elapsed time: 00:00:20
-    Info: Total CPU time (on all processors): 00:00:42
+    Info: Peak virtual memory: 391 megabytes
+    Info: Processing ended: Sun Jul 20 19:51:04 2025
+    Info: Elapsed time: 00:01:03
+    Info: Total CPU time (on all processors): 00:02:20
 
 
 +------------------------------------------+

@@ -38,16 +38,8 @@ module alarm_led (
 
             led_index <= (led_index == 3'd6) ? 3'd0 : led_index + 1; // Cambiar los leds en cada coincidencia
 
-            if (Seconds_C < 8) begin
-                if (
-                    (Seconds_C >= 0  && Seconds_C <= 1) || 
-                    (Seconds_C >= 3  && Seconds_C <= 4) || 
-                    (Seconds_C >= 6  && Seconds_C <= 7)
-                ) begin
-                    buzzer <= 0; 
-                end else begin
-                    buzzer <= 1; 
-                end
+            if (Seconds_C == 2 | Seconds_C == 3) begin
+                buzzer <= 0; 
             end else begin
                 buzzer <= 1; 
             end

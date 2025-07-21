@@ -3,7 +3,7 @@ module lcddin_mod #(
     NUM_DATA_ALL = 32,
     NUM_DATA_PERLINE = 16,
     DATA_BITS = 8,
-    COUNT_MAX = 800000
+    COUNT_MAX = 400000
 )(
     input clk,
     input [7:0] Hours,
