@@ -8,6 +8,7 @@ module lcddin_mod #(
     input clk,
     input [7:0] Hours,
     input [7:0] Minutes,
+    input [7:0] Seconds,
     input [DATA_BITS-1:0] din_data, 
     output reg rs,
     output reg rw,
@@ -31,6 +32,8 @@ localparam WR_STATIC_TEXT_2L = 3'b101;
     wire [7:0] Hours_uni  = Hours[3:0] + 8'd48;
     wire [7:0] Min_dec   = Minutes[7:4] + 8'd48;
     wire [7:0] Min_uni   = Minutes[3:0] + 8'd48;
+    wire [7:0] Sec_dec   = Seconds[7:4] + 8'd48;
+    wire [7:0] Sec_uni   = Seconds[3:0] + 8'd48;
 
 
     // Arreglo de 32 caracteres para cada espacio de la LCD
@@ -49,6 +52,28 @@ localparam WR_STATIC_TEXT_2L = 3'b101;
         text[8] <= 8'h3A;
         text[9] <= Min_dec;
         text[10] <= Min_uni;
+        text[11] <= 8'h3A;
+        text[12] <= Sec_dec;
+        text[13] <= Sec_uni;
+        text[14] <= 8'h20;
+        text[15] <= 8'h20;
+        
+        text[16] <= 8'h20;
+        text[17] <= 8'h20;
+        text[18] <= 8'h20;
+        text[19] <= 8'h20;
+        text[20] <= 8'h20;
+        text[21] <= 8'h20;
+        text[22] <= 8'h20;
+        text[23] <= 8'h20;
+        text[24] <= 8'h20;
+        text[25] <= 8'h20;
+        text[26] <= 8'h20;
+        text[27] <= 8'h20;
+        text[28] <= 8'h20;
+        text[29] <= 8'h20;
+        text[30] <= 8'h20;
+        text[31] <= 8'h20;
     end
 
 // Guardo los estados
@@ -145,7 +170,7 @@ always @(posedge clk_16ms) begin
             data <= 0;
             last_sw_data <= 0; 
         end
-        
+
         CONFIG_CMD1: begin
             rs <= 0;
             rw <= 0;

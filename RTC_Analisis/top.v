@@ -52,6 +52,7 @@ lcddin_mod lcd_display (
     .clk(clk),
     .Hours(Hours),
     .Minutes(Minutes),
+    .Seconds(Seconds),
     .rs(rs),
     .rw(rw),
     .data(data),
@@ -61,6 +62,7 @@ lcddin_mod lcd_display (
 alarm_led alarm_led (
     .clk(clk),
     .Minutes(Minutes),
+    .Seconds(Seconds),
     .buzzer(buzzer),
     .leds(leds)
 );
