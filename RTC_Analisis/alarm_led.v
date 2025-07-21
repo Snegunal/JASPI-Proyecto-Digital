@@ -49,7 +49,9 @@ module alarm_led (
 
     always @(posedge clk) begin 
         if (buzzer_minute) begin
-            buzzer <= (Seconds_C == 2 || Seconds_C == 3) ? 0 : 1;
+            buzzer <= ((Seconds_C >= 0  && Seconds_C <= 1) || 
+            (Seconds_C >= 3  && Seconds_C <= 4) || 
+            (Seconds_C >= 6  && Seconds_C <= 7)) ? 0 : 1;
         end else begin
             buzzer <= 1;
         end
