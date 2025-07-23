@@ -10,6 +10,7 @@ module top(
     output rw,
     output enable,
     output [6:0] leds,
+    output vcc,
     output buzzer
 );
 
@@ -22,6 +23,7 @@ wire [7:0] Hours;
 wire [2:0] Acknowledge;
 
 assign sda = (sda_en) ? sda_out: 1'bz;
+assign vcc = 1;
 
 beg_com beg_com(
     .clk(clk),

@@ -13,7 +13,7 @@ module alarm_led (
     reg buzzer_minute;
 
     initial begin
-        intervalo <= 6'b000001;
+        intervalo <= 6'b000010;
         last_min_bin <= 0;
         led_index <= 0;
         buzzer_minute <= 0;
@@ -29,13 +29,13 @@ module alarm_led (
             buzzer_minute <= 1;
 
             case (led_index)
-                3'd0: leds <= 7'b1111110;
-                3'd1: leds <= 7'b1111101;
-                3'd2: leds <= 7'b1111011;
-                3'd3: leds <= 7'b1110111;
-                3'd4: leds <= 7'b1101111;
-                3'd5: leds <= 7'b1011111;
-                3'd6: leds <= 7'b0111111;
+                3'd0: leds <= 7'b0000001;
+                3'd1: leds <= 7'b0000010;
+                3'd2: leds <= 7'b0000100;
+                3'd3: leds <= 7'b0001000;
+                3'd4: leds <= 7'b0010000;
+                3'd5: leds <= 7'b0100000;
+                3'd6: leds <= 7'b1000000;
             endcase
 
             led_index <= (led_index == 3'd6) ? 3'd0 : led_index + 1; // Cambiar los leds en cada coincidencia
@@ -43,7 +43,7 @@ module alarm_led (
         end else if (Minutes_C != last_min_bin) begin
             last_min_bin <= Minutes_C;
             buzzer_minute <= 0;
-            leds <= 7'b1111111;
+            leds <= 7'b0000000;
         end
     end
 
