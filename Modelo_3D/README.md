@@ -111,8 +111,8 @@ Los siguientes parámetros están definidos en el modelo CAD (Fusion):
 | cable1     | mm     | 5        | Agujero para el cable 1 de la FPGA         |
 | cable2     | mm     | 6        | Agujero para el cable 2 de la FPGA           |
 | Cilindro   | mm     | 158.673  | Diametro que inscribe la FPGA dentro de sí          |
-| largoSSCD  | mm     | 35.8     | Largo del módulo LCD (Valor consultado)          |
-| anchoSSCD  | mm     | 106.4    | Ancho del módulo LCD (Valor consultado)           |
+| largoSSCD  | mm     | 24.45     | Largo del módulo LCD (Valor consultado)          |
+| anchoSSCD  | mm     | 71.1    | Ancho del módulo LCD (Valor consultado)           |
 | DimLed     | mm     | 3        | Diametro de led (Valor consultado)          |
 | Sep        | mm     | 5        | Separación X           |
 | CilindroSS | mm     | 164.614  | Diametro que inscribe el mÓdulo LCD dentro de sí          |
