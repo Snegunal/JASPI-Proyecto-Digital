@@ -29,6 +29,6 @@
 
 ---
 
-##Bluetooth
+## Bluetooth
 
 ---
