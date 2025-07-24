@@ -2,12 +2,12 @@ module alarm_led (
     input clk,
     input [7:0] Minutes,   
     input [7:0] Seconds,  
-    //input [5:0] intervalo,       // Cada determinados minutos hasta la hora  (Multiplos)
+    input [7:0] intervalo,       // Cada determinados minutos hasta la hora  (Multiplos)
     output reg buzzer,
     output reg [6:0] leds        
 );
 
-    reg [5:0] intervalo; 
+    //reg [5:0] intervalo; 
     reg [2:0] led_index;
     reg buzzer_minute;
 

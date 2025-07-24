@@ -2,6 +2,7 @@
 module top(
     input clk,
     inout sda,
+    input rx,
     output scl,
     //output [0:6] SSeg,
     //output [7:0] an
@@ -11,6 +12,7 @@ module top(
     output enable,
     output [6:0] leds,
     output vcc,
+    output vcc_rx,
     output buzzer
 );
 
@@ -21,16 +23,20 @@ wire [7:0] c;
 wire [7:0] Minutes;
 wire [7:0] Hours;
 wire [2:0] Acknowledge;
+wire [7:0] intervalo;
+wire [7:0] rx_data;
+wire rx_done;
 
 assign sda = (sda_en) ? sda_out: 1'bz;
 assign vcc = 1;
+assign vcc_rx = 1;
 
-beg_com beg_com(
+beg_com beg_com (
     .clk(clk),
     .beg(beg)
 );
 
-master master(
+master master (
     .scl(scl),
     .sda_out(sda_out),
     .sda_en(sda_en),
@@ -39,7 +45,7 @@ master master(
     .beg(beg)
 );
 
-listen listen(
+listen listen (
     .scl(scl),
     .sda(sda),
     .sda_en(sda_en),
@@ -48,6 +54,20 @@ listen listen(
     .Minutes(Minutes),
     .Hours(Hours),
     .Acknowledge(Acknowledge)
+);
+
+UART UART(
+    .clk(clk),
+    .rx(rx),
+    .rx_data(rx_data),
+    .rx_done(rx_done)
+);
+
+intervalo intervalo (
+    .clk(clk),
+    .rx_data(rx_data),
+    .rx_done(rx_done),
+    .intervalo(intervalo)
 );
 
 lcddin_mod lcd_display (
@@ -66,7 +86,8 @@ alarm_led alarm_led (
     .Minutes(Minutes),
     .Seconds(Seconds),
     .buzzer(buzzer),
-    .leds(leds)
+    .leds(leds),
+    .intervalo(intervalo)
 );
 
 /* BCD BCD(
