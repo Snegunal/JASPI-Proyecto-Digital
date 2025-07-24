@@ -12,7 +12,6 @@ module top(
     output enable,
     output [6:0] leds,
     output vcc,
-    output vcc_rx,
     output buzzer
 );
 
@@ -29,7 +28,6 @@ wire rx_done;
 
 assign sda = (sda_en) ? sda_out: 1'bz;
 assign vcc = 1;
-assign vcc_rx = 1;
 
 beg_com beg_com (
     .clk(clk),
