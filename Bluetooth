@@ -3,8 +3,8 @@ module receptor (
     input reset,
     input rx,
     output reg [7:0] prueba,
-    output reg [8:0] debug_tmp, \\ esta parte(el debug y delay) fue corregida por chatgpt,
-    output reg [3:0] debug_i, \\ la cual se debe cambiar si el modulo esta configurado en 9600 o 11000
+    output reg [8:0] debug_tmp,
+    output reg [3:0] debug_i, 
     output reg nice
 );
 
