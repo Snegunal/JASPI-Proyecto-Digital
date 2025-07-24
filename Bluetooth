@@ -1,0 +1,101 @@
+module receptor (
+    input clk,
+    input reset,
+    input rx,
+    output reg [7:0] prueba,
+    output reg [8:0] debug_tmp,
+    output reg [3:0] debug_i,
+    output reg nice
+);
+
+    reg [1:0] state, nexte;
+    parameter start0 = 2'b00, start1 = 2'b01;
+
+    reg control = 0;
+    reg [8:0] tmp = 9'b0;
+    reg [3:0] i = 0;
+    reg [9:0] c = 0;
+    reg delay = 0;
+    reg [1:0] c2 = 2'b11;
+    reg muestra = 0;
+
+    always @(posedge clk) begin
+        if (c < 868)
+            c <= c + 1;
+        else begin
+            c <= 0;
+            delay <= ~delay;
+        end
+    end
+
+    always @(posedge delay) begin
+        if (c2 > 1)
+            c2 <= 0;
+        else
+            c2 <= c2 + 1;
+    end
+
+    always @(c2) begin
+        if (c2 == 1)
+            muestra = 1;
+        else
+            muestra = 0;
+    end
+
+ 
+    always @(posedge muestra or posedge reset) begin
+        if (reset)
+            state <= start0;
+        else
+            state <= nexte;
+    end
+
+    always @(*) begin
+        case (state)
+            start0: begin
+                if (rx == 1 && nice == 0) begin
+                    control = 0;
+                    nexte = start0;
+                end else if (rx == 0 && nice == 0) begin
+                    control = 1;
+                    nexte = start1;
+                end else begin
+                    control = 0;
+                    nexte = start0;
+                end
+            end
+            start1: begin
+                if (nice == 0) begin
+                    control = 1;
+                    nexte = start0;
+                end else begin
+                    control = 0;
+                    nexte = start0;
+                end
+            end
+            default: nexte = start0;
+        endcase
+    end
+
+    always @(posedge muestra) begin
+        if (control) begin
+            tmp <= {rx, tmp[8:1]};
+            if (i >= 8) begin
+                i <= 0;
+                nice <= 1;
+                prueba <= tmp[8:1];
+            end else begin
+                i <= i + 1;
+                nice <= 0;
+            end
+        end else begin
+            nice <= 0;
+        end
+    end
+
+    always @(*) begin
+        debug_tmp = tmp;
+        debug_i = i;
+    end
+
+endmodule
