@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE10E22) Path("/home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/RTC_Analisis/Quartus3/output_files/") File("top.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE10E22) Path("/home/samuel/Documentos/Sem_6/Digital/Proyecto 2/JASPI-Proyecto-Digital/Arquitectura_Digital/Quartus3/output_files/") File("top.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

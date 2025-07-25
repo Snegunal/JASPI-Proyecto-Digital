@@ -6,6 +6,8 @@ module lcddin_mod #(
     COUNT_MAX = 30000
 )(
     input clk,
+    input [6:0]leds,
+    input [6:0]led_index,
     input [7:0] Hours,
     input [7:0] Minutes,
     input [7:0] Seconds,
@@ -64,10 +66,10 @@ localparam WR_STATIC_TEXT_2L = 3'b101;
         text[19] <= 8'h20;
         text[20] <= 8'h20;
         text[21] <= 8'h20;
-        text[22] <= 8'h20;
+        text[22] <= 8'h20;// leds +8'd48;
         text[23] <= 8'h20;
         text[24] <= 8'h20;
-        text[25] <= 8'h20;
+        text[25] <= 8'h20;//led_index + 8'd48;
         text[26] <= 8'h20;
         text[27] <= 8'h20;
         text[28] <= 8'h20;

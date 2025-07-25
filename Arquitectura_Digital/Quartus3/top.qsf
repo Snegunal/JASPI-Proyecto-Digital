@@ -80,12 +80,12 @@ set_location_assignment PIN_99 -to rw
 set_location_assignment PIN_58 -to scl
 set_location_assignment PIN_54 -to sda
 set_location_assignment PIN_52 -to vcc
-set_location_assignment PIN_28 -to leds[6]
-set_location_assignment PIN_39 -to leds[5]
-set_location_assignment PIN_34 -to leds[4]
-set_location_assignment PIN_30 -to leds[3]
+set_location_assignment PIN_31 -to leds[6]
+set_location_assignment PIN_34 -to leds[5]
+set_location_assignment PIN_30 -to leds[4]
+set_location_assignment PIN_39 -to leds[3]
 set_location_assignment PIN_32 -to leds[2]
-set_location_assignment PIN_31 -to leds[1]
+set_location_assignment PIN_28 -to leds[1]
 set_location_assignment PIN_33 -to leds[0]
 set_global_assignment -name ENABLE_OCT_DONE OFF
 set_global_assignment -name USE_CONFIGURATION_DEVICE OFF

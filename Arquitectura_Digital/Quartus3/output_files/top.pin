@@ -96,18 +96,18 @@ GND+                         : 24        :        :                   :         
 GND+                         : 25        :        :                   :         : 2         :                
 VCCIO2                       : 26        : power  :                   : 2.5V    : 2         :                
 GND                          : 27        : gnd    :                   :         :           :                
-leds[6]                      : 28        : output : 2.5 V             :         : 2         : Y              
+leds[1]                      : 28        : output : 2.5 V             :         : 2         : Y              
 VCCINT                       : 29        : power  :                   : 1.2V    :           :                
-leds[3]                      : 30        : output : 2.5 V             :         : 2         : Y              
-leds[1]                      : 31        : output : 2.5 V             :         : 2         : Y              
+leds[4]                      : 30        : output : 2.5 V             :         : 2         : Y              
+leds[6]                      : 31        : output : 2.5 V             :         : 2         : Y              
 leds[2]                      : 32        : output : 2.5 V             :         : 2         : Y              
 leds[0]                      : 33        : output : 2.5 V             :         : 2         : Y              
-leds[4]                      : 34        : output : 2.5 V             :         : 2         : Y              
+leds[5]                      : 34        : output : 2.5 V             :         : 2         : Y              
 VCCA1                        : 35        : power  :                   : 2.5V    :           :                
 GNDA1                        : 36        : gnd    :                   :         :           :                
 VCCD_PLL1                    : 37        : power  :                   : 1.2V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 38        :        :                   :         : 3         :                
-leds[5]                      : 39        : output : 2.5 V             :         : 3         : Y              
+leds[3]                      : 39        : output : 2.5 V             :         : 3         : Y              
 VCCIO3                       : 40        : power  :                   : 2.5V    : 3         :                
 GND                          : 41        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 42        :        :                   :         : 3         :                

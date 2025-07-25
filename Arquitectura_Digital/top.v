@@ -21,9 +21,12 @@ wire [7:0] c;
 wire [7:0] Minutes;
 wire [7:0] Hours;
 wire [2:0] Acknowledge;
+wire [6:0] ledsw;
+wire [2:0] led_indexw;
 
 assign sda = (sda_en) ? sda_out: 1'bz;
 assign vcc = 1;
+assign leds = ledsw;
 
 beg_com beg_com(
     .clk(clk),
@@ -58,6 +61,8 @@ lcddin_mod lcd_display (
     .rs(rs),
     .rw(rw),
     .data(data),
+    .leds(ledsw),
+    .led_index(led_indexw),
     .enable(enable)
 );
 
@@ -66,7 +71,8 @@ alarm_led alarm_led (
     .Minutes(Minutes),
     .Seconds(Seconds),
     .buzzer(buzzer),
-    .leds(leds)
+    .led_index(led_indexw),
+    .leds(ledsw)
 );
 
 /* BCD BCD(
