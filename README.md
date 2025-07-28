@@ -22,8 +22,8 @@
 
 ---
 
-## Analisis de RTC
+## Arquitectura Digital
 
-[Ir a la carpeta de Análisis RTC](RTC_Analisis/README.md)
+[Ir a la carpeta de Arquitectura Digital](Arquitectura_Digital/README.md)
 
 ---
