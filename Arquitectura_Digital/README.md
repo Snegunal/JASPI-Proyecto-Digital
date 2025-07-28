@@ -1,4 +1,14 @@
 # Arquitectura Digital
+
+## Tabla de Contenido
+
+1. [Arquitectura Digital](#arquitectura-digital)
+    1. [Protocolo de Comunicación](#protocolo-de-comunicación)
+    2. [Visualización](#visualización)
+    3. [Videos de funcionamiento progresivo](#videos-de-funcionamiento)
+    4. [Notas adicionales](#notas-adicionales)
+
+
 El componente principal del sistema es **el módulo RTC (Real Time Clock) DS3231**, por lo que comprender su modo de operación *resulta fundamental*. Inicialmente, se planteó desarrollar el proyecto utilizando una placa **Arduino Uno**, con el objetivo de adaptar el sistema a las necesidades específicas del diseño, principalmente el muestreo de la hora en un elemento visual. A través de la **integración del sensor** y el uso de **librerías de Arduino**, se buscaba facilitar la comprensión del **funcionamiento del RTC.**
 
 De este modo, se decidió construir un "pseudoproyecto" con *Arduino*, *permitiendo su montaje y verificación práctica* (visualización de la hora actual). A partir de su correcto funcionamiento, en esta etapa se pensaba posible **analizar la lógica empleada** para luego replicarla y adaptarla al entorno de programación en **FPGA**.
@@ -120,8 +130,9 @@ always @(negedge beg) begin
     Year <= reverse_bits8(data[58:51]);
 end
 ```
+### Visualización
 
-4. **lcddin_mod**: Se encarga de gestionar el envío de la hora para la representación visual en la **LCD**.
+1. **lcddin_mod**: Se encarga de gestionar el envío de la hora para la representación visual en la **LCD**.
 
 A continuación, se detallan los componentes principales del módulo:
 
@@ -263,7 +274,7 @@ Esta sección implementa la lógica de control mediante una máquina de estados 
   </tr>
 </table>
 
-5. **alarm_led** Este módulo gestiona la configuración de horarios de medicación, así como la activación de los indicadores visuales y sonoros.
+2. **alarm_led** Este módulo gestiona la configuración de horarios de medicación, así como la activación de los indicadores visuales y sonoros.
 
 #### Definición de condiciones iniciales y entradas en binario
 ```verilog
@@ -348,54 +359,51 @@ Si el minuto no coincide con el intervalo, se apagan todos los LEDs y el buzzer 
 assign sda = (sda_en) ? sda_out: 1'bz;
 ```
 
+<p align="center">
+  <img src="Videos_e_imagenes/RTL_VIEWER_TOP.png" alt="Módulo top" width="50%">
+</p>
+<p align="center"><strong>Figura:</strong> Módulo top</p>
 
-## Tabla de contenido
+### Transistores en el prototipo
 
-1. [Metodología](#metodología)
-2. [Módulos](#módulos)
-   1. [`master`](#master)
-   2. [`beg_com`](#beg_com)
-   3. [`listen`](#listen)
-   4. [`BCD`](#bcd)
-   5. [`BCDtoSSeg`](#bcdtosseg)
-3. [Videos de funcionamiento](#videos-de-funcionamiento)
-4. [Notas adicionales](#notas-adicionales)
+La **FPGA** utiliza en su principio básico compuertas lógicas que componen elementos más complejos como los *flip-flops*, y que son el fundamento de la lógica secuencial que hace posible la conexión entre módulos que capturan información de forma dinámica. Se puede medir la eficiencia de las lógicas programadas sobre la cantidad de los transistores utilizados en el diseño; por lo tanto, ese valor podría representar disminución de costos, ajustes de lógica para nuevas funcionalidades o reducción de complejidad para optimizaciones futuras.
 
----
+El software Quartus de Intel facilita esta tarea: permite visualizar las compuertas lógicas y sus conexiones a partir del lenguaje de descripción de hardware `verilog`.
 
-## Metodología
-
-El primer paso para el desarrollo del proyecto fue su versión en Arduino, haciendo uso de está, por medio de un analizador lógico se pudo observar la secuencia completa de comunicación, e identificar lo que iba a ser necesario realizar con la FPGA para obtener respuesta del RTC
+<p align="center">
+  <img src="Videos_e_imagenes/Num_trans.png" alt="Número de transistores" width="50%">
+</p>
+<p align="center"><strong>Figura:</strong> Número de transistores</p>
 
 
+También hay datos relacionados con el porcentaje de elementos lógicos, número de pines usados o el total de registros (memoria). Se puede suponer una función directa entre estos valores y el número de transistores; **Altera** no habla con exactitud del valor de los transistores, pero múltiples fuentes comentan que por elementos lógicos como **LUTs** tienen alrededor de 2 a 5 transistores. Por lo tanto:
 
-Usando como guía lo visto en *Pulseview* y la información del *Datasheet* correspondiente se comprendió por completo el protocolo. Entonces se crean los módulos **master** y **beg_com** para replicar esta secuencia. Una vez se confirmó la respuesta del RTC a las señales creadas por la FPGA nuevamente haciendo uso del analizador lógico, se buscó la forma de guardar esa información temporalmente para visualización y el control de alarma creando el módulo **listen**. Para poder confirmar el registro de la información se hace uso de los 7 Segmentos disponibles en la placa de desarrollo.
+$$
+\text{Número de Transistores} = \text{Número de elementos lógicos} \cdot \text{Promedio de transistores investigados}
+$$
 
-## Módulos
+$$
+\text{Promedio de transistores investigados} = \frac{2 + 5}{2} = 3.5
+$$
 
-### `master`
+$$
+\text{Número de Transistores de la FPGA} = 10320 \cdot 3.5 = 36120
+$$
 
-Este módulo funciona como maestro del bus I²C, gestionando la secuencia completa de comunicación: desde el envío de condiciones de start/stop hasta la lectura/escritura de datos.
 
-### `beg_com`
+En porcentaje:
 
-Este módulo se encarga de generar la condición de **inicio (Start)** del protocolo I²C cada 2 segundos para iniciar la comunicación adicionalmente la señal generada por este modulo va a ser de utilidad en el módulo **listen** pues sincroniza la captura de la información.
+$$
+\text{Número de transistores en el proyecto} = \text{\% en el proyecto de elementos lógicos} \cdot \text{Número de Transistores de la FPGA}
+$$
 
-### `listen`
-
-Responsable de recibir los bits desde el RTC por la línea `sda`, sincronizado con `scl`. Interpreta los datos leídos y detecta los bits de ACK/NACK.
-
-### `BCD`
-
-Este módulo convierte los datos binarios recibidos del RTC en formato **BCD (Binary Coded Decimal)** para facilitar su visualización y uso posterior teniendo en cuenta la condición de los 7 Segmentos de la placa, los cuales se encuentran multiplexados.
-
-### `BCDtoSSeg`
-
-Convierte los valores BCD en los códigos necesarios para controlar un **display de 7 segmentos**, permitiendo mostrar la hora de manera legible en hardware.
+$$
+\text{Número de transistores en el proyecto} \approx 2569.6
+$$
 
 ## Videos de funcionamiento
 
-A continuación se incluyen enlaces a videos donde se muestra el sistema en funcionamiento:
+A continuación se incluyen enlaces a videos donde se muestra el sistema en funcionamiento progresivamente:
 
 - [Video 1 - Comunicación básica I²C, Respuesta RTC](Videos_e_imagenes/Jaspi_1.mp4)
 - [Video 2 - Lectura y visualización de la hora](Videos_e_imagenes/Jaspi_2.mp4)
@@ -408,9 +416,9 @@ A continuación se incluyen enlaces a videos donde se muestra el sistema en func
 - El diseño está escrito en Verilog.
 - El sistema fue probado en una FPGA **[Intel Cyclone IV E: EP4CE10E22C8]**.
 - El reloj externo usado es el **DS3231**, con alimentación de 3.3V.
-- Se realizan pruebas en los 7 segmentos integrados en la tarjeta.
+- Se realizaron pruebas preliminares en los 7 segmentos integrados en la tarjeta (sus módulos también están anexados).
 - Se anexan 2 archivos de pulseview `prueba_real_1.sr`y `Sesion.sr` los cuales fueron obtenidos con el analizador lógico y en ellos se puede observar la comunicación.
-- Se anexa un testbench `tb_top.v` con el que se puede observar la comunicación simulada, sin embargo es necesario cambiar los parametros de **tiempo** y **Maxcount** en `beg_com` y `BCD` respectivamente para que se pueda observar en el tiempo de simulación.
+- Se anexa un testbench `tb_top.v` con el que se puede observar la comunicación simulada, sin embargo es necesario cambiar los parametros de **tiempo** y **Maxcount** en `beg_com`, `BCD` respectivamente para que se pueda observar en el tiempo de simulación.
 - Se anexa el **Datasheet** del DS3231.
 ---
 
